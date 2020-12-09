@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema viajes
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema viajes
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `viajes` DEFAULT CHARACTER SET utf8 ;
+USE `viajes` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`usuarios`
+-- Table `viajes`.`usuarios`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`usuarios` (
+CREATE TABLE IF NOT EXISTS `viajes`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(30) NOT NULL,
   `contraseña` VARCHAR(50) NOT NULL,
@@ -31,9 +31,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`experiencias`
+-- Table `viajes`.`experiencias`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`experiencias` (
+CREATE TABLE IF NOT EXISTS `viajes`.`experiencias` (
   `id_experiencia` INT NOT NULL AUTO_INCREMENT,
   `fecha_de_publicacion` TIMESTAMP NOT NULL,
   `texto` LONGTEXT NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`experiencias` (
   INDEX `fk_experiencias_usuarios1_idx` (`id_usuario` ASC),
   CONSTRAINT `fk_experiencias_usuarios1`
     FOREIGN KEY (`id_usuario`)
-    REFERENCES `mydb`.`usuarios` (`id`)
+    REFERENCES `viajes`.`usuarios` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
