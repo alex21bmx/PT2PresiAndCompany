@@ -1,7 +1,7 @@
 <?php
 class tipo_usuario extends Enum
 {
-    private const normal = 'normal';
+    private const usuario = 'usuario';
     private const admin = 'admin';
 }
 ?>
