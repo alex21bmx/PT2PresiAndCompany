@@ -1,16 +1,15 @@
 <?php
 
 require_once('DBAbstractModel.php');
+require_once('enums/tipo_usuario.php');
 
 class Contacte extends DBAbstractModel {
-  private $nom;
-  private $cognom1;
-  private $cognom2;
-  private $telefon;
-  private $email;
+  private $username;
+  private $password;
+  private $tipo_usuario;
   
   function __construct() {
-    $this->db_name = "agenda";
+    $this->db_name = "viajes";
     //echo "constant " . parent::DBPASS;
     }
   
