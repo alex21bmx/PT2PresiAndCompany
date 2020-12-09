@@ -20,6 +20,6 @@
     </div>
     <footer>
       <?php require_once("extra/footer.php"); ?>
-</footer>
+    </footer>
 </body>
 </html>
