@@ -1,3 +1,19 @@
+html {
+    height: 100%;
+    font-family: Open-sans;
+  }
+  
+  body {
+    background-color: #a8e9ff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+  }
+  #content {
+    flex: 1;
+    background-color: #a8e9ff;
+  }
 #header{
     display:flex;
     background-color: aquamarine;
@@ -36,4 +52,19 @@
 #searchBttn{
     height: 20px;
     width: 20px;
+}
+#footer{
+    background-color: aquamarine;
+    height: 100px;
+}
+#fotoBenvinguda{
+    background-image: url("../src/fons1.jpg");
+    height: 500px;
+    margin: 0;
+    top: 0;
+    padding: 0;
+    background-size: cover;
+}
+#textIndex{
+    margin: 0;
 }
