@@ -9,6 +9,13 @@ function togglePopup(num){
         case 3:
             document.getElementById("popup-3").classList.toggle("active");
             break;
+        case 4:
+            document.getElementById("popup-3").classList.toggle("active");
+            document.getElementById("popup-4").classList.toggle("active");
+            break;
+        case 5:
+            document.getElementById("popup-4").classList.toggle("active");
+            break;
 
     }
 }
