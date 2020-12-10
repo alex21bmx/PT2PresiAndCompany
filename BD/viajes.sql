@@ -23,7 +23,7 @@ USE `viajes` ;
 CREATE TABLE IF NOT EXISTS `viajes`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(30) NOT NULL,
-  `contraseña` VARCHAR(50) NOT NULL,
+  `password` VARCHAR(50) NOT NULL,
   `tipo_usuario` ENUM('admin', 'usuario') NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `username_UNIQUE` (`username` ASC))
