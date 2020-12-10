@@ -2,20 +2,20 @@
 <script src="./js/header.js"></script>
 <div id="header">
     <div id="logoHeader">
-        <img id="logo" src="./src/logo.jpg" alt="">
+        
     </div>
     <div id="titolHeader">
-        <h1>Viatges</h1>
+        <img id="logo" src="./src/presiLogo.png" alt="">
     </div>
     <div id="botonsDivHeader">
         
-            <button class="headerBttn" onclick="togglePopup(1)"><img id="searchBttn" src="./src/search.png" alt=""></button>
+            <button class="headerBttn" onclick="togglePopup(1)"><img id="searchBttn" src="./src/buscar.jpg" alt=""></button>
         
         
-            <button class="headerBttn" onclick="togglePopup(2)">Staff</button>
+            <button class="headerBttn" onclick="togglePopup(2)"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
         
         
-            <button class="headerBttn" onclick="togglePopup(3)">Log-in</button>
+            <button class="headerBttn" onclick="togglePopup(3)"><img id="logInBttn" src="./src/key.ico" alt=""></button>
         
     </div>
     <div class="popup" id="popup-1">

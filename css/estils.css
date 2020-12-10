@@ -1,10 +1,10 @@
 html {
     height: 100%;
-    font-family: Open-sans;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
   
 body {
-    background-color: #a8e9ff;
+    background-color: black;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -12,7 +12,7 @@ body {
 }
 #content {
     flex: 1;
-    background-color: #a8e9ff;
+    background-color: black;
 }
 
 /*Header*/
@@ -22,7 +22,7 @@ body {
     left:0px;
     width:100vw;
     height:100vh;
-    background:rgba(0,0,0,0.7);
+    background:black;
     z-index:1;
     display:none;
   }
@@ -32,7 +32,7 @@ body {
     top:50%;
     left:50%;
     transform:translate(-50%,-50%) scale(0);
-    background:#fff;
+    background:black;
     width:500px;
     height:250px;
     z-index:2;
@@ -81,8 +81,9 @@ body {
     background:#fff;
   }
 #header{
+    color: whitesmoke;
     display:flex;
-    background-color: aquamarine;
+    background-color: black;
     width: 100%;
     height: 100px;
 }
@@ -102,16 +103,17 @@ body {
     justify-content: flex-end;
 }
 .headerBttn{
+    color: white;
     height: 100px;
     width: 60px;
-    background-color: aqua;
+    background-color:black;
     border: none;
     border-left: 2px solid black;
     outline: none;
 }
 #logo{
-    height: 90px;
-    width: 90px;
+    height: 100px;
+    width: 250px;
     margin: 0;
     padding: 5px;
 }
@@ -119,18 +121,110 @@ body {
     height: 20px;
     width: 20px;
 }
+#logInBttn{
+    height: 20px;
+    width: 20px;
+}
 #footer{
-    background-color: aquamarine;
+    background-color: whitesmoke;
     height: 100px;
 }
+
+/*-----BACKGROUND-----*/
+
 #fotoBenvinguda{
-    background-image: url("../src/fons1.jpg");
+    background-position: center center;
+    background: url("../src/backgroundTravel.jpg"), no-repeat;
     height: 500px;
-    margin: 0;
+    margin: 10;
     top: 0;
     padding: 0;
     background-size: cover;
 }
+
+/*-----EXPERIENCIES-----*/
 #textIndex{
     margin: 0;
+    align-items: center;
+}
+
+#experiencies{
+    color: blanchedalmond;
+
+}
+
+#fotoExperiencia{
+    width: 300px;
+    height: 100px;
+}
+
+/*-----SLIDESHOW-----*/
+
+#fotoPost{
+    height: 720px;
+    width: 1080px;
+}
+.slider{
+   padding: 100px 0; 
+}
+
+.item img{
+    transform: scale(.92);
+    transition: all ease 0.6s;
+}
+
+.item:hover img{
+    transform: scale(.85);
+}
+
+.slider-caption{
+    position: absolute;
+    top: 35%;
+    left: 45px;
+    z-index: 999;
+}
+
+.slider-caption h4{
+    font-size: 58px;
+    color: #fff;
+}
+
+.slider-caption p{
+    font-size: 20px;
+    color: #fff;
+}
+
+.owl-item{
+    opacity: .4;
+    transition: all ease 0.6s;
+}
+
+.owl-item .slider-caption{
+    opacity: 0;
+    transform: translateY(-25px);
+}
+
+.owl-item.active.center{
+    opacity: 1;
+}
+
+.owl-item.active.center .slider-caption{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all ease 0.4s;
+}
+
+.owl-nav{
+    text-align: center;
+}
+
+.owl-nav button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    line-height: 42px !important;
+    background-color: rgba(255,255,255,.3) !important;
+    color: #fff !important;
+    margin: 0 5px;
+    outline: none;
 }
