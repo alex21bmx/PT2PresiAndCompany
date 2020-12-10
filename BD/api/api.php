@@ -5,10 +5,14 @@
 
     $Usuario = new Usuario();
 
-    if($Usuario-> selectName($_REQUEST['user'], $_REQUEST['pass'])){
-        $response = array("status" => "ok");
-    }else{
-        $response = array("status" => "fail");
+    $resultado = $Usuario-> selectExistsUser($_REQUEST['user'], $_REQUEST['pass']);
+    foreach($resultado as $key => $value){
+        if($value==1){
+            $datos = $Usuario->selectUser($_REQUEST['user'], $_REQUEST['pass']);
+            $response = array("status" => "ok", "nombre" =>$datos["username"], "tipo_usuario" => $datos["tipo_usuario"]);
+        }else{
+            $response = array("status" => "fail");
+        }
     }
 
     echo json_encode($response);

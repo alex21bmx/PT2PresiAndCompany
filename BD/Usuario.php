@@ -37,17 +37,22 @@ class Usuario extends DBAbstractModel {
   }
 
   //FUNCIONA EL SELECT PARA EL LOGIN
-  public function selectName($userName="", $pass=""){
+  public function selectExistsUser($userName="", $pass=""){
+    if($userName!="" && $pass!=""){
+      $this->query = "SELECT EXISTS (SELECT * FROM usuarios WHERE username='$userName' AND password='$pass')";
+      $this->get_results_from_query();
+    }
+    
+    return $this->rows[0];
+
+  }
+
+  public function selectUser($userName="", $pass=""){
     if($userName!="" && $pass!=""){
       $this->query = "SELECT * FROM usuarios WHERE username='$userName' AND password='$pass'";
       $this->get_results_from_query();
-      if($this->rows[0]["username"]==$userName && $this->rows[0]["password"]==$pass){
-        return true;
-      }
-      
-      return false;
-      /*foreach ($this->rows[0] as $property => $value)
-        $this->$property = $value;*/
+
+      return $this->rows[0];
     }
   }
   
