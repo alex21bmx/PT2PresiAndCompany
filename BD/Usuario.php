@@ -21,25 +21,50 @@ class Usuario extends DBAbstractModel {
     unset ($this);
   }*/
   
+  //FUNCIONA EL SELECT GENERAL
   public function select() {
-    $this->query = "SELECT id, username, password, tipo_usuario FROM usuarios";
+    $this->query = "SELECT * FROM usuarios";
     $this->get_results_from_query();
-    foreach ($this->rows[0] as $property => $value)
-        $this->$property = $value;
+    for($i=0; $i<count($this->rows); $i++){
+      $resultSet[] = $this->rows[$i];
+    }
+
+    print_r($resultSet);
+
+    /*foreach($resultSet as $property => $value){
+      echo $value["username"] . "<br>";
+    }*/
   }
-  
-  public function insert($userData = array()) {
-    
-    if (array_key_exists("id", $userData)) {
-      $this->select($userData["id"]);
-      if ($userData["id"]!= $this->id) {
-        foreach ($userData as $property => $value)
-          $$property = $value;
-        $this->query="INSERT INTO usuarios (id, username, password, tipo_usuario)
-                      VALUES ('$id', '$username', '$password', '$tipo_usuario')";
-        $this->execute_single_query();
+
+  //FUNCIONA EL SELECT PARA EL LOGIN
+  public function selectName($userName="", $pass=""){
+    if($userName!="" && $pass!=""){
+      $this->query = "SELECT * FROM usuarios WHERE username='$userName' AND password='$pass'";
+      $this->get_results_from_query();
+      if($this->rows[0]["username"]==$userName && $this->rows[0]["password"]==$pass){
+        return true;
       }
       
+      return false;
+      /*foreach ($this->rows[0] as $property => $value)
+        $this->$property = $value;*/
+    }
+  }
+  
+  //FUNCIONA PERO EL INSERT VA UN POCO RARO CUANDO LOS NOMBRES COINCIDEN
+  public function insert($userData = array()) {
+    if (array_key_exists("username", $userData)) {
+      $this->select($userData["username"]);
+      echo $userData["username"];
+      echo $this->username;
+      if ($userData["username"]!= $this->username) {
+        foreach ($userData as $property => $value)
+          $$property = $value;
+        $this->query="INSERT INTO usuarios (username, password, tipo_usuario)
+                      VALUES ('$username', '$password', '$tipo_usuario')";
+        $this->execute_single_query();
+      }else
+        echo "Este usuario ya ha sido introducido"; 
     }
   }
   
