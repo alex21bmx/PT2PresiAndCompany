@@ -39,7 +39,24 @@
         <div class="content">
             <div class="close-btn" onclick="togglePopup(3)">&times;</div>
             <h1>Log-in</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aspernatur laborum rem sed laudantium excepturi veritatis voluptatum architecto, dolore quaerat totam officiis nisi animi accusantium alias inventore nulla atque debitis.</p>
+            <form>
+                <input type="text" name="" id="username1" placeholder="Usuari"><br>
+                <input type="password" name="" id="password1" placeholder="Contrasenya"><br>
+                <input type="button" value="Log-in" id="login">
+            </form>
+            <button id="nouUsuari" onclick="togglePopup(4)">Nou usuari</button>
+            </div>
+    </div>
+    <div class="popup" id="popup-4">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close-btn" onclick="togglePopup(5)">&times;</div>
+            <h1>Sign-up</h1>
+            <form>
+                <input type="text" name="" id="" placeholder="Usuari"><br>
+                <input type="password" name="" id="" placeholder="Contrasenya"><br>
+                <button>Sign-up</button>
+            </form>
         </div>
     </div>
 </div>
