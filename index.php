@@ -16,7 +16,18 @@
     </header>
     <div id="content">
         <div id="fotoBenvinguda">
-            <h1 id="textIndex"></h1>
+        <figure class="snip1477">
+            <img id="fotoBenvinguda" src="./src/backgroundTravel.jpg" alt="sample38" />
+            <div class="title">
+                <div>
+                <h2>PRESIBLOG</h2>
+                <h4>INSPedralbes</h4>
+                </div>
+            </div>
+            <figcaption>
+                <p>Aixo és la presentació del Projecte 2 boys.</p>
+            </figcaption>
+            <a href="#"></a>
         </div>
         <div id="experiencies">
             <div>
@@ -26,28 +37,28 @@
                         <img id="fotoPost" src="./src/foto1.jpg" alt="">
                         <div class="slider-caption">
                             <h4>Sahara</h4>
-                            <p>Alex - Fucking Vic</p>
+                            <p>Alex - 22 Oct</p>
                         </div>
                     </div>
                     <div class="item">
                         <img id="fotoPost" src="./src/foto2.jfif" alt="">
                         <div class="slider-caption">
-                            <h4>Sahara</h4>
-                            <p>Sergio - The Caramelo</p>
+                            <h4>Taiwan</h4>
+                            <p>Sergio - 21 Sep</p>
                         </div>
                     </div>
                     <div class="item">
                         <img id="fotoPost" src="./src/foto3.jpg" alt=""> 
                         <div class="slider-caption">
-                            <h4>Sahara</h4>
-                            <p>Arnau - Bdn Cuchillos</p>
+                            <h4>Barcelona</h4>
+                            <p>Arnau - 21 Aug</p>
                         </div>
                     </div>
                     <div class="item">
                         <img id="fotoPost" src="./src/foto1.jfif" alt="">
                         <div class="slider-caption">
-                            <h4>Sahara</h4>
-                            <p>Alvaro - Br</p>
+                            <h4>Cairo</h4>
+                            <p>Alvaro - 4 Jan</p>
                         </div>
                     </div>
                 </div>
@@ -78,6 +89,11 @@
 
         $(".owl-prev").html('<i class="fa fa-chevron-left"></i>');
         $(".owl-next").html('<i class="fa fa-chevron-right"></i>');
+    });
+
+    $(".hover").mouseleave(
+        function () {
+            $(this).removeClass("hover");
     });
 </script>
 </html>
