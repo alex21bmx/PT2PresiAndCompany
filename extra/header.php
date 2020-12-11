@@ -52,10 +52,10 @@
         <div class="content">
             <div class="close-btn" onclick="togglePopup(5)">&times;</div>
             <h1>Sign-up</h1>
-            <form>
-                <input type="text" name="" id="" placeholder="Usuari"><br>
-                <input type="password" name="" id="" placeholder="Contrasenya"><br>
-                <button>Sign-up</button>
+            <form action="./BD/registrarUsuario.php" method="post">
+                <input type="text" id="newUsername" name="newUsername" placeholder="Usuari" required><br>
+                <input type="password" id="newPassword" name="newPassword" placeholder="Contrasenya" required><br>
+                <input type="submit" value="Sign-up" id="signup">
             </form>
         </div>
     </div>

@@ -6,7 +6,6 @@ abstract class DBAbstractModel {
   private static $db_host = "localhost:3306";
   private static $db_user = "root";
   private static $db_pass = "Ausias12*";
-  //const DBPASS = "r44t";
 
   protected $db_name;
 
