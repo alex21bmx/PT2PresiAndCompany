@@ -19,6 +19,8 @@ document.getElementById("login").addEventListener("click",function(){
         else{                            
             alert("Logeado");
         }
+
+        console.log(respuesta);
         
         
     })
