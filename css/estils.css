@@ -89,13 +89,16 @@ body {
     width: 100%;
     height: 100px;
 }
-#logoHeader{
-    width:10%;
+#fraseHeader{
+    font-style: italic;
+    margin-top: 1.3%;
+    margin-left: 2%;
+    width: 650px;
     display: flex;
     justify-content: flex-start;
 }
 #titolHeader{
-    width:80%;
+    width:50%;
     display: flex;
     justify-content: center;
 }
@@ -127,20 +130,71 @@ body {
     height: 20px;
     width: 20px;
 }
+
+/*-----FOOTER-----*/
+
 #footer{
-    background-color: whitesmoke;
+    color: whitesmoke;
+    display:flex;
+    background-color: black;
+    width: 100%;
     height: 100px;
 }
 
+#upFooter{
+    font-family: 'Raleway', Arial, sans-serif;
+    color: black;
+    letter-spacing: 0.3em;
+    display:flex;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+}
+#ptem{
+    margin-top: 5px;
+}
+
+#izquierdaFooter{
+    background-color: #d9d9d9;
+    width:30%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footerBttn{
+    color: white;
+    height: 100px;
+    width: 60px;
+    background-color:#d9d9d9;
+    border: none;
+    border-left: 2px solid #d9d9d9;
+    outline: none;
+}
+#socialBttn{
+    height: 20px;
+    width: 20px;
+}
+
+#derechaFooter{
+    color: black;
+    background-color: whitesmoke;
+    min-height: 100px;
+}
 /*-----BACKGROUND-----*/
 
 #fotoBenvinguda{
     background-position: center center;
+    background-image: url("../src/backgroundTravel.jpg");
     height: 500px;
     margin: 10;
     top: 0;
     padding: 0;
     background-size: cover;
+}
+#fotoBenvinguda:hover{
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
 }
 
 /*-----EXPERIENCIES-----*/
@@ -157,6 +211,12 @@ body {
 #fotoExperiencia{
     width: 300px;
     height: 100px;
+}
+
+/*-----ÚLTIMES ENTRADES-----*/
+
+#ultimesEntrades{
+    color: blanchedalmond;
 }
 
 /*-----SLIDESHOW-----*/
@@ -228,17 +288,20 @@ body {
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 figure.snip1477 {
+  background-color: transparent;
   font-family: 'Raleway', Arial, sans-serif;
   position: relative;
   overflow: hidden;
   margin: 0px;
   min-width: 230px;
-  max-width: 100%;
+  max-width: 40%;
+  min-height: 60%;
+  max-height: 80%;
   width: 100%;
   color: #ffffff;
   text-align: center;
   font-size: 16px;
-  background-color: #000000;
+  letter-spacing: 0.3em;
 }
 figure.snip1477 *,
 figure.snip1477 *:before,
@@ -256,9 +319,10 @@ figure.snip1477 img {
   -webkit-filter: blur(3px);
 }
 figure.snip1477 .title {
+
   position: absolute;
   top: 58%;
-  left: 25px;
+  left: 20%;
   padding: 5px 10px 10px;
 }
 figure.snip1477 .title:before,
@@ -320,7 +384,7 @@ figure.snip1477 h4 {
 figure.snip1477 figcaption {
   position: absolute;
   bottom: 42%;
-  left: 25px;
+  left: 20%;
   text-align: left;
   opacity: 0;
   padding: 5px 60px 5px 10px;
@@ -329,6 +393,9 @@ figure.snip1477 figcaption {
   letter-spacing: 1.5px;
 }
 figure.snip1477 figcaption p {
+  color: black;
+  font-weight: 10px;
+  left: 20%;
   margin: 0;
 }
 figure.snip1477 a {
