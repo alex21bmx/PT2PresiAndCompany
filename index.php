@@ -17,7 +17,7 @@
     <div id="content">
         <div id="fotoBenvinguda">
         <figure class="snip1477">
-            <img id="fotoBenvinguda" src="./src/backgroundTravel.jpg" alt="sample38" />
+            <img id="fotoBenvinguda" src="./src/backgroundTravel.jpg" alt="" />
             <div class="title">
                 <div>
                 <h2>PRESIBLOG</h2>
