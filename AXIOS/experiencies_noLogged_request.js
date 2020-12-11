@@ -6,8 +6,7 @@ document.getElementById("login").addEventListener("click",function(){
         timeout:3000,
         params: {
             user: document.getElementById("username1").value ,
-            pass: document.getElementById("password1").value ,
-            id: 1
+            pass: document.getElementById("password1").value
         }
     })
     .then(function (respuesta) {
