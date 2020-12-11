@@ -28,12 +28,6 @@ class Usuario extends DBAbstractModel {
     for($i=0; $i<count($this->rows); $i++){
       $resultSet[] = $this->rows[$i];
     }
-
-    print_r($resultSet);
-
-    /*foreach($resultSet as $property => $value){
-      echo $value["username"] . "<br>";
-    }*/
   }
 
   //FUNCIONA EL SELECT PARA EL LOGIN
@@ -51,7 +45,14 @@ class Usuario extends DBAbstractModel {
     if($userName!="" && $pass!=""){
       $this->query = "SELECT * FROM usuarios WHERE username='$userName' AND password='$pass'";
       $this->get_results_from_query();
+      return $this->rows[0];
+    }
+  }
 
+  public function selectUserName($idUsuario){
+    if($idUsuario!=""){
+      $this->query = "SELECT username FROM usuarios WHERE id='$idUsuario'";
+      $this->get_results_from_query();
       return $this->rows[0];
     }
   }
