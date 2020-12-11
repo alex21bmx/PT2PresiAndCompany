@@ -17,24 +17,24 @@
     <div id="content">
         <div id="fotoBenvinguda">
         <figure class="snip1477">
-            <img id="fotoBenvinguda" src="./src/backgroundTravel.jpg" alt="" />
             <div class="title">
                 <div>
-                <h2>PRESIBLOG</h2>
+                <h2>BENVINGUTS A VIATJES</h2>
                 <h4>INSPedralbes</h4>
                 </div>
             </div>
             <figcaption>
-                <p>Aixo és la presentació del Projecte 2 boys.</p>
+                <p>Esto es una puta mierda de presentacion asquerosa impuesta</p>
             </figcaption>
             <a href="#"></a>
         </div>
+        <div id="ultimesEntrades">
+        </div>
         <div id="experiencies">
             <div>
-                <!--<h2>THE MOST WONDERFUL FUNCKING TRAVELS<h2>-->
                 <div class="slider owl-carousel">
                     <div class="item">
-                        <img id="fotoPost" src="./src/foto1.jpg" alt="">
+                        <img id="fotoPost" src="./src/foto1.jfif" alt="">
                         <div class="slider-caption">
                             <h4>Sahara</h4>
                             <p>Alex - 22 Oct</p>
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img id="fotoPost" src="./src/foto1.jfif" alt="">
+                        <img id="fotoPost" src="./src/foto4.jpg" alt="">
                         <div class="slider-caption">
                             <h4>Cairo</h4>
                             <p>Alvaro - 4 Jan</p>

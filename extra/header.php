@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="css/estils.css">
 <script src="./js/header.js"></script>
 <div id="header">
-    <div id="logoHeader">
-        
+    <div id="fraseHeader">
+        <p>Sé capaz de hacer algo cuyas consecuencias sean para siempre. ¡Bienvenido a este nuevo día!</p>
     </div>
     <div id="titolHeader">
         <img id="logo" src="./src/presiLogo.png" alt="">
