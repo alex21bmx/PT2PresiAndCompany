@@ -33,5 +33,11 @@
 
             echo json_encode($response);
             break;
+
+        case 3: 
+            $datos = $Usuario -> insert($_REQUEST['user'], $_REQUEST['pass']);
+            $response = array("status" => $datos);
+            echo json_encode($response);
+            break;
         }
 ?>

@@ -67,3 +67,4 @@
     </div>
 </div>
 <script src="./AXIOS/login_request.js"></script>
+<script src="./AXIOS/signup_request.js"></script>

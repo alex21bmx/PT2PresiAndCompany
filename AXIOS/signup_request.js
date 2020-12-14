@@ -1,5 +1,4 @@
 document.getElementById("signup").addEventListener("click",function(){      
-
     document.getElementById("signup").innerHTML=`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Validando`
 
     axios.get('./BD/api/api.php', {
@@ -25,7 +24,7 @@ document.getElementById("signup").addEventListener("click",function(){
         
     })
     .catch(function (error) {
-        alert("El servidor ha tardado mucho en responder")
+        alert("El servidor ha tardado mucho en responder");
     })
     .then(function () {
         //se ejecuta siempre

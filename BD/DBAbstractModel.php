@@ -3,9 +3,9 @@
 
 abstract class DBAbstractModel {
  
-  private static $db_host = "localhost:3306";
-  private static $db_user = "root";
-  private static $db_pass = "";
+  private static $db_host = "labs.iam.cat";
+  private static $db_user = "a18sergribra_u";
+  private static $db_pass = "Ausias12*";
 
   protected $db_name;
 
