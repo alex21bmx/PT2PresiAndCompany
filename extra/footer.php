@@ -24,7 +24,16 @@
         </div> 
         <hr></hr>
         <div id="parteDerecha">
-            <img id="berto" src="./src/berto.jpeg" alt="">
+            <div id="parteUno">
+                <h6>PRIVACY POLICY</h6>
+                <h6>TERMS & CONDITIONS</h6>
+                <h6>ABOUT</h6>
+            </div>
+            <div id="parteDos">
+                <h6>CONTACT</h6>
+                <h6>SIGN UP FOR THE PRESIBLOG NEWSLETTER</h6>
+                <h6>WORK</h6>
+            </div>
         </div>
     </div>
 

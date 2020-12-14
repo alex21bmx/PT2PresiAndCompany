@@ -170,6 +170,19 @@ body {
 #parteDerecha{
   width: 50%;
 }
+
+#parteUno{
+  margin-left: 15%;
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+#parteDos{
+  margin-right: 15%;
+  float: right;
+  width: 50%;
+  text-align: right;
+}
 #centroFooter{
     display: flex;
     justify-content: center;
@@ -177,6 +190,10 @@ body {
     border-top: 30px solid #d9d9d9;
     border-bottom: 30px solid #d9d9d9;
     border-left: 20px solid #d9d9d9;
+    min-width: 230px;
+    max-width: 100%;
+    min-height: 30%;
+    max-height: 50%;
 }
 
 #backToTop{
@@ -337,7 +354,7 @@ figure.snip1477 {
   overflow: hidden;
   margin: 0px;
   min-width: 230px;
-  max-width: 42%;
+  max-width: 40%;
   min-height: 60%;
   max-height: 80%;
   width: 100%;
