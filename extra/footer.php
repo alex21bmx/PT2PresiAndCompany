@@ -7,9 +7,8 @@
         </div>
     </div>
     </div>
-    <!--IZQUIERDA FOOTER-->
     <div id="centroFooter">
-        <div id="ptem"> 
+        <div id="parteIzquierda"> 
                 <div>
                     <div id="otro">
                         <h4>FOLLOW #PRESIBLOG</h4>
@@ -24,7 +23,7 @@
                 </div> 
         </div> 
         <hr></hr>
-        <div>
+        <div id="parteDerecha">
             <img id="berto" src="./src/berto.jpeg" alt="">
         </div>
     </div>
