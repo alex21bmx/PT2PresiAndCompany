@@ -40,8 +40,8 @@
             <div class="close-btn" onclick="togglePopup(3)">&times;</div>
             <h1>Log-in</h1>
             <form>
-                <input type="text" name="" id="username1" placeholder="Usuari"><br>
-                <input type="password" name="" id="password1" placeholder="Contrasenya"><br>
+                <input type="text" name="" id="username1" placeholder="Usuari" required><br>
+                <input type="password" name="" id="password1" placeholder="Contrasenya" required><br>
                 <input type="button" value="Log-in" id="login">
             </form>
             <button id="nouUsuari" onclick="togglePopup(4)">Nou usuari</button>
@@ -52,10 +52,10 @@
         <div class="content">
             <div class="close-btn" onclick="togglePopup(5)">&times;</div>
             <h1>Sign-up</h1>
-            <form action="./BD/registrarUsuario.php" method="post">
+            <form>
                 <input type="text" id="newUsername" name="newUsername" placeholder="Usuari" required><br>
                 <input type="password" id="newPassword" name="newPassword" placeholder="Contrasenya" required><br>
-                <input type="submit" value="Sign-up" id="signup">
+                <input type="button" value="signup" id="signup">
             </form>
         </div>
     </div>
