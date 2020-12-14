@@ -15,7 +15,7 @@ class Experiencia extends DBAbstractModel {
     private $id_usuario;
 
     function __construct() {
-        $this->db_name = "viajes";
+        $this->db_name = "a18sergribra_viajes";
     }
 
     public function select() {
