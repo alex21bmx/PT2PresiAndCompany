@@ -28,40 +28,7 @@
             </figcaption>
             <a href="#"></a>
         </div>
-        <div id="ultimesEntrades">
-        </div>
         <div id="experiencies">
-            <div>
-                <div class="slider owl-carousel">
-                    <div class="item">
-                        <img id="fotoPost" src="./src/foto1.jfif" alt="">
-                        <div class="slider-caption">
-                            <h4>Sahara</h4>
-                            <p>Alex - 22 Oct</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img id="fotoPost" src="./src/foto2.jfif" alt="">
-                        <div class="slider-caption">
-                            <h4>Taiwan</h4>
-                            <p>Sergio - 21 Sep</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img id="fotoPost" src="./src/foto3.jpg" alt=""> 
-                        <div class="slider-caption">
-                            <h4>Barcelona</h4>
-                            <p>Arnau - 21 Aug</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img id="fotoPost" src="./src/foto4.jpg" alt="">
-                        <div class="slider-caption">
-                            <h4>Cairo</h4>
-                            <p>Alvaro - 4 Jan</p>
-                        </div>
-                    </div>
-                </div>
             <?php require_once("experiencies.php"); ?>
         </div>
     </div>
@@ -69,6 +36,7 @@
       <?php require_once("extra/footer.php"); ?>
     </footer>
 </body>
+<script src="AXIOS/experiencies_noLogged_request.js"></script>
 <!-- JQUERY link -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!--OWL CAROUSEL JS -->

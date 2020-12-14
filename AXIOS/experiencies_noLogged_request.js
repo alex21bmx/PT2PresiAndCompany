@@ -1,12 +1,7 @@
-document.getElementById("login").addEventListener("click",function(){      
-
-    document.getElementById("login").innerHTML=`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Validando`
-
     axios.get('./BD/api/api.php', {
         timeout:3000,
         params: {
-            user: document.getElementById("username1").value ,
-            pass: document.getElementById("password1").value
+            id: 2
         }
     })
     .then(function (respuesta) {
@@ -16,7 +11,14 @@ document.getElementById("login").addEventListener("click",function(){
             alert("ERROR, TE HAS EQUIVOCADO")
         }
         else{                            
-            alert("Logeado");
+            for (let index = 0; index < 3; index++) {
+                document.getElementsByClassName("fotoPost")[index].src = respuesta["data"]["viaje"+index]["imagen"];
+                
+                document.getElementsByClassName("titolPost")[index].innerHTML = respuesta["data"]["viaje"+index]["localizacion"];
+                
+                document.getElementsByClassName("dadesPost")[index].innerHTML = respuesta["data"]["viaje"+index]["id_usuario"]+" - "+respuesta["data"]["viaje"+index]["fecha_de_publicacion"];   
+                             
+            }
         }
         
         
@@ -24,8 +26,4 @@ document.getElementById("login").addEventListener("click",function(){
     .catch(function (error) {
         alert("El servidor ha tardado mucho en responder")
     })
-    .then(function () {
-        //se ejecuta siempre
-        document.getElementById("login").innerHTML="Log-In"
-    });         
-});
+    ;         
