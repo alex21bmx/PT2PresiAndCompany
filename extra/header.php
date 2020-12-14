@@ -34,18 +34,24 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aspernatur laborum rem sed laudantium excepturi veritatis voluptatum architecto, dolore quaerat totam officiis nisi animi accusantium alias inventore nulla atque debitis.</p>
         </div>
     </div>
+    <!--LOGIN POP-UP-->
     <div class="popup" id="popup-3">
         <div class="overlay"></div>
         <div class="content">
             <div class="close-btn" onclick="togglePopup(3)">&times;</div>
-            <h1>Log-in</h1>
+            <div id="logInHeader">
+                <img id="logoHeader" src="./src/presiLogoPopUp.png" alt="">
+            </div>
+            <hr></hr>
+            <div id="logInRegister">
+                <h1>Login or register</h1>
+            </div>
             <form>
                 <input type="text" name="" id="username1" placeholder="Usuari" required><br>
-                <input type="password" name="" id="password1" placeholder="Contrasenya" required><br>
-                <input type="button" value="Log-in" id="login">
+                <input type="password" name="" id="password1" placeholder="Contrasenya" required><br>                    <input type="button" value="Login" id="login">
             </form>
-            <button id="nouUsuari" onclick="togglePopup(4)">Nou usuari</button>
-            </div>
+            <button id="nouUsuari" onclick="togglePopup(4)">Register</button>
+        </div>
     </div>
     <div class="popup" id="popup-4">
         <div class="overlay"></div>

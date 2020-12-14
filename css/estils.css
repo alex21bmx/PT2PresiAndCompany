@@ -35,8 +35,8 @@ body {
     left:50%;
     transform:translate(-50%,-50%) scale(0);
     background:black;
-    width:500px;
-    height:250px;
+    width:550px;
+    height:350px;
     z-index:2;
     text-align:center;
     padding:20px;
@@ -495,4 +495,32 @@ figure.snip1477.hover figcaption {
   opacity: 1;
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
+}
+
+/*-----CSS LOGIN-----*/
+
+#logInRegister{
+  text-align: left;
+}
+
+#logInHeader{
+  align-self: start;
+  justify-content: left;
+ 
+}
+#logoHeader{
+  min-width: 10%;
+  max-width: 15%;
+  min-height: 10%;
+  max-height: 15%;
+}
+
+#username1{
+
+}
+
+#nouUsuari {
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 2px;
 }
