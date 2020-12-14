@@ -17,7 +17,7 @@ document.getElementById("login").addEventListener("click",function(){
             alert("ERROR, TE HAS EQUIVOCADO")
         }
         else{                            
-            alert("Logeado");
+            document.cookie = "username="+document.getElementById("username1").value;
         }
 
         console.log(respuesta);
@@ -25,7 +25,7 @@ document.getElementById("login").addEventListener("click",function(){
         
     })
     .catch(function (error) {
-        alert("El servidor ha tardado mucho en responder")
+        alert("El servidor ha tardado mucho en responder2")
     })
     .then(function () {
         //se ejecuta siempre

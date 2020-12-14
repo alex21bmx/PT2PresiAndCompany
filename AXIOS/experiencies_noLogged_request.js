@@ -24,6 +24,6 @@
         
     })
     .catch(function (error) {
-        alert("El servidor ha tardado mucho en responder")
+        alert("El servidor ha tardado mucho en responder3")
     })
     ;         

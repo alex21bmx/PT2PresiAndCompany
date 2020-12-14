@@ -8,14 +8,25 @@
         <img id="logo" src="./src/presiLogo.png" alt="">
     </div>
     <div id="botonsDivHeader">
+
+            <?php
+                if(isset($_COOKIE["username"])){
+                    echo "<h4>Logged as (".$_COOKIE["username"].")</h4>";
+                }
+            ?>
         
             <button class="headerBttn" onclick="togglePopup(1)"><img id="searchBttn" src="./src/buscar.jpg" alt=""></button>
         
         
             <button class="headerBttn" onclick="togglePopup(2)"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
         
-        
-            <button class="headerBttn" onclick="togglePopup(3)"><img id="logInBttn" src="./src/key.ico" alt=""></button>
+            <?php
+                if(isset($_COOKIE["username"])){
+                    echo "<h4>Logged as (".$_COOKIE["username"].")</h4>";
+                }else{
+                    echo '<button class="headerBttn" onclick="togglePopup(3)"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
+                }
+            ?>
         
     </div>
     <div class="popup" id="popup-1">

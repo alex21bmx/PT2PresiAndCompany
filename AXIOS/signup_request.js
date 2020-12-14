@@ -24,7 +24,7 @@ document.getElementById("signup").addEventListener("click",function(){
         
     })
     .catch(function (error) {
-        alert("El servidor ha tardado mucho en responder");
+        alert("El servidor ha tardado mucho en responder1");
     })
     .then(function () {
         //se ejecuta siempre
