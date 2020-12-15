@@ -61,6 +61,11 @@
             $response = array("status" => $datos);
             echo json_encode($response);
             break;
+
+        //INSERT DE EXPERIENCIA
+        case 6:
+
+            break;
     }
 
         

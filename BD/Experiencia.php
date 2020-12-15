@@ -38,5 +38,23 @@ class Experiencia extends DBAbstractModel {
         return $resultSet;
     }
 
+    public function selectExistsExperienciaByLocalizacionAndIdUsuario($localizacion="", $idUsuario=""){
+      $this->query = "SELECT EXISTS (SELECT * FROM usuarios WHERE username='$userName')";
+      $this->get_results_from_query();
+    }
+
+    public function insert($expData = array()){
+      $resultado = $this->selectExistsExperienciaByLocalizacionAndIdUsuario($expData["localizacion"], $expData["id_usuario"]);
+      foreach($resultado as $key => $value){
+        if ($value==0) {
+          $this->query="INSERT INTO usuarios (username, password, tipo_usuario)
+            VALUES ('$userName', '$pass', 'usuario')";
+          $this->execute_single_query();
+          return "ok";
+        }else
+          return "fail";
+      }
+    }
+
 }
 ?>

@@ -90,5 +90,6 @@ class Usuario extends DBAbstractModel {
       }
     }
   }
+  //
 
 ?>
