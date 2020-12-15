@@ -19,7 +19,7 @@
         <figure class="snip1477">
             <div class="title">
                 <div>
-                <h2>BENVINGUTS A VIATJES</h2>
+                <h2>WELCOME TO TRAVEL</h2>
                 <h4>INSPedralbes</h4>
                 </div>
             </div>
