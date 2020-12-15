@@ -30,7 +30,7 @@ class Experiencia extends DBAbstractModel {
     }
 
     public function selectExperienciasPrincipales(){
-        $this->query = "SELECT localizacion, imagen, id_usuario, fecha_de_publicacion FROM experiencias";
+        $this->query = "SELECT localizacion, imagen, id_usuario, fecha_de_publicacion FROM experiencias LIMIT 10";
         $this->get_results_from_query();
         for($i=0; $i<count($this->rows); $i++){
           $resultSet[] = $this->rows[$i];

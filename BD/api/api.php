@@ -75,6 +75,10 @@
             "fecha_de_publicacion" => $_REQUEST["fecha_de_publicacion"],
             "localizacion" => $_REQUEST["localizacion"]
             );
+
+            $datos = $Experiencia -> insert($array);
+            $response = array("status" => $datos);
+            echo json_encode($response);
             break;
 
         //SELECT DE TODAS LAS EXPERIENCIAS
