@@ -18,6 +18,7 @@ document.getElementById("login").addEventListener("click",function(){
         }
         else{                            
             document.cookie = "username="+document.getElementById("username1").value;
+            location.reload();
         }
 
         console.log(respuesta);

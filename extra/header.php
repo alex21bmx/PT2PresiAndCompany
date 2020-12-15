@@ -22,7 +22,7 @@
         
             <?php
                 if(isset($_COOKIE["username"])){
-                    echo "<h4>Logged as (".$_COOKIE["username"].")</h4>";
+                    echo '<button onClick="desLog()"><a >Tencar Sessió</a></button>';
                 }else{
                     echo '<button class="headerBttn" onclick="togglePopup(3)"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
                 }
