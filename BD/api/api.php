@@ -64,7 +64,41 @@
 
         //INSERT DE EXPERIENCIA
         case 6:
+            $array = array("id_experiencia" => $_REQUEST["id_experiencia"],
+            "texto" => $_REQUEST["texo"],
+            "imagen" => $_REQUEST["imagen"],
+            "categoria" => $_REQUEST["categoria"],
+            "latitud" => $_REQUEST["latitud"],
+            "longitud" => $_REQUEST["longitud"],
+            "estado" => $_REQUEST["estado"],
+            "id_usuario" => $_REQUEST["id_usuario"],
+            "fecha_de_publicacion" => $_REQUEST["fecha_de_publicacion"],
+            "localizacion" => $_REQUEST["localizacion"]
+            );
+            break;
 
+        //SELECT DE TODAS LAS EXPERIENCIAS
+        case 7:
+            $response = array();
+            $datos = $Experiencia -> select();
+            foreach($datos as $key => $value){
+                $response["viaje" . $key] = array("id_experiencia" => $value["id_experiencia"],
+                "texto" => $value["texto"],
+                "imagen" => $value["imagen"],
+                "categoria" => $value["categoria"],
+                "latitud" => $value["latitud"],
+                "longitud" => $value["longitud"],
+                "valoraciones_positivas" => $value["valoraciones_positivas"],
+                "valoraciones_negativas" => $value["valoraciones_negativas"],
+                "estado" => $value["estado"],
+                "id_usuario" => $value["id_usuario"],
+                "fecha_de_publicacion" => $value["fecha_de_publicacion"],
+                "localizacion" => $value["localizacion"],
+                "reportado" => $value["reportado"]
+                );      
+            }
+
+            echo json_encode($response);
             break;
     }
 
