@@ -25,13 +25,6 @@ class Usuario extends DBAbstractModel {
     }
   }
 
-
-
-  
-  function __toString() {
-    return "(" . $this->id . ", " . $this->username . ", " . $this->password . ", " . $this->tipo_usuario . ")";
-  }
-  
   //Hace un select para comprovar que el usuario que intenta registrarse no existe
   public function selectExistsUserByUserName($userName=""){
     if($userName!=""){
@@ -72,12 +65,17 @@ class Usuario extends DBAbstractModel {
     }
   }
   
-  public function update ($edituser = array()) {
-    //$tipo_usuario = new tipo_usuario(tipo_usuario::$userData["tipo_usuario"]);
-    foreach ($editUser as $property => $value)
-      $$property = $value;
-    $this->query = "UPDATE usuarios SET username='$username', password= '$password', tipo_usuario = '$tipo_usuario' WHERE id='$id'";
-    $this->execute_single_query($this->query);
+  public function update ($userName="", $pass="") {
+    if($userName!="" && $pass!=""){
+      $resultado = $this->selectExistsUserByUserName($userName);
+      foreach($resultado as $key => $value){
+        if ($value==1) {
+          $this->query = "UPDATE usuarios SET password= '$pass' WHERE username='$userName'";
+          $this->execute_single_query($this->query);
+          return "ok";
+        }else return "fail";
+      }
+    }
   }
   
   public function delete ($id="") {

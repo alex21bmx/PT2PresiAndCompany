@@ -8,6 +8,8 @@
     $Experiencia = new Experiencia();
 
     switch($_REQUEST['id']){
+
+        //SELECT DE UN USUARIO PARA EL LOGIN
         case 1:
             
             $resultado = $Usuario-> selectExistsUser($_REQUEST['user'], $_REQUEST['pass']);
@@ -23,7 +25,9 @@
             echo json_encode($response);
             break;
 
+        //SELECT PARA LAS EXPERIENCIAS SIN LOGEARSE
         case 2:
+
             $response = array();
             $datos = $Experiencia -> selectExperienciasPrincipales();
             foreach($datos as $key => $value){
@@ -34,10 +38,22 @@
             echo json_encode($response);
             break;
 
+        //INSERT PARA REGISTRAR UN USUARIO
         case 3: 
+
             $datos = $Usuario -> insert($_REQUEST['user'], $_REQUEST['pass']);
             $response = array("status" => $datos);
             echo json_encode($response);
             break;
-        }
+
+        //UPDATE PARA QUE EL USUARIO PUEDA HACER UN CAMBIO DE CONTRASEÑA
+        case 4: 
+            
+            $datos = $Usuario -> update($_REQUEST['user'], $_REQUEST['pass']);
+            $response = array("status" => $datos);
+            echo json_encode($response);
+            break;
+    }
+
+        
 ?>
