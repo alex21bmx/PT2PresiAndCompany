@@ -78,12 +78,17 @@ class Usuario extends DBAbstractModel {
     }
   }
   
-  public function delete ($id="") {
-    $this->query = "DELETE FROM usuarios WHERE id ='$id'";
-    $this->execute_single_query($this->query);
+  public function delete ($userName="") {
+    if($userNamer!=""){
+      $resultado = $this->selectExistsUserByUserName($userName);
+      foreach($resultado as $key => $value){
+        if ($value==1) {
+          $this->query = "DELETE FROM usuarios WHERE username ='$userName'";
+          $this->execute_single_query($this->query);
+          return "ok";
+        }else return "fail";
+      }
+    }
   }
- 
-    
-}
 
 ?>

@@ -53,6 +53,14 @@
             $response = array("status" => $datos);
             echo json_encode($response);
             break;
+
+        //DELETE PARA ELIMINAR UN USUARIO DE NUESTRA BBDD
+        case 5: 
+            
+            $datos = $Usuario -> delete($_REQUEST['user']);
+            $response = array("status" => $datos);
+            echo json_encode($response);
+            break;
     }
 
         
