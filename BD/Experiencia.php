@@ -40,24 +40,23 @@ class Experiencia extends DBAbstractModel {
     }
 
     public function selectExistsExperiencia($array = array()){
-      $texto = $expData["texto"];
-      $imagen = $expData["imagen"];
-      $categoria = $expData["categoria"];
-      $latitud = $expData["latitud"];
-      $longitud = $expData["longitud"];
-      $id_usuario = $expData["id_usuario"];
-      $fecha_de_publicacion = $expData["fecha_de_publicacion"];
-      $localizacion = $expData["localizacion"];
+      $texto = $array["texto"];
+      $imagen = $array["imagen"];
+      $categoria = $array["categoria"];
+      $latitud = $array["latitud"];
+      $longitud = $array["longitud"];
+      $id_usuario = $array["id_usuario"];
+      $fecha_de_publicacion = $array["fecha_de_publicacion"];
+      $localizacion = $array["localizacion"];
 
-      $this->query = "SELECT EXISTS (SELECT id_experiencia FROM experiencias WHERE localizacion='$localizacion' AND id_usuario='$idUsuario' AND texto='$texto' AND imagen='$imagen' AND categoria='$categoria' AND fecha_de_publicacion='$fecha_de_publicacion' AND longitud='$longitud' AND latitud='$latitud')";
+      $this->query = "SELECT EXISTS (SELECT * FROM experiencias WHERE localizacion='$localizacion' AND id_usuario='$id_usuario' AND texto='$texto' AND imagen='$imagen' AND categoria='$categoria' AND fecha_de_publicacion='$fecha_de_publicacion' AND longitud='$longitud' AND latitud='$latitud')";
       $this->get_results_from_query();
 
       return $this->rows[0];
     }
 
     public function insert($expData = array()){
-      $comprovacion = array("texto" => $expData["texto"], "imagen" => $expData["imagen"], "categoria" => $expData["categoria"], "latitud" => $expData["latitud"], "longitud" => $expData["longitud"], "localizacion" => $expData["localizacion"], "id_usuario" => $expData["id_usuario"], "fecha_de_publicacion" => $expData["fecha_de_publicacion"]);
-      $resultado = $this->selectExistsExperiencia($comprovacion);
+      $resultado = $this->selectExistsExperiencia($expData);
       foreach($resultado as $key => $value){
         if ($value==0) {
           $id_experiencia = $expData["id_experiencia"];
@@ -72,7 +71,7 @@ class Experiencia extends DBAbstractModel {
           $localizacion = $expData["localizacion"];
 
           $this->query="INSERT INTO experiencias (id_experiencia, texto, imagen, categoria, latitud, longitud, valoraciones_positivas, valoraciones_negativas, estado, id_usuario, fecha_de_publicacion, localizacion, reportado)
-            VALUES ('$id_experiencia', '$texto', '$imagen', '$categoria', '$latitud', '$longitud', 0, 0, '$estado', '$id_usuario', '$fecha_de_publicacion', '$localizacion', 0)";
+            VALUES ('$id_experiencia', '$texto', '$imagen', '$categoria', '$latitud', '$longitud', 0, 0, '$estado', '$id_usuario', '$fecha_de_publicacion', '$localizacion', '0')";
           $this->execute_single_query();
           
           return "ok";
@@ -81,7 +80,7 @@ class Experiencia extends DBAbstractModel {
     }
 
     public function selectExistsExperienciaByIdAndUsuario($idExp, $idUsu){
-      $this->query = "SELECT EXISTS (SELECT id_experiencia FROM experiencias WHERE id_experiencia='$idExp' AND id_usuario='$idUsu')";
+      $this->query = "SELECT EXISTS (SELECT * FROM experiencias WHERE id_experiencia='$idExp' AND id_usuario='$idUsu')";
       $this->get_results_from_query();
 
       return $this->rows[0];
@@ -120,6 +119,4 @@ class Experiencia extends DBAbstractModel {
       }
     }
   }
-
-}
 ?>

@@ -79,7 +79,7 @@ class Usuario extends DBAbstractModel {
   }
   
   public function delete ($userName="") {
-    if($userNamer!=""){
+    if($userName!=""){
       $resultado = $this->selectExistsUserByUserName($userName);
       foreach($resultado as $key => $value){
         if ($value==1) {

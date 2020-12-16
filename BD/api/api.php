@@ -9,7 +9,7 @@
 
     switch($_REQUEST['id']){
 
-        //SELECT DE UN USUARIO PARA EL LOGIN
+        //SELECT DE UN USUARIO PARA EL LOGIN :)
         case 1:
             
             $resultado = $Usuario-> selectExistsUser($_REQUEST['user'], $_REQUEST['pass']);
@@ -25,7 +25,7 @@
             echo json_encode($response);
             break;
 
-        //SELECT PARA LAS EXPERIENCIAS SIN LOGEARSE
+        //SELECT PARA LAS EXPERIENCIAS SIN LOGEARSE :)
         case 2:
 
             $response = array();
@@ -38,7 +38,7 @@
             echo json_encode($response);
             break;
 
-        //INSERT PARA REGISTRAR UN USUARIO
+        //INSERT PARA REGISTRAR UN USUARIO :)
         case 3: 
 
             $datos = $Usuario -> insert($_REQUEST['user'], $_REQUEST['pass']);
@@ -46,7 +46,7 @@
             echo json_encode($response);
             break;
 
-        //UPDATE PARA QUE EL USUARIO PUEDA HACER UN CAMBIO DE CONTRASEÑA
+        //UPDATE PARA QUE EL USUARIO PUEDA HACER UN CAMBIO DE CONTRASEÑA :)
         case 4: 
             
             $datos = $Usuario -> update($_REQUEST['user'], $_REQUEST['pass']);
@@ -54,7 +54,7 @@
             echo json_encode($response);
             break;
 
-        //DELETE PARA ELIMINAR UN USUARIO DE NUESTRA BBDD
+        //DELETE PARA ELIMINAR UN USUARIO DE NUESTRA BBDD :)
         case 5: 
             
             $datos = $Usuario -> delete($_REQUEST['user']);
@@ -62,10 +62,10 @@
             echo json_encode($response);
             break;
 
-        //INSERT DE EXPERIENCIA
+        //INSERT DE EXPERIENCIA :) LAS COORDENADAS CHOCAN PERO LO DEJAMOS EN NULL Y YA LO MIRAREMOS
         case 6:
             $array = array("id_experiencia" => $_REQUEST["id_experiencia"],
-            "texto" => $_REQUEST["texo"],
+            "texto" => $_REQUEST["texto"],
             "imagen" => $_REQUEST["imagen"],
             "categoria" => $_REQUEST["categoria"],
             "latitud" => $_REQUEST["latitud"],
