@@ -104,6 +104,30 @@
 
             echo json_encode($response);
             break;
+
+        //UPDATE DE UNA EXPERIENCIA EN CONCRETO
+        case 8:
+            $array = array("id_experiencia" => $_REQUEST["id_experiencia"],
+            "texto" => $_REQUEST["texo"],
+            "imagen" => $_REQUEST["imagen"],
+            "categoria" => $_REQUEST["categoria"],
+            "latitud" => $_REQUEST["latitud"],
+            "longitud" => $_REQUEST["longitud"],
+            "id_usuario" => $_REQUEST["id_usuario"],
+            "localizacion" => $_REQUEST["localizacion"]
+            );
+
+            $datos = $Experiencia -> update($array);
+            $response = array("status" => $datos);
+            echo json_encode($response);
+            break;
+
+        //DELETE DE UNA EXPERIENCIA EN CONCRETO
+        case 9:
+            $datos = $Experiencia -> delete($_REQUEST["id_experiencia"], $_REQUEST["id_usuario"]);
+            $response = array("status" => $datos);
+            echo json_encode($response); 
+            break;
     }
 
         
