@@ -79,9 +79,11 @@ class Experiencia extends DBAbstractModel {
       }
     }
 
-    public function selectExistsExperienciaByIdAndUsuario($idExp, $idUsu){
-      $this->query = "SELECT EXISTS (SELECT * FROM experiencias WHERE id_experiencia='$idExp' AND id_usuario='$idUsu')";
-      $this->get_results_from_query();
+    public function selectExistsExperienciaByIdAndUsuario($idExp="", $idUsu=""){
+      if($idExp!="" && $idUsu!=""){
+        $this->query = "SELECT EXISTS (SELECT * FROM experiencias WHERE id_experiencia='$idExp' AND id_usuario='$idUsu')";
+        $this->get_results_from_query();
+      }
 
       return $this->rows[0];
 
@@ -111,7 +113,7 @@ class Experiencia extends DBAbstractModel {
         $resultado = $this->selectExistsExperienciaByIdAndUsuario($idExperiencia, $idUsuario);
         foreach($resultado as $key => $value){
           if ($value==1) {
-            $this->query = "DELETE FROM experiencias WHERE id_experiencias ='$idExperiencia' AND id_usuario='$idUsuario'";
+            $this->query = "DELETE FROM experiencias WHERE id_experiencia ='$idExperiencia' AND id_usuario='$idUsuario'";
             $this->execute_single_query($this->query);
             return "ok";
           }else return "fail";

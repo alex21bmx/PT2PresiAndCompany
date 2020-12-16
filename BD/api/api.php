@@ -81,7 +81,7 @@
             echo json_encode($response);
             break;
 
-        //SELECT DE TODAS LAS EXPERIENCIAS
+        //SELECT DE TODAS LAS EXPERIENCIAS :)
         case 7:
             $response = array();
             $datos = $Experiencia -> select();
@@ -105,10 +105,10 @@
             echo json_encode($response);
             break;
 
-        //UPDATE DE UNA EXPERIENCIA EN CONCRETO
+        //UPDATE DE UNA EXPERIENCIA EN CONCRETO :)
         case 8:
             $array = array("id_experiencia" => $_REQUEST["id_experiencia"],
-            "texto" => $_REQUEST["texo"],
+            "texto" => $_REQUEST["texto"],
             "imagen" => $_REQUEST["imagen"],
             "categoria" => $_REQUEST["categoria"],
             "latitud" => $_REQUEST["latitud"],
