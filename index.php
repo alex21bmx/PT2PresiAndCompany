@@ -24,9 +24,15 @@
                 </div>
             </div>
             <figcaption>
-                <p>Esto es una puta mierda de presentacion asquerosa impuesta</p>
+                <p>We have to confess that today, although PresiBlog is our job, it is also an incredible life experience since it has allowed us to relive the journey through the memories and images that our users make.</p>
             </figcaption>
             <a href="#"></a>
+        </div>
+        <div class="recentPosts">
+            <div class="text-box">
+                <h1>RECENT POSTS</h1>
+            </div>
+                <p>#bePartOfUs<span>:)</span></p>
         </div>
         <div id="experiencies">
             <?php
@@ -42,6 +48,13 @@
       <?php require_once("extra/footer.php"); ?>
     </footer>
 </body>
+<?php
+    if(isset($_COOKIE["username"])){
+        echo "Logged";
+    }else{
+        echo '<script src="AXIOS/experiencies_noLogged_request.js"></script>';
+    }
+?>
 <!-- JQUERY link -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!--OWL CAROUSEL JS -->

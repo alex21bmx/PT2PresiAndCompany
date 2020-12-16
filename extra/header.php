@@ -2,7 +2,7 @@
 <script src="./js/header.js"></script>
 <div id="header">
     <div id="fraseHeader">
-        <p>Sé capaz de hacer algo cuyas consecuencias sean para siempre. ¡Bienvenido a este nuevo día!</p>
+        <p>Never let your memories be greater than your dreams</p>
     </div>
     <div id="titolHeader">
         <img id="logo" src="./src/presiLogo.png" alt="">
@@ -22,7 +22,7 @@
         
             <?php
                 if(isset($_COOKIE["username"])){
-                    echo '<button onClick="desLog()"><a >Tencar Sessió</a></button>';
+                    echo "<h4>Logged as (".$_COOKIE["username"].")</h4>";
                 }else{
                     echo '<button class="headerBttn" onclick="togglePopup(3)"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
                 }
@@ -39,10 +39,49 @@
     </div>
     <div class="popup" id="popup-2">
         <div class="overlay"></div>
-        <div class="content">
+        <div class="contentStaff">
             <div class="close-btn" onclick="togglePopup(2)">&times;</div>
             <h1>Staff</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aspernatur laborum rem sed laudantium excepturi veritatis voluptatum architecto, dolore quaerat totam officiis nisi animi accusantium alias inventore nulla atque debitis.</p>
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                    <img src="./src/alex.PNG" alt="" style="width:100%">
+                    <div class="container">
+                        <h2>Álex Pérez Fernández</h2>
+                        <p class="title">LOL player</p>
+                        <p>Fantastic person, good LOL player.</p>
+                        <p>a18aleperfer@inspedralbes.cat</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                    <img src="./src/sergio.PNG" alt="" style="width:100%">
+                    <div class="container">
+                        <h2>Sergio Grima Bravo</h2>
+                        <p class="title">Está empezando el gym</p>
+                        <p>Lift the dumbbells like nothing.</p>
+                        <p>a18sergribra@inspedralbes.cat</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="card">
+                    <img src="./src/arnau.PNG" alt="" style="width:100%">
+                    <div class="container">
+                        <h2>Arnau Fernández Jerez</h2>
+                        <p class="title">The President</p>
+                        <p>Their presence wanders from capitalism.</p>
+                        <p>a18arnferjer@inspedralbes.cat</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!--LOGIN POP-UP-->
