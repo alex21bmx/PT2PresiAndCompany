@@ -87,34 +87,74 @@
     <!--LOGIN POP-UP-->
     <div class="popup" id="popup-3">
         <div class="overlay"></div>
-        <div class="content">
+        <div class="contentLogin">
             <div class="close-btn" onclick="togglePopup(3)">&times;</div>
-            <div id="logInHeader">
-                <img id="logoHeader" src="./src/presiLogoPopUp.png" alt="">
-            </div>
-            <hr></hr>
-            <div id="logInRegister">
-                <h1>Login or register</h1>
-            </div>
-            <form>
-                <input type="text" name="" id="username1" placeholder="Usuari" required><br>
-                <input type="password" name="" id="password1" placeholder="Contrasenya" required><br>                    <input type="button" value="Login" id="login">
-            </form>
-            <button id="nouUsuari" onclick="togglePopup(4)">Register</button>
-        </div>
-    </div>
-    <div class="popup" id="popup-4">
-        <div class="overlay"></div>
-        <div class="content">
-            <div class="close-btn" onclick="togglePopup(5)">&times;</div>
-            <h1>Sign-up</h1>
-            <form>
-                <input type="text" id="newUsername" name="newUsername" placeholder="Usuari" required><br>
-                <input type="password" id="newPassword" name="newPassword" placeholder="Contrasenya" required><br>
-                <input type="button" value="signup" id="signup">
-            </form>
+            <div class = "containerSignInSignUp"  id="containerSignInSignUp">
+            <!--PARTE CREAR USUARIO-->
+                <div class ="form-container crearCuentaContainer">
+                    <form action="#">
+                        <h1>Create Account</h1>
+                        <div class = "social-container">
+                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <span>or use your user for registration</span>
+                        <input type="text" placeholder="User"/>
+                        <input type="password" placeholder="Password"/>
+
+                        <button>Sign Up</button>
+                    </form>
+                </div> 
+            <!--PARTE INICIAR SESION-->
+                <div class="form-container iniciarSesionContainer">
+                    <form action="#">
+                        <h1>Sign in</h1>
+                        <div class = "social-container">
+                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <span>or use your account</span>
+                        <input type="text" placeholder="User"/>
+                        <input type="password" placeholder="Password"/>
+                        <a href="#">Forgot your password?Pues te jodes</a>
+                        <button>Sign in</button>
+                    </form>
+                </div>
+            <!--CREO EL CONTAINER OVERLAY-->c
+                <div class="overlay-container-log">
+                    <div class="overlay">
+                        <!--PARTE IZQUIERDA DEL OVERLAY, parte login-->
+                        <div class="overlay-panel overlay-left">
+                            <h1>Welcome Back!</h1>
+                            <p>To keep connected with us please login with your personal info</p>
+                            <button class="fantasma" id="signIn">Sing In</button>
+                        </div>
+                         <!--PARTE DERECHA DEL OVERLAY, parte registrar-->
+                         <div class="overlay-panel overlay-left">
+                            <h1>Hello, new MaloMalisimo!</h1>
+                            <p>Enter your personal details for join us, with the presi</p>
+                            <button class="fantasma" id="signUp">Sing Up</button>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 </div>
 <script src="./AXIOS/login_request.js"></script>
 <script src="./AXIOS/signup_request.js"></script>
+<script>
+    /*JAVASCRIPT LOGIN-REGISTER*/
+    const signUpBttn = document.getElementById('signUp');
+    const signInBttn = document.getElementById('signIn');
+    const containerSignInSignUp = document.getElementById('containerSignInSignUp');
+
+    signUpBttn.addEventListener('click', () => {
+        containerSignInSignUp.classList.add("right-panel-active");
+    });
+
+    signInBttn.addEventListener('click', () => {
+        containerSignInSignUp.classList.remove("right-panel-active");
+    });
+</script>
