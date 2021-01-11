@@ -47,9 +47,9 @@
                     <div class="card">
                     <img src="./src/alex.PNG" alt="" style="width:100%">
                     <div class="container">
-                        <h2>Álex Pérez Fernández</h2>
-                        <p class="title">LOL player</p>
-                        <p>Fantastic person, good LOL player.</p>
+                        <h2>Àlex Pérez Fernández</h2>
+                        <p class="title">The Humble</p>
+                        <p>Fantastic person, code machine.</p>
                         <p>a18aleperfer@inspedralbes.cat</p>
                         <p><button class="button">Contact</button></p>
                     </div>
