@@ -37,9 +37,9 @@
         <div id="experiencies">
             <?php
                 if(isset($_COOKIE["username"])){
-                    echo "Logged";
+                    require_once("experienciesLogged.php");
                 }else{
-                    require_once("experiencies.php");
+                    require_once("experienciesNoLogged.php");
                 }
             ?>
         </div>

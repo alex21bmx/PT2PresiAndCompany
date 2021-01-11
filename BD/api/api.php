@@ -86,20 +86,22 @@
             $response = array();
             $datos = $Experiencia -> select();
             foreach($datos as $key => $value){
-                $response["viaje" . $key] = array("id_experiencia" => $value["id_experiencia"],
-                "texto" => $value["texto"],
-                "imagen" => $value["imagen"],
-                "categoria" => $value["categoria"],
-                "latitud" => $value["latitud"],
-                "longitud" => $value["longitud"],
-                "valoraciones_positivas" => $value["valoraciones_positivas"],
-                "valoraciones_negativas" => $value["valoraciones_negativas"],
-                "estado" => $value["estado"],
-                "id_usuario" => $value["id_usuario"],
-                "fecha_de_publicacion" => $value["fecha_de_publicacion"],
-                "localizacion" => $value["localizacion"],
-                "reportado" => $value["reportado"]
-                );      
+                if($key<$_REQUEST['size']){
+                    $response[$key] = array("id_experiencia" => $value["id_experiencia"],
+                    "texto" => $value["texto"],
+                    "imagen" => $value["imagen"],
+                    "categoria" => $value["categoria"],
+                    "latitud" => $value["latitud"],
+                    "longitud" => $value["longitud"],
+                    "valoraciones_positivas" => $value["valoraciones_positivas"],
+                    "valoraciones_negativas" => $value["valoraciones_negativas"],
+                    "estado" => $value["estado"],
+                    "id_usuario" => $value["id_usuario"],
+                    "fecha_de_publicacion" => $value["fecha_de_publicacion"],
+                    "localizacion" => $value["localizacion"],
+                    "reportado" => $value["reportado"]
+                    );   
+                }     
             }
 
             echo json_encode($response);

@@ -278,6 +278,15 @@ font-family: 'Raleway', Arial, sans-serif;
   height: 100px;
 }
 
+/*-----EXPERIENCIES LOGGED-----*/
+
+#grid-container {
+  display: grid;
+  text-align: center;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto auto;
+}
+
 /*-----ÚLTIMES ENTRADES-----*/
 
 #ultimesEntrades{
