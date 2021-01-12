@@ -8,12 +8,6 @@
         <img id="logo" src="./src/presiLogo.png" alt="">
     </div>
     <div id="botonsDivHeader">
-
-            <?php
-                if(isset($_COOKIE["username"])){
-                    echo "<h4>Logged as (".$_COOKIE["username"].")</h4>";
-                }
-            ?>
         
             <button class="headerBttn" onclick="togglePopup(1)"><img id="searchBttn" src="./src/buscar.jpg" alt=""></button>
         
@@ -22,7 +16,18 @@
         
             <?php
                 if(isset($_COOKIE["username"])){
-                    echo "<h4>Logged as (".$_COOKIE["username"].")</h4>";
+                    echo "<nav>
+                        <ul>
+                            <li><a href='#'>(".$_COOKIE["username"].")</a>
+                            <div>
+                                <ul>
+                                    <li class='titulo'><a href=''>Crear experiencia</a></li>
+                                    <li class='titulo'><a href=''>Tus experiencias</a></li>
+                                </ul>
+                            </div>
+                            </li>
+                        </ul>
+                    </nav>";
                 }else{
                     echo '<button class="headerBttn" onclick="togglePopup(3)"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
                 }
