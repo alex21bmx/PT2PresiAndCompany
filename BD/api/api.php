@@ -87,6 +87,7 @@
             $datos = $Experiencia -> select();
             foreach($datos as $key => $value){
                 if($key<$_REQUEST['size']){
+                    $idUsuario = $Usuario -> selectUserName($value["id_usuario"]);
                     $response[$key] = array("id_experiencia" => $value["id_experiencia"],
                     "texto" => $value["texto"],
                     "imagen" => $value["imagen"],
@@ -96,7 +97,7 @@
                     "valoraciones_positivas" => $value["valoraciones_positivas"],
                     "valoraciones_negativas" => $value["valoraciones_negativas"],
                     "estado" => $value["estado"],
-                    "id_usuario" => $value["id_usuario"],
+                    "id_usuario" => $idUsuario["username"],
                     "fecha_de_publicacion" => $value["fecha_de_publicacion"],
                     "localizacion" => $value["localizacion"],
                     "reportado" => $value["reportado"]
