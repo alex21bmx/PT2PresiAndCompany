@@ -1,4 +1,5 @@
-window.onload = function() {
+document.getElementById("cargamas").addEventListener("click",function(){
+    document.getElementById("numero").value = parseInt(document.getElementById("numero").value)+9;
     axios.get('./BD/api/api.php', {
         timeout:4000,
         params: {
@@ -25,6 +26,7 @@ window.onload = function() {
                     '<h4 class="usuarioYfecha">'+respuesta.data[index]["fecha_de_publicacion"]+' - '+'*usuario*'+'</h4>'+
                 '</div>';
             }
+            alert(document.getElementById("numero").value);
             document.getElementById("grid-container").innerHTML = cadena;   
         }
         
@@ -32,4 +34,4 @@ window.onload = function() {
     .catch(function (error) {
         alert("El servidor ha tardado mucho en responder2")
     });         
-  };
+});
