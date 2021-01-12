@@ -27,16 +27,21 @@
                     echo '<button class="headerBttn" onclick="togglePopup(3)"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
                 }
             ?>
-        
+    <!--SEARCH POP-UP--> 
     </div>
     <div class="popup" id="popup-1">
         <div class="overlay"></div>
         <div class="content">
             <div class="close-btn" onclick="togglePopup(1)">&times;</div>
-            <h1>Search</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aspernatur laborum rem sed laudantium excepturi veritatis voluptatum architecto, dolore quaerat totam officiis nisi animi accusantium alias inventore nulla atque debitis.</p>
+            <div class="search-container">
+                <form action="/action_page.php"> <!--Aquí poner el php o js que haga la accion de buscar-->
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+    </div>
         </div>
     </div>
+    <!--STAFF POP-UP-->
     <div class="popup" id="popup-2">
         <div class="overlay"></div>
         <div class="contentStaff">
@@ -61,8 +66,8 @@
                     <img src="./src/sergio.PNG" alt="" style="width:100%">
                     <div class="container">
                         <h2>Sergio Grima Bravo</h2>
-                        <p class="title">Está empezando el gym</p>
-                        <p>Lift the dumbbells like nothing.</p>
+                        <p class="title">The Rock</p>
+                        <p>Lift the dumbbells like nothing. He's terrible.</p>
                         <p>a18sergribra@inspedralbes.cat</p>
                         <p><button class="button">Contact</button></p>
                     </div>
@@ -98,7 +103,8 @@
             </div>
             <form>
                 <input type="text" name="" id="username1" placeholder="Usuari" required><br>
-                <input type="password" name="" id="password1" placeholder="Contrasenya" required><br>                    <input type="button" value="Login" id="login">
+                <input type="password" name="" id="password1" placeholder="Contrasenya" required><br>                    
+                <input type="button" value="Login" id="login">
             </form>
             <button id="nouUsuari" onclick="togglePopup(4)">Register</button>
         </div>

@@ -614,3 +614,24 @@ width: 100%;
 .button:hover {
 background-color: #555;
 }
+
+/*CSS SEARCH*/
+
+.popup .search-container{
+  float: center;
+}
+
+.popup .search-container button{
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.popup .search-container button{
+  background: #ccc;
+}
