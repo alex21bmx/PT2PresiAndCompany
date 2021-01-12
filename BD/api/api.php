@@ -86,23 +86,45 @@
             $response = array();
             $datos = $Experiencia -> select();
             foreach($datos as $key => $value){
-                if($key<$_REQUEST['size']){
-                    $idUsuario = $Usuario -> selectUserName($value["id_usuario"]);
-                    $response[$key] = array("id_experiencia" => $value["id_experiencia"],
-                    "texto" => $value["texto"],
-                    "imagen" => $value["imagen"],
-                    "categoria" => $value["categoria"],
-                    "latitud" => $value["latitud"],
-                    "longitud" => $value["longitud"],
-                    "valoraciones_positivas" => $value["valoraciones_positivas"],
-                    "valoraciones_negativas" => $value["valoraciones_negativas"],
-                    "estado" => $value["estado"],
-                    "id_usuario" => $idUsuario["username"],
-                    "fecha_de_publicacion" => $value["fecha_de_publicacion"],
-                    "localizacion" => $value["localizacion"],
-                    "reportado" => $value["reportado"]
-                    );   
-                }     
+                if($_REQUEST['size']==18){
+                    if($key<18){
+                        $idUsuario = $Usuario -> selectUserName($value["id_usuario"]);
+                        $response[$key] = array("id_experiencia" => $value["id_experiencia"],
+                        "texto" => $value["texto"],
+                        "imagen" => $value["imagen"],
+                        "categoria" => $value["categoria"],
+                        "latitud" => $value["latitud"],
+                        "longitud" => $value["longitud"],
+                        "valoraciones_positivas" => $value["valoraciones_positivas"],
+                        "valoraciones_negativas" => $value["valoraciones_negativas"],
+                        "estado" => $value["estado"],
+                        "id_usuario" => $idUsuario["username"],
+                        "fecha_de_publicacion" => $value["fecha_de_publicacion"],
+                        "localizacion" => $value["localizacion"],
+                        "reportado" => $value["reportado"]
+                        );   
+                    }
+                }else{
+                    if($key>=($_REQUEST['size']-9) && $key<$_REQUEST['size']){
+                        $idUsuario = $Usuario -> selectUserName($value["id_usuario"]);
+                        $response[$key] = array("id_experiencia" => $value["id_experiencia"],
+                        "texto" => $value["texto"],
+                        "imagen" => $value["imagen"],
+                        "categoria" => $value["categoria"],
+                        "latitud" => $value["latitud"],
+                        "longitud" => $value["longitud"],
+                        "valoraciones_positivas" => $value["valoraciones_positivas"],
+                        "valoraciones_negativas" => $value["valoraciones_negativas"],
+                        "estado" => $value["estado"],
+                        "id_usuario" => $idUsuario["username"],
+                        "fecha_de_publicacion" => $value["fecha_de_publicacion"],
+                        "localizacion" => $value["localizacion"],
+                        "reportado" => $value["reportado"]
+                        );  
+                    }else if($key<$_REQUEST['size']){
+                        $response[$key] = array();
+                    }
+                }   
             }
 
             echo json_encode($response);

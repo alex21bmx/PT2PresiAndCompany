@@ -12,7 +12,6 @@ window.onload = function() {
             alert("ERROR, TE HAS EQUIVOCADO");
         }
         else{  
-            console.log(respuesta);
             let cadena= "";
             for (let index = 0; index < respuesta.data.length; index++) {
                 cadena+=
@@ -22,9 +21,10 @@ window.onload = function() {
                         '<h4 class="localizacion">'+respuesta.data[index]["localizacion"]+'</h4>'+
                         '<h4 class="coordenadas">'+respuesta.data[index]["latitud"]+'-'+respuesta.data[index]["longitud"]+'</h4>'+ 
                     '</div>'+
-                    '<h4 class="usuarioYfecha">'+respuesta.data[index]["fecha_de_publicacion"]+' - '+'*usuario*'+'</h4>'+
+                    '<h4 class="usuarioYfecha">'+respuesta.data[index]["fecha_de_publicacion"]+' - '+respuesta.data[index]["id_usuario"]+'</h4>'+
                 '</div>';
             }
+            localStorage.setItem('cadena',cadena);
             document.getElementById("grid-container").innerHTML = cadena;   
         }
         

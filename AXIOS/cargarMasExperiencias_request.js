@@ -12,10 +12,9 @@ document.getElementById("cargamas").addEventListener("click",function(){
         if (respuesta.data.status=="fail"){
             alert("ERROR, TE HAS EQUIVOCADO");
         }
-        else{  
-            console.log(respuesta);
-            let cadena= "";
-            for (let index = 0; index < respuesta.data.length; index++) {
+        else{
+            let cadena= localStorage.getItem('cadena');
+            for (let index = parseInt(document.getElementById("numero").value)-9; index < respuesta.data.length; index++) {
                 cadena+=
                 '<div class="experienciaOutter"'+
                     '<h4 class="categoriaExperiencia">'+respuesta.data[index]["categoria"]+'</h4>'+
@@ -23,10 +22,10 @@ document.getElementById("cargamas").addEventListener("click",function(){
                         '<h4 class="localizacion">'+respuesta.data[index]["localizacion"]+'</h4>'+
                         '<h4 class="coordenadas">'+respuesta.data[index]["latitud"]+'-'+respuesta.data[index]["longitud"]+'</h4>'+ 
                     '</div>'+
-                    '<h4 class="usuarioYfecha">'+respuesta.data[index]["fecha_de_publicacion"]+' - '+'*usuario*'+'</h4>'+
+                    '<h4 class="usuarioYfecha">'+respuesta.data[index]["fecha_de_publicacion"]+' - '+respuesta.data[index]["id_usuario"]+'</h4>'+
                 '</div>';
             }
-            alert(document.getElementById("numero").value);
+            localStorage.setItem('cadena',cadena);
             document.getElementById("grid-container").innerHTML = cadena;   
         }
         
