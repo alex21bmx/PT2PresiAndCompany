@@ -638,3 +638,26 @@ background-color: #555;
 
 /*CSS EXPERIENCIAS_USUARIO*/
 
+.experienciaOutter{
+  text-transform: capitalize;
+  color: white;
+  margin: 1px;
+  border: 1px solid #777;
+  height: 500px;
+}
+
+.experienciaInner{
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.categoriaExperiencia{
+  padding: 5px;
+  text-align: center;
+}
+.desc{
+  padding: 5px;
+  text-align: left;
+}
+

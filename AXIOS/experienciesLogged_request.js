@@ -18,10 +18,10 @@ window.onload = function() {
                 '<div class="experienciaOutter"'+
                     '<h4 class="categoriaExperiencia">'+respuesta.data[index]["categoria"]+'</h4>'+
                     '<div class="experienciaInner" style="background-image: url('+respuesta.data[index]["imagen"]+');>'+
-                        '<h4 class="localizacion">'+respuesta.data[index]["localizacion"]+'</h4>'+
+                        '<p class="titolPost">'.respuesta.data[index]["localizacion"]+'</p>'+
                         '<h4 class="coordenadas">'+respuesta.data[index]["latitud"]+'-'+respuesta.data[index]["longitud"]+'</h4>'+ 
                     '</div>'+
-                    '<div class="desc">'+respuesta.data[index]["fecha_de_publicacion"]+' - '+respuesta.data[index]["id_usuario"]+'</div>'+
+                    '<h4 class="desc">'+respuesta.data[index]["fecha_de_publicacion"]+' ↠ '+respuesta.data[index]["id_usuario"]+'</h4>'+
                 '</div>';
             }
             localStorage.setItem('cadena',cadena);
