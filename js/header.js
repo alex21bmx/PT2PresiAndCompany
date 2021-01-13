@@ -16,10 +16,15 @@ function togglePopup(num){
         case 5:
             document.getElementById("popup-4").classList.toggle("active");
             break;
+        case 6:
+            document.getElementById("popup-5").classList.toggle("active");
+            break;
 
     }
 }
-function desLog(){
-    document.cookie = "username= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
-    location.reload();
+
+function cerrarSesion(valor){
+    document.cookie = "username=" + valor + "; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    window.location.reload();
+    alert("Sesión cerrada");
 }
