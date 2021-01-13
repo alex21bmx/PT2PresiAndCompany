@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="AXIOS/Like_request.js"></script>
+    <script src="js/like.js"></script>
 </head>
 <body>
     <header>
@@ -30,7 +33,13 @@
         </div>
         <div class="recentPosts">
             <div class="text-box">
-                <h1>RECENT POSTS</h1>
+                <?php
+                    if(isset($_COOKIE["username"])){
+                        echo '<h1>POSTS</h1>';
+                    }else{
+                        echo '<h1>RECENT POSTS</h1>';
+                    }
+                ?>
             </div>
                 <p>#bePartOfUs<span>:)</span></p>
         </div>

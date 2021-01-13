@@ -2,6 +2,10 @@ html {
   height: 100%;
   font-family: 'Raleway', Arial, sans-serif;
 }
+@font-face{
+  font-family:Open-sans;
+  src: url("../src/OpenSans.ttf");
+}
 
 body {
   background-color: black;
@@ -276,15 +280,6 @@ font-family: 'Raleway', Arial, sans-serif;
 #fotoExperiencia{
   width: 300px;
   height: 100px;
-}
-
-/*-----EXPERIENCIES LOGGED-----*/
-
-#grid-container {
-  display: grid;
-  text-align: center;
-  grid-column-gap: 50px;
-  grid-template-columns: auto auto auto;
 }
 
 /*-----ÚLTIMES ENTRADES-----*/
@@ -638,26 +633,141 @@ background-color: #555;
 
 /*CSS EXPERIENCIAS_USUARIO*/
 
+#grid-container {
+  padding-left: 100px;
+  padding-right: 100px;
+  display: grid;
+  text-align: center;
+  grid-column-gap: 75px;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap: 100px;
+  padding-bottom: 100px;
+}
+
 .experienciaOutter{
   text-transform: capitalize;
   color: white;
   margin: 1px;
-  border: 1px solid #777;
   height: 500px;
+  width: auto;
 }
 
 .experienciaInner{
+  position: absolute;
   background-size: cover;
-  height: 100%;
+  border-radius: 0px 0px 40px 40px;
+  height: 465px;
   width: 100%;
+  bottom: 0;
+}
+
+.localizacion{
+  position: absolute;
+  font-size: 35px;
+  left: 20px;
+  bottom: 40px;
+}
+.coordenadas{
+  position: absolute;
+  font-size: 11px;
+  right: 20px;
+  bottom: 30px;
+}
+
+.experienciaMiddle{
+  
+  border-radius: 40px;
+  height: 500px;
+  width: auto;
+  position: relative;
+  -webkit-box-shadow: 0 0 5px #fff;
+        box-shadow: 0 0 5px #fff;
+}
+.experienciaMiddle:hover {
+  -webkit-box-shadow: 0 0 10px #fff;
+        box-shadow: 0 0 10px #fff;
+}
+
+#cargamas{
+  float: right;
+  border-radius: 30px;
+  margin-right: 200px;
+  margin-bottom: 10px;
+  height: 30px;
+  width: 200px;
+  font-size: 15px;
+  font-family: Open-sans;
+  background-color: white;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0 0 5px #fff;
+        box-shadow: 0 0 5px #fff;
+}
+#cargamas:hover{
+  -webkit-box-shadow: 0 0 10px #fff;
+        box-shadow: 0 0 10px #fff;
 }
 
 .categoriaExperiencia{
-  padding: 5px;
+  margin: 0;
+  padding: 10px;
   text-align: center;
 }
-.desc{
+.usuarioYfecha{
   padding: 5px;
+  padding-left: 35px;
   text-align: left;
+  font-size: 12px;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  border-radius: 50%;
+  border: 6px solid black;
+  border-color: black transparent black transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.likecontent{
+  position: relative;
+}
+.heart {
+  position: absolute;
+  bottom: 5px;
+  right: 35px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-image:url( 'https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
+  background-position: left;
+  background-repeat:no-repeat;
+  background-size:2900%;
 }
 
+.heart:hover {
+  background-position:right;
+}
+
+.is_animating {
+  animation: heart-burst .8s steps(28) 1;
+}
+
+@keyframes heart-burst {
+  from {background-position:left;}
+  to { background-position:right;}
+}

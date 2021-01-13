@@ -3,9 +3,11 @@
     header("Content-Type: text/html; charset-utf-8");
     require_once('../Usuario.php');
     require_once('../Experiencia.php');
+    require_once('../ValoracionesUsuario.php');
 
     $Usuario = new Usuario();
     $Experiencia = new Experiencia();
+    $ValoracionesUsuario = new ValoracionesUsuario();
 
     switch($_REQUEST['id']){
 
@@ -16,7 +18,7 @@
             foreach($resultado as $key => $value){
                 if($value==1){
                     $datos = $Usuario->selectUser($_REQUEST['user'], $_REQUEST['pass']);
-                    $response = array("status" => "ok", "nombre" =>$datos["username"], "tipo_usuario" => $datos["tipo_usuario"]);
+                    $response = array("status" => "ok", "nombre" =>$datos["username"],"id" =>$datos["id"], "tipo_usuario" => $datos["tipo_usuario"]);
                 }else{
                     $response = array("status" => "fail");
                 }
@@ -86,37 +88,39 @@
             $response = array();
             $datos = $Experiencia -> select();
             foreach($datos as $key => $value){
-                if($_REQUEST['size']==18){
-                    if($key<18){
+                if($_REQUEST['size']==8){
+                    if($key<8){
                         $idUsuario = $Usuario -> selectUserName($value["id_usuario"]);
+                        $valoraciones = $ValoracionesUsuario -> selectValoraciones($value["id_experiencia"]);
                         $response[$key] = array("id_experiencia" => $value["id_experiencia"],
                         "texto" => $value["texto"],
                         "imagen" => $value["imagen"],
                         "categoria" => $value["categoria"],
                         "latitud" => $value["latitud"],
                         "longitud" => $value["longitud"],
-                        "valoraciones_positivas" => $value["valoraciones_positivas"],
-                        "valoraciones_negativas" => $value["valoraciones_negativas"],
+                        "valoraciones" => $valoraciones,
                         "estado" => $value["estado"],
-                        "id_usuario" => $idUsuario["username"],
+                        "usuario" => $idUsuario["username"],
+                        "id_usuario" => $value["id_usuario"],
                         "fecha_de_publicacion" => $value["fecha_de_publicacion"],
                         "localizacion" => $value["localizacion"],
                         "reportado" => $value["reportado"]
                         );   
                     }
                 }else{
-                    if($key>=($_REQUEST['size']-9) && $key<$_REQUEST['size']){
+                    if($key>=($_REQUEST['size']-8) && $key<$_REQUEST['size']){
                         $idUsuario = $Usuario -> selectUserName($value["id_usuario"]);
+                        $valoraciones = $ValoracionesUsuario -> selectValoraciones($value["id_experiencia"]);
                         $response[$key] = array("id_experiencia" => $value["id_experiencia"],
                         "texto" => $value["texto"],
                         "imagen" => $value["imagen"],
                         "categoria" => $value["categoria"],
                         "latitud" => $value["latitud"],
                         "longitud" => $value["longitud"],
-                        "valoraciones_positivas" => $value["valoraciones_positivas"],
-                        "valoraciones_negativas" => $value["valoraciones_negativas"],
+                        "valoraciones" => $valoraciones,
                         "estado" => $value["estado"],
-                        "id_usuario" => $idUsuario["username"],
+                        "usuario" => $idUsuario["username"],
+                        "id_usuario" => $value["id_usuario"],
                         "fecha_de_publicacion" => $value["fecha_de_publicacion"],
                         "localizacion" => $value["localizacion"],
                         "reportado" => $value["reportado"]
@@ -152,6 +156,37 @@
             $datos = $Experiencia -> delete($_REQUEST["id_experiencia"], $_REQUEST["id_usuario"]);
             $response = array("status" => $datos);
             echo json_encode($response); 
+            break;
+        
+        //CREAR LIKE
+        case 10:
+            $array = array("id_experiencia" => $_REQUEST["idexp"],
+            "id_usuario" => $_REQUEST["iduser"]
+            );
+
+            $datos = $ValoracionesUsuario -> insert($array);
+            $response = array("status" => $datos);
+            echo json_encode($response);
+            break;
+
+        //BORRAR LIKE
+        case 11:
+            $datos = $ValoracionesUsuario -> delete($_REQUEST["idexp"], $_REQUEST["iduser"]);
+            $response = array("status" => $datos);
+            echo json_encode($response); 
+            break;
+        
+        //LIKED?
+        case 12:
+            $resultado = $ValoracionesUsuario-> selectExistsValoracion($_REQUEST['idexp'], $_REQUEST['iduser']);
+            foreach($resultado as $key => $value){
+                if($value==1){
+                    $response = array("status" => "ok");
+                }else{
+                    $response = array("status" => "nope");
+                }
+            }
+            echo json_encode($response);
             break;
     }
 
