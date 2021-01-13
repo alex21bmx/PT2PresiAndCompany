@@ -1,8 +1,6 @@
 
 <?php
 
-//INSERT INTO `experiencias` VALUES (2, 'esto es un texto', 'src/foto3.jpg', 'familiar', 0.000000, 0.000000, 0, 0, 'publicada', 2, '2021-01-12', 'Burgos', 0);
-
 abstract class DBAbstractModel {
  
   private static $db_host = "labs.iam.cat";
