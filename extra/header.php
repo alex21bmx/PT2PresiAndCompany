@@ -104,15 +104,14 @@
                 <img id="logoHeader" src="./src/presiLogoPopUp.png" alt="">
             </div>
             <hr></hr>
-            <div id="logInRegister">
-                <h1>Login or register</h1>
-            </div>
+
             <form>
                 <input type="text" name="" id="username1" placeholder="Usuari" required><br>
                 <input type="password" name="" id="password1" placeholder="Contrasenya" required><br>                    
-                <input type="button" value="Login" id="login">
+                <button>Login</button>
             </form>
-            <button id="nouUsuari" onclick="togglePopup(4)">Register</button>
+
+            <button onclick="togglePopup(4)">Register</button>
         </div>
     </div>
     <div class="popup" id="popup-4">
@@ -133,6 +132,7 @@
         <div class="content">
         <div class="close-btn" onclick="togglePopup(6)">&times;</div>
             <h2>POST AN EXPERIENCE</h2>
+
             <div class = "categories">
                     <input type="checkbox" id="categoria1" name="categoria1" value="aventures">
                     <label for="categoria1">ADVENTURES</label>
@@ -145,6 +145,7 @@
                     <input type="checkbox" id="categoria5" name="categoria5" value="romantic">
                     <label for="categoria5">ROMANTIC</label>
             </div>
+
             <form>
                 <div class="mas_info">
                     <input type="text" id="localizacion" name="localizacion" placeholder="Location" required><br>
