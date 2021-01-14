@@ -22,13 +22,9 @@ class ValoracionesUsuario extends DBAbstractModel {
   //Hace un select para comprovar que el usuario que intenta registrarse no existe
   public function selectValoraciones($id_experiencia=""){
     if($id_experiencia!=""){
-      $this->query = "SELECT * FROM ValoracionesUsuario WHERE id_experiencia='$id_experiencia'";
+      $this->query = "SELECT COUNT(*) FROM ValoracionesUsuario WHERE id_experiencia='$id_experiencia'";
       $this->get_results_from_query();
-      if(count($this->rows)==0){
-          return 0;
-      }else{
-          return count($this->rows);
-      }
+      return $this->rows[0];
     }
   }
   public function selectExistsValoracion($id_experiencia="", $id_usuario=""){

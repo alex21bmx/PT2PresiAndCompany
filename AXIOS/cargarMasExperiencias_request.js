@@ -44,13 +44,14 @@ document.getElementById("cargamas").addEventListener("click",function(){
                             '<div class="experienciaInner" style="background-image: url('+respuesta.data[index]["imagen"]+'");>'+
                                 '<div class="ultimaCapa">'+
                                     '<h4 class="localizacion">'+respuesta.data[index]["localizacion"]+'</h4>'+
-                                    '<h4 class="coordenadas">'+respuesta.data[index]["latitud"]+'-'+respuesta.data[index]["longitud"]+'</h4>'+ 
+                                    '<h4 class="coordenadas">'+respuesta.data[index]["latitud"]+','+respuesta.data[index]["longitud"]+'</h4>'+ 
                                 '</div>'+
                             '</div>'+
                         '</div>'+
                         '<h4 class="usuarioYfecha">'+respuesta.data[index]["fecha_de_publicacion"]+' - '+respuesta.data[index]["id_usuario"]+'</h4>'+
                         '<div class="likecontent">'+
                             '<div id="like'+index+'" class="heart"></div>'+
+                            '<h4 class="numLike odometer">'+respuesta.data[index]["valoraciones"]['COUNT(*)']+'</h4>'+
                         '</div>'+
                     '</div>';
                 }
@@ -59,10 +60,11 @@ document.getElementById("cargamas").addEventListener("click",function(){
                 document.getElementById("grid-container").innerHTML = cadena;
                 document.getElementById("cargamas").innerHTML = "SHOW MORE";
                 document.getElementById("cargamas").classList.remove("lds-dual-ring"); 
-                for (let index = parseInt(document.getElementById("numero").value)-8; index < respuesta.data.length; index++) {
+                for (let index = 0; index < respuesta.data.length; index++) {
                     let element = document.getElementById("like"+index);
                     element.addEventListener("click", function(){ likea(index); });
                     element.addEventListener("webkitAnimationEnd", function(){ finished(index); });
+                    comprovaLike(index);
                 }
              
         }

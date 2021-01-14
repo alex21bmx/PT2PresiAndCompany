@@ -61,11 +61,10 @@ function IsLiked(idusuari,idexperiencia,numero){
             document.getElementById("login").innerHTML="Validar"
             alert("ERROR, TE HAS EQUIVOCADO")
         }
-        
-        console.log(respuesta.data.status);
-        console.log(idusuari);
-        console.log(idexperiencia);
-        
+        if (respuesta.data.status=="ok"){
+            document.getElementById("like"+numero).style.backgroundPosition = "right";
+            document.getElementById("like"+numero).classList.add('likeado');
+        }      
         
     })
     .catch(function (error) {

@@ -41,13 +41,14 @@ window.onload = function() {
                             '<div class="experienciaInner" style="background-image: url('+respuesta.data[index]["imagen"]+'");>'+
                                 '<div class="ultimaCapa">'+
                                     '<h4 class="localizacion">'+respuesta.data[index]["localizacion"]+'</h4>'+
-                                    '<h4 class="coordenadas">'+respuesta.data[index]["latitud"]+'-'+respuesta.data[index]["longitud"]+'</h4>'+ 
+                                    '<h4 class="coordenadas">'+respuesta.data[index]["latitud"]+','+respuesta.data[index]["longitud"]+'</h4>'+ 
                                 '</div>'+
                             '</div>'+
                         '</div>'+
                         '<h4 class="usuarioYfecha">'+respuesta.data[index]["fecha_de_publicacion"]+' - '+respuesta.data[index]["id_usuario"]+'</h4>'+
                         '<div class="likecontent">'+
                             '<div id="like'+index+'" class="heart"></div>'+
+                            '<h4 class="numLike odometer">'+respuesta.data[index]["valoraciones"]['COUNT(*)']+'</h4>'+
                         '</div>'+
                     '</div>';
             }

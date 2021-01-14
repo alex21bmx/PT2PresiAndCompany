@@ -766,6 +766,12 @@ background-color: #555;
 .likecontent{
   position: relative;
 }
+.numLike{
+  font-size: 12px;
+  position: absolute;
+  bottom: 7px;
+  right:30px;
+}
 .heart {
   position: absolute;
   bottom: 5px;
@@ -790,5 +796,10 @@ background-color: #555;
 @keyframes heart-burst {
   from {background-position:left;}
   to { background-position:right;}
+}
+.animate {
+  -webkit-animation: spinit 0.2s 5;
+  -moz-animation: spinit 0.2s 5;
+  animation: spinit 0.2s 5;
 }
 
