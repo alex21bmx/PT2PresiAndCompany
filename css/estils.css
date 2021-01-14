@@ -521,23 +521,10 @@ transition-delay: 0.2s;
 }
 
 /*-----CSS LOGIN-----*/
-@import "bourbon";
 
-
-.login{
-  overflow: hidden;
-  background-color: black;
-  padding: 40px 30px 30px 30px;
-  border-radius: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  transform:translate(-50%, -50%);
-  transition:transform 300ms, box-shadow 300ms;
-  box-shadow: 5px 10px 10px rgba(120, 113, 113, 0.84);
+#logInRegister{
+text-align: left;
 }
-  
 
 #logInHeader{
 align-self: start;
