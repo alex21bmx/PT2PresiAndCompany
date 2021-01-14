@@ -59,7 +59,6 @@ class Experiencia extends DBAbstractModel {
       $resultado = $this->selectExistsExperiencia($expData);
       foreach($resultado as $key => $value){
         if ($value==0) {
-          $id_experiencia = $expData["id_experiencia"];
           $texto = $expData["texto"];
           $imagen = $expData["imagen"];
           $categoria = $expData["categoria"];
@@ -67,11 +66,10 @@ class Experiencia extends DBAbstractModel {
           $longitud = $expData["longitud"];
           $estado = $expData["estado"];
           $id_usuario = $expData["id_usuario"];
-          $fecha_de_publicacion = $expData["fecha_de_publicacion"];
           $localizacion = $expData["localizacion"];
 
           $this->query="INSERT INTO experiencias (id_experiencia, texto, imagen, categoria, latitud, longitud, valoraciones_positivas, valoraciones_negativas, estado, id_usuario, fecha_de_publicacion, localizacion, reportado)
-            VALUES ('$id_experiencia', '$texto', '$imagen', '$categoria', '$latitud', '$longitud', 0, 0, '$estado', '$id_usuario', '$fecha_de_publicacion', '$localizacion', '0')";
+            VALUES (null, '$texto', '$imagen', '$categoria', '$latitud', '$longitud', 0, 0, '$estado', '$id_usuario', NOW(), '$localizacion', '0')";
           $this->execute_single_query();
           
           return "ok";

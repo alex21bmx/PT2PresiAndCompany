@@ -188,6 +188,31 @@
             }
             echo json_encode($response);
             break;
+        //INSERT DE EXPERIENCIA
+        case 13:
+            $idUsuario = $Usuario -> selectIdUsuarioByUsername($_REQUEST["username"]);
+
+            $response = array("idUsuario" => $idUsuario,
+            "texto" => $_REQUEST["texto"],
+            "imagen" => $_REQUEST["imagen"],
+            "categoria" => $_REQUEST["categoria"],
+            "latitud" => $_REQUEST["latitud"],
+            "longitud" => $_REQUEST["longitud"],
+            "localizacion" => $_REQUEST["localizacion"],
+            "estado" => $_REQUEST["estado"]);
+
+            echo json_encode($response);
+            /*$array = array(
+            "texto" => $_REQUEST["texto"],
+            "imagen" => $_REQUEST["imagen"],
+            "categoria" => $_REQUEST["categoria"],
+            "latitud" => $_REQUEST["latitud"],
+            "longitud" => $_REQUEST["longitud"],
+            "estado" => $_REQUEST["estado"],
+            "id_usuario" => $idUsuario["id"],
+            "localizacion" => $_REQUEST["localizacion"]
+            );*/
+            break;
     }
 
         

@@ -64,6 +64,17 @@ class Usuario extends DBAbstractModel {
       return $this->rows[0];
     }
   }
+
+  //Devuelve el id del usuario segun su nombre
+  public function selectIdUsuarioByUsername($username=""){
+    if($username!=""){
+      $this->query = "SELECT id FROM usuarios WHERE username='$username'";
+      $this->get_results_from_query();
+      return $this->rows[0];
+    }
+  }
+
+
   
   public function update ($userName="", $pass="") {
     if($userName!="" && $pass!=""){
