@@ -3,7 +3,7 @@ html {
   font-family: 'Raleway', Arial, sans-serif;
 }
 @font-face{
-  font-family:Open-sans;
+  font-family: 'Raleway', Arial, sans-serif;
   src: url("../src/OpenSans.ttf");
 }
 
@@ -135,6 +135,23 @@ body {
   width: 20px;
 }
 
+/*-----CREAR EXPERIENCIA POP-UP-----*/
+
+#localizacion {
+  margin: 5px;
+}
+
+#imagen{
+  margin: 5px;
+}
+
+#categories{
+  display: flex;
+}
+
+#mas_info{
+  margin: 5px;
+}
 /*-----FOOTER-----*/
 
 #footer{
@@ -162,14 +179,14 @@ body {
 }
 
 #otro{
-margin-left: 50px;
-font-size: 27px;
-letter-spacing: 0.2em;
+  margin-left: 50px;
+  font-size: 27px;
+  letter-spacing: 0.2em;
 }
 #parteIzquierda{
-align-items: center;
-margin-top: 5px;
-width: 50%;
+  align-items: center;
+  margin-top: 5px;
+  width: 50%;
 }
 #parteDerecha{
 width: 50%;
@@ -213,18 +230,18 @@ text-align: right;
 }
 
 #backToTopBttn{
-background-color: black;
-height: 100px;
-width: 120px;
-font-size: 16px;
-text-decoration: none;
-color: whitesmoke;
+  background-color: black;
+  height: 100px;
+  width: 120px;
+  font-size: 16px;
+  text-decoration: none;
+  color: whitesmoke;
 }
 #cositas{
-color: whitesmoke;
-font-size: 15px;
-display: flex;
-justify-content: center;
+  color: whitesmoke;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 .footerBttn{
@@ -646,7 +663,7 @@ background-color: #555;
 
 .experienciaOutter{
   text-transform: capitalize;
-  color: white;
+  color: whitesmoke;
   margin: 1px;
   height: 500px;
   width: auto;
@@ -680,32 +697,35 @@ background-color: #555;
   height: 500px;
   width: auto;
   position: relative;
-  -webkit-box-shadow: 0 0 5px #fff;
-        box-shadow: 0 0 5px #fff;
+  -webkit-box-shadow: 0 0 5px whitesmoke;
+        box-shadow: 0 0 5px whitesmoke;
 }
 .experienciaMiddle:hover {
-  -webkit-box-shadow: 0 0 10px #fff;
-        box-shadow: 0 0 10px #fff;
+  -webkit-box-shadow: 0 0 10px whitesmoke;
+        box-shadow: 0 0 10px whitesmoke;
 }
 
 #cargamas{
+  letter-spacing: 0.3em;
+  font-size: 16px;
+  text-decoration: none;
   float: right;
-  border-radius: 30px;
+  border-radius: 10px;
   margin-right: 200px;
   margin-bottom: 10px;
   height: 30px;
   width: 200px;
   font-size: 15px;
-  font-family: Open-sans;
-  background-color: white;
+  font-family: 'Raleway', Arial, sans-serif;
+  background-color: whitesmoke;
   outline: none;
   border: none;
-  -webkit-box-shadow: 0 0 5px #fff;
-        box-shadow: 0 0 5px #fff;
+  -webkit-box-shadow: 0 0 5px whitesmoke;
+        box-shadow: 0 0 5px whitesmoke;
 }
 #cargamas:hover{
-  -webkit-box-shadow: 0 0 10px #fff;
-        box-shadow: 0 0 10px #fff;
+  -webkit-box-shadow: 0 0 10px whitesmoke;
+        box-shadow: 0 0 10px whitesmoke;
 }
 
 .categoriaExperiencia{
@@ -771,3 +791,4 @@ background-color: #555;
   from {background-position:left;}
   to { background-position:right;}
 }
+

@@ -57,7 +57,7 @@ document.getElementById("cargamas").addEventListener("click",function(){
                 localStorage.setItem('tamany',respuesta.data.length);
                 localStorage.setItem('cadena',cadena);
                 document.getElementById("grid-container").innerHTML = cadena;
-                document.getElementById("cargamas").innerHTML = "Mostra més";
+                document.getElementById("cargamas").innerHTML = "SHOW MORE";
                 document.getElementById("cargamas").classList.remove("lds-dual-ring"); 
                 for (let index = parseInt(document.getElementById("numero").value)-8; index < respuesta.data.length; index++) {
                     let element = document.getElementById("like"+index);

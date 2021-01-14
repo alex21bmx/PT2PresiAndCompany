@@ -42,7 +42,7 @@
             <a id="backToTopBttn" href="#">BACK TO TOP <img src="./src/back.png" alt=""></a>            
             <hr></hr>
             <div id="cositas">
-                <h6>COPYRIGHT® 2020</h6>
+                <h6>COPYRIGHT® 2021</h6>
             </div>
         </div>
     </div>

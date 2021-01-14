@@ -132,29 +132,32 @@
         <div class="overlay"></div>
         <div class="content">
         <div class="close-btn" onclick="togglePopup(6)">&times;</div>
-            <h1>Crear experiencia</h1>
+            <h2>POST AN EXPERIENCE</h2>
+            <div class = "categories">
+                    <input type="checkbox" id="categoria1" name="categoria1" value="aventures">
+                    <label for="categoria1">ADVENTURES</label>
+                    <input type="checkbox" id="categoria2" name="categoria2" value="muntanyisme">
+                    <label for="categoria2">MOUNTAIN</label>
+                    <input type="checkbox" id="categoria3" name="categoria3" value="familiar">
+                    <label for="categoria3">FAMILIAR</label>
+                    <input type="checkbox" id="categoria4" name="categoria4" value="historic">
+                    <label for="categoria4">HISTORICAL</label>
+                    <input type="checkbox" id="categoria5" name="categoria5" value="romantic">
+                    <label for="categoria5">ROMANTIC</label>
+            </div>
             <form>
-                <input type="text" id="localizacion" name="localizacion" placeholder="Localització" required><br>
-                <input type="text" id="imagen" name="imagen" placeholder="Imatge(URL)" required><br>
-                <h5>Categories</h5>
-                <input type="checkbox" id="categoria1" name="categoria1" value="aventures">
-                <label for="categoria1">Aventures</label>
-                <input type="checkbox" id="categoria2" name="categoria2" value="muntanyisme">
-                <label for="categoria2">Muntanyisme</label>
-                <input type="checkbox" id="categoria3" name="categoria3" value="familiar">
-                <label for="categoria3">Familiar</label>
-                <input type="checkbox" id="categoria4" name="categoria4" value="historic">
-                <label for="categoria4">Històric</label>
-                <input type="checkbox" id="categoria5" name="categoria5" value="romantic">
-                <label for="categoria5">Romàntic</label>
-                <input type="number" id="latitud" name="latitud" placeholder="Latitud"> 
-                <input type="number" id="longitud" name="longitud" placeholder="Longitud"><br><br>
-                <input type="text" id="texto" name="texto" placeholder="Descripció"><br>
+                <div class="mas_info">
+                    <input type="text" id="localizacion" name="localizacion" placeholder="Location" required><br>
+                    <input type="text" id="imagen" name="imagen" placeholder="Img - (URL)" required><br>
+                    <input type="number" id="latitud" name="latitud" placeholder="Latitude"> 
+                    <input type="number" id="longitud" name="longitud" placeholder="Longitude"><br><br>
+                    <input type="text" id="texto" name="texto" placeholder="Write a description..."><br>
+                </div>
                 <select>
-                    <option value="0">Esbozo</option> 
-                    <option selected value="1">Publicada</option> 
+                    <option value="0">Archive</option> 
+                    <option selected value="1">Post</option> 
                 </select><br><br>
-                <input type="button" value="Crear" id="crear">
+                <input type="button" value="✔" id="crear">
             </form>
         </div>
     </div>
