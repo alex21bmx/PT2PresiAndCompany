@@ -8,12 +8,22 @@
     </div>
     <div id="botonsDivHeader">
         
-            <button class="headerBttn" onclick="togglePopup(1)"><img id="searchBttn" src="./src/buscar.jpg" alt=""></button>
+            <?php
+                if(isset($_COOKIE["username"]))
+                    echo '<button class="headerBttn" onclick="togglePopup(1)"><img id="searchBttn" src="./src/buscar.jpg" alt=""></button>';
+            ?>
+            
         
         
             <button class="headerBttn" onclick="togglePopup(2)"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
 
-            <button class="headerBttn" onclick=""><img id="adminBttn" src="./src/admin.png" alt=""></button>
+
+            <?php
+                if(isset($_COOKIE["username"])){
+                    echo '<button class="headerBttn" onclick=""><img id="adminBttn" src="./src/admin.png" alt=""></button>';
+                }
+            ?>
+            
         
             <?php
                 if(isset($_COOKIE["username"])){
@@ -106,26 +116,26 @@
             <h1>Login Here</h1>
             <form>
                     <!--USERNAME INPUT-->
-                    <label for="username">Username</label>
-                    <input id="username" type="text" placeholder="Enter Username">
+                    <label for="username1">Username</label>
+                    <input id="username1" type="text" placeholder="Enter Username" required>
                     <!--PASS INPUT-->
-                    <label for="password">Password</label>
-                    <input id="password" type="password" placeholder="Enter Password">
+                    <label for="password1">Password</label>
+                    <input id="password1" type="password" placeholder="Enter Password" required>
                     <input type="submit" value="Log In" id="login">
             <hr></hr> 
             <button id="nouUsuari" onclick="togglePopup(4)">Don't have An account?</button><br>
-            <a href="#">Lost your Password?</a><br>
         </div>
     </div>
     <div class="popup" id="popup-4">
         <div class="overlay"></div>
-        <div class="content">
+        <div class="contentRegister">
             <div class="close-btn" onclick="togglePopup(5)">&times;</div>
+            <img class="avatar" src="./src/presiLogoPopUp.png" alt="">
             <h1>Sign-up</h1>
             <form>
-                <input type="text" id="newUsername" name="newUsername" placeholder="Usuari" required><br>
-                <input type="password" id="newPassword" name="newPassword" placeholder="Contrasenya" required><br>
-                <input type="button" value="signup" id="signup">
+                <input type="text" id="newUsername" name="newUsername" placeholder="Enter Username" required><br>
+                <input type="password" id="newPassword" name="newPassword" placeholder="Enter Password" required><br>
+                <input type="submit" value="Sign Up" id="signup">
             </form>
         </div>
     </div>
