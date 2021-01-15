@@ -61,8 +61,8 @@ class ValoracionesUsuario extends DBAbstractModel {
     }
   }
   
-  public function delete ($id_exp="", $id_user="") {
-    $this->query = "DELETE FROM ValoracionesUsuario WHERE id_experiencia ='$id_exp' AND id_usuario ='$id_user'";
+  public function delete ($id_exp="") {
+    $this->query = "DELETE FROM ValoracionesUsuario WHERE id_experiencia ='$id_exp'";
     $this->execute_single_query($this->query);
     return "ok"; 
   }

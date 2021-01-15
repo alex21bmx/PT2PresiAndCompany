@@ -34,5 +34,5 @@ document.getElementById("login").addEventListener("click",function(){
             //se ejecuta siempre
             document.getElementById("login").innerHTML="Log-In"
         });   
-    }else  alert("no");     
+    }  
 });

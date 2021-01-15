@@ -30,5 +30,5 @@ document.getElementById("signup").addEventListener("click",function(){
             //se ejecuta siempre
             document.getElementById("signup").innerHTML="Sign-up"
         }); 
-    }        
+    }    
 });
