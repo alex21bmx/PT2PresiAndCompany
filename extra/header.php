@@ -124,11 +124,12 @@
         <div class="overlay"></div>
         <div class="contentRegister">
             <div class="close-btn" onclick="togglePopup(5)">&times;</div>
+            <img class="avatar" src="./src/presiLogoPopUp.png" alt="">
             <h1>Sign-up</h1>
             <form>
                 <input type="text" id="newUsername" name="newUsername" placeholder="Enter Username" required><br>
                 <input type="password" id="newPassword" name="newPassword" placeholder="Enter Password" required><br>
-                <input type="button" value="signup" id="signup">
+                <input type="submit" value="Sign Up" id="signup">
             </form>
         </div>
     </div>
