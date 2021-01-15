@@ -17,19 +17,19 @@ window.onload = function() {
             for (let index = parseInt(document.getElementById("numero").value)-8; index < respuesta.data.length; index++) {
                 let color = "";
                     switch (respuesta.data[index]["categoria"]){
-                        case "aventures":
+                        case "aventuras":
                             color = "#40731D";
                             break; 
-                        case "muntanyisme":
+                        case "montañismo":
                             color = "#633E36";
                             break; 
                         case "familiar":
                             color = "#01709A";
                             break; 
-                        case "historic":
+                        case "historico":
                             color = "#779606";
                             break; 
-                        case "romantic":
+                        case "romantico":
                             color = "#660271";
                             break;
                     }

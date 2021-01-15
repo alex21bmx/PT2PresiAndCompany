@@ -98,21 +98,21 @@
     <!--LOGIN POP-UP-->
     <div class="popup" id="popup-3">
         <div class="overlay"></div>
-        <div class="content">
+        <div class="contentLogin">
             <div class="close-btn" onclick="togglePopup(3)">&times;</div>
-            <div id="logInHeader">
-                <img id="logoHeader" src="./src/presiLogoPopUp.png" alt="">
-            </div>
-            <hr></hr>
-            <div id="logInRegister">
-                <h1>Login or register</h1>
-            </div>
+            <img class="avatar" src="./src/presiLogoPopUp.png" alt="">
+            <h1>Login Here</h1>
             <form>
-                <input type="text" name="" id="username1" placeholder="Usuari" required><br>
-                <input type="password" name="" id="password1" placeholder="Contrasenya" required><br>                    
-                <input type="button" value="Login" id="login">
-            </form>
-            <button id="nouUsuari" onclick="togglePopup(4)">Register</button>
+                    <!--USERNAME INPUT-->
+                    <label for="username">Username</label>
+                    <input id="username" type="text" placeholder="Enter Username">
+                    <!--PASS INPUT-->
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="Enter Password">
+                    <input type="submit" value="Log In" id="login">
+            <hr></hr> 
+            <button id="nouUsuari" onclick="togglePopup(4)">Don't have An account?</button><br>
+            <a href="#">Lost your Password?</a><br>
         </div>
     </div>
     <div class="popup" id="popup-4">
