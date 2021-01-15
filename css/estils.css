@@ -636,6 +636,21 @@ transition-delay: 0.2s;
       border-radius: 20px;
     }
 
+    #nouUsuari{
+      background-color: black;
+      border: none;
+      outline: none;
+      height: 40px;
+      color: #fff;
+      font-size: 12px;
+    }
+
+    #nouUsuari:hover {
+      cursor: pointer;
+      background: #ffc107;
+      color: #000;
+    }
+
 /*-----CSS REGISTER-----*/
 #contentRegister {
   flex: 1;
@@ -745,6 +760,7 @@ transition-delay: 0.2s;
       color: black;
       border-radius: 20px;
     }
+
 /*-----CSS STAFF-----*/
 
 #contentStaff {

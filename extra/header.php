@@ -13,12 +13,14 @@
                     echo '<button class="headerBttn" onclick="togglePopup(1)"><img id="searchBttn" src="./src/buscar.jpg" alt=""></button>';
             ?>
             
-        
-        
+            <?php
+                if(isset($_COOKIE["username"]))
+                    echo '<button class="headerBttn" onclick=""><img id="adminBttn" src="./src/admin.png" alt=""></button>';
+            ?>
+                
             <button class="headerBttn" onclick="togglePopup(2)"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
 
-            <button class="headerBttn" onclick=""><img id="adminBttn" src="./src/admin.png" alt=""></button>
-        
+
             <?php
                 if(isset($_COOKIE["username"])){
                     $prueba = $_COOKIE["username"];
@@ -110,14 +112,13 @@
             <h1>Login Here</h1>
             <form>
                     <!--USERNAME INPUT-->
-                    <label for="username1">Username</label>
                     <input id="username1" type="text" placeholder="Enter Username" required>
                     <!--PASS INPUT-->
-                    <label for="password1">Password</label>
                     <input id="password1" type="password" placeholder="Enter Password" required>
                     <input type="submit" value="Log In" id="login">
             <hr></hr> 
-            <button id="nouUsuari" onclick="togglePopup(4)">Don't have An account?</button><br>
+            <br>
+            <button id="nouUsuari" onclick="togglePopup(4)">Don't have An account?</button>
         </div>
     </div>
     <div class="popup" id="popup-4">
