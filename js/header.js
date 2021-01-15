@@ -22,6 +22,10 @@ function togglePopup(num,index){
         case 7:
             document.getElementById("popup-6").classList.toggle("active");
             document.getElementById("popExpFoto").style.backgroundImage = document.getElementsByClassName("experienciaInner")[index].style.backgroundImage;
+            document.getElementById("popExpTitol").innerHTML = document.getElementsByClassName("localizacion")[index].textContent;
+            document.getElementById("popExpFecha").innerHTML = document.getElementsByClassName("usuarioYfecha")[index].textContent;
+            document.getElementById("popExpCoords").innerHTML = document.getElementsByClassName("coordenadas")[index].textContent;
+            document.getElementById("popExpTexto").innerHTML = document.getElementsByClassName("textoExp")[index].value;
             break;
 
     }
