@@ -116,6 +116,7 @@
                     <!--PASS INPUT-->
                     <input id="password1" type="password" placeholder="Enter Password" required>
                     <input type="submit" value="Log In" id="login">
+            </form>
             <hr></hr> 
             <br>
             <button id="nouUsuari" onclick="togglePopup(4)">Don't have An account?</button>
@@ -141,7 +142,7 @@
         <div class="close-btn" onclick="togglePopup(6)">&times;</div>
             <h2>POST AN EXPERIENCE</h2>
             
-            <form id="crearExperiencia">
+            <form>
                 <div class = "categories">
                     <select id="categoria">
                         <option selected value="aventuras">Aventuras</option> 
@@ -164,7 +165,7 @@
                 </select><br><br>
                 <input type="button" value="✔" id="crear"><br>
                 <?php 
-                echo '<input id="username" style="visibility:hidden" value="'. $prueba . '">';
+                echo '<input id="username" style="visibility:hidden" value="'. $prueba . '"required>';
                 ?>
             </form>
         </div>

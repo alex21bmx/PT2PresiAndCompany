@@ -136,7 +136,7 @@
 
         //DELETE DE UNA EXPERIENCIA EN CONCRETO
         case 9:
-            $datos = $Experiencia -> delete($_REQUEST["id_experiencia"], $_REQUEST["id_usuario"]);
+            $datos = $Experiencia -> delete($_REQUEST["id_experiencia"]);
             $response = array("status" => $datos);
             echo json_encode($response); 
             break;

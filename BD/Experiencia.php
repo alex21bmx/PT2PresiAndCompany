@@ -22,7 +22,7 @@ class Experiencia extends DBAbstractModel {
     public function select($position="") {
         
         $origen = $position - 8;
-        $this->query = "SELECT usuarios.*,experiencias.* , count(ValoracionesUsuario.id_experiencia) as valoraciones FROM `experiencias` LEFT JOIN ValoracionesUsuario ON experiencias.id_experiencia = ValoracionesUsuario.id_experiencia JOIN usuarios ON experiencias.id_usuario=usuarios.id GROUP BY experiencias.id_experiencia limit 8 offset $origen";
+        $this->query = "SELECT usuarios.*,experiencias.* , count(ValoracionesUsuario.id_experiencia) as valoraciones FROM `experiencias` LEFT JOIN ValoracionesUsuario ON experiencias.id_experiencia = ValoracionesUsuario.id_experiencia JOIN usuarios ON experiencias.id_usuario=usuarios.id WHERE experiencias.estado='Publicada' GROUP BY experiencias.id_experiencia limit 8 offset $origen";
         $this->get_results_from_query();
         error_log("entroXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
         if(count($this->rows)!=0){
@@ -115,10 +115,10 @@ class Experiencia extends DBAbstractModel {
     
     public function delete ($idExperiencia="", $idUsuario="") {
       if($idExperiencia!="" && $idUsuario!=""){
-        $resultado = $this->selectExistsExperienciaByIdAndUsuario($idExperiencia, $idUsuario);
+        $resultado = $this->selectExistsExperienciaByIdAndUsuario($idExperiencia);
         foreach($resultado as $key => $value){
           if ($value==1) {
-            $this->query = "DELETE FROM experiencias WHERE id_experiencia ='$idExperiencia' AND id_usuario='$idUsuario'";
+            $this->query = "DELETE FROM experiencias WHERE id_experiencia ='$idExperiencia'";
             $this->execute_single_query($this->query);
             return "ok";
           }else return "fail";
