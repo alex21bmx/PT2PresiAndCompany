@@ -13,18 +13,14 @@
                     echo '<button class="headerBttn" onclick="togglePopup(1)"><img id="searchBttn" src="./src/buscar.jpg" alt=""></button>';
             ?>
             
-        
-        
+            <?php
+                if(isset($_COOKIE["username"]))
+                    echo '<button class="headerBttn" onclick=""><img id="adminBttn" src="./src/admin.png" alt=""></button>';
+            ?>
+                
             <button class="headerBttn" onclick="togglePopup(2)"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
 
 
-            <?php
-                if(isset($_COOKIE["username"])){
-                    echo '<button class="headerBttn" onclick=""><img id="adminBttn" src="./src/admin.png" alt=""></button>';
-                }
-            ?>
-            
-        
             <?php
                 if(isset($_COOKIE["username"])){
                     $prueba = $_COOKIE["username"];
@@ -121,7 +117,8 @@
                     <input id="password1" type="password" placeholder="Enter Password" required>
                     <input type="submit" value="Log In" id="login">
             <hr></hr> 
-            <button id="nouUsuari" onclick="togglePopup(4)">Don't have An account?</button><br>
+            <br>
+            <button id="nouUsuari" onclick="togglePopup(4)">Don't have An account?</button>
         </div>
     </div>
     <div class="popup" id="popup-4">
