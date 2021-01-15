@@ -1,5 +1,4 @@
 document.getElementById("crear").addEventListener("click",function(){
-    console.log("hola");
     axios.get('./BD/api/api.php', {
         timeout:10000,
         params: {
@@ -16,6 +15,10 @@ document.getElementById("crear").addEventListener("click",function(){
     })
     .then(function (respuesta) {
         console.log(respuesta);
+        if (respuesta.data=="ok"){
+            alert("Experiencia creada!");
+            document.getElementById("popup-5").classList.toggle("active");
+        }
         
     })
     .catch(function (error) {
