@@ -14,5 +14,13 @@
             <p id="popExpTexto"></p>
         </div>
     </div>
+    <div class="popup" id="popup-7">
+        <input type="hidden" id="gestionId" value="">
+        <div class="overlay"></div>
+        <div class="contentExp">
+            <div class="close-btn" onclick="togglePopup(8)">&times;</div>
+            <button onclick="deleteExperiencia()">Borrar experiencia</button>
+        </div>
+    </div>
 <script src="AXIOS/experienciesLogged_request.js"></script>
 <script src="AXIOS/cargarMasExperiencias_request.js"></script>

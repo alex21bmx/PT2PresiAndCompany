@@ -33,6 +33,10 @@ window.onload = function() {
                             color = "#660271";
                             break;
                     }
+                let cadena2 = "";
+                if(respuesta.data[index]["id_usuario"]==localStorage.getItem("user_id")){
+                    cadena2 = '<a class="gestion" onclick="togglePopup(8,'+index+')">Gestionar</a>';
+                }
                 cadena+=
                 '<div class="experienciaOutter">'+
                         '<input type="hidden" class="id_experiencia" value="'+respuesta.data[index]["id_experiencia"]+'">'+
@@ -49,6 +53,7 @@ window.onload = function() {
                         '<h4 class="usuarioYfecha">'+respuesta.data[index]["fecha_de_publicacion"]+' - '+respuesta.data[index]["usuario"]+'</h4>'+
                         '<div class="likecontent">'+
                             '<div id="like'+index+'" class="heart"></div>'+
+                            cadena2+
                             '<h4 class="numLike odometer">'+respuesta.data[index]["valoraciones"]+'</h4>'+
                         '</div>'+
                     '</div>';

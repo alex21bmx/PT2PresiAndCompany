@@ -27,6 +27,9 @@ function togglePopup(num,index){
             document.getElementById("popExpCoords").innerHTML = document.getElementsByClassName("coordenadas")[index].textContent;
             document.getElementById("popExpTexto").innerHTML = document.getElementsByClassName("textoExp")[index].value;
             break;
+        case 8:
+            document.getElementById("popup-7").classList.toggle("active");
+            break;
 
     }
 }

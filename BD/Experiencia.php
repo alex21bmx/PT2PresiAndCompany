@@ -113,16 +113,11 @@ class Experiencia extends DBAbstractModel {
       }
     }
     
-    public function delete ($idExperiencia="", $idUsuario="") {
-      if($idExperiencia!="" && $idUsuario!=""){
-        $resultado = $this->selectExistsExperienciaByIdAndUsuario($idExperiencia, $idUsuario);
-        foreach($resultado as $key => $value){
-          if ($value==1) {
-            $this->query = "DELETE FROM experiencias WHERE id_experiencia ='$idExperiencia' AND id_usuario='$idUsuario'";
+    public function delete ($idExperiencia="") {
+      if($idExperiencia!=""){
+            $this->query = "DELETE FROM experiencias WHERE id_experiencia ='$idExperiencia'";
             $this->execute_single_query($this->query);
             return "ok";
-          }else return "fail";
-        }
       }
     }
   }

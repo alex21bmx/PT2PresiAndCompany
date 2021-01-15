@@ -1018,6 +1018,14 @@ background-color: #555;
   bottom: 7px;
   right:30px;
 }
+.gestion{
+  font-size: 12px;
+  position: absolute;
+  bottom: 20px;
+  right:120px;
+  color: blueviolet;
+  cursor: pointer;
+}
 .heart {
   position: absolute;
   bottom: 5px;
