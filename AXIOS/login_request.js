@@ -21,6 +21,7 @@ document.getElementById("login").addEventListener("click",function(){
                 console.log(respuesta);
                 localStorage.setItem("user_id",respuesta.data.id);                   
                 document.cookie = "username="+document.getElementById("username1").value;
+                document.cookie = "admin="+respuesta.data.tipo_usuario;
                 location.reload();
             }
 
