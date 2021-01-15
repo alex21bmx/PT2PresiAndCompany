@@ -17,7 +17,13 @@
         
             <button class="headerBttn" onclick="togglePopup(2)"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
 
-            <button class="headerBttn" onclick=""><img id="adminBttn" src="./src/admin.png" alt=""></button>
+
+            <?php
+                if(isset($_COOKIE["username"])){
+                    echo '<button class="headerBttn" onclick=""><img id="adminBttn" src="./src/admin.png" alt=""></button>';
+                }
+            ?>
+            
         
             <?php
                 if(isset($_COOKIE["username"])){
