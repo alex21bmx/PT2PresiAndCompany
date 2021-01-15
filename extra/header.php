@@ -8,7 +8,11 @@
     </div>
     <div id="botonsDivHeader">
         
-            <button class="headerBttn" onclick="togglePopup(1)"><img id="searchBttn" src="./src/buscar.jpg" alt=""></button>
+            <?php
+                if(isset($_COOKIE["username"]))
+                    echo '<button class="headerBttn" onclick="togglePopup(1)"><img id="searchBttn" src="./src/buscar.jpg" alt=""></button>';
+            ?>
+            
         
         
             <button class="headerBttn" onclick="togglePopup(2)"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
