@@ -110,20 +110,19 @@
             <h1>Login Here</h1>
             <form>
                     <!--USERNAME INPUT-->
-                    <label for="username">Username</label>
-                    <input id="username" type="text" placeholder="Enter Username">
+                    <label for="username1">Username</label>
+                    <input id="username1" type="text" placeholder="Enter Username">
                     <!--PASS INPUT-->
-                    <label for="password">Password</label>
-                    <input id="password" type="password" placeholder="Enter Password">
+                    <label for="password1">Password</label>
+                    <input id="password1" type="password" placeholder="Enter Password">
                     <input type="submit" value="Log In" id="login">
             <hr></hr> 
             <button id="nouUsuari" onclick="togglePopup(4)">Don't have An account?</button><br>
-            <a href="#">Lost your Password?</a><br>
         </div>
     </div>
     <div class="popup" id="popup-4">
         <div class="overlay"></div>
-        <div class="content">
+        <div class="contentRegister">
             <div class="close-btn" onclick="togglePopup(5)">&times;</div>
             <h1>Sign-up</h1>
             <form>

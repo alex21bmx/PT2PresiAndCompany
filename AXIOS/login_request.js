@@ -5,8 +5,8 @@ document.getElementById("login").addEventListener("click",function(){
     axios.get('./BD/api/api.php', {
         timeout:3000,
         params: {
-            user: document.getElementById("username").value ,
-            pass: document.getElementById("password").value ,
+            user: document.getElementById("username1").value ,
+            pass: document.getElementById("password1").value ,
             id: 1
         }
     })
@@ -18,7 +18,7 @@ document.getElementById("login").addEventListener("click",function(){
         }
         else{  
             localStorage.setItem("user_id",respuesta.data.id);                   
-            document.cookie = "username="+document.getElementById("username").value;
+            document.cookie = "username="+document.getElementById("username1").value;
             location.reload();
         }
 
