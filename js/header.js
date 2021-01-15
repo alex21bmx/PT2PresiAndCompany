@@ -37,6 +37,7 @@ function togglePopup(num,index){
 
 function cerrarSesion(valor){
     document.cookie = "username=" + valor + "; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    document.cookie = "admin=admin; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     window.location.reload();
     alert("Sesión cerrada");
 }

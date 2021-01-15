@@ -14,10 +14,13 @@
             ?>
             
             <?php
-                if(isset($_COOKIE["username"]))
-                    echo '<button class="headerBttn" onclick=""><img id="adminBttn" src="./src/admin.png" alt=""></button>';
+                if(isset($_COOKIE["username"])){
+                    $valor = $_COOKIE["admin"];
+                    if($valor == "admin")
+                        echo '<button class="headerBttn" onclick="" id="admin"><img id="adminBttn" src="./src/admin.png" alt=""></button>';
+                }
             ?>
-                
+
             <button class="headerBttn" onclick="togglePopup(2)"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
 
 
@@ -48,6 +51,32 @@
         <div class="contentSearch">
             <div class="close-btn" onclick="togglePopup(1)">&times;</div>
             <div class="search-container">
+
+                <label>Filtrar por usuario</label>
+                <input type="text" name="" id=""><br>
+
+                <label>Filtrar por Likes</label>
+                <div>
+                    <input type="radio" id="none" name="likes" value="No"
+                            checked>
+                    <label for="huey">No</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="masLikes" name="likes" value="Mas likes">
+                    <label for="dewey">Mas likes</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="menosLikes" name="likes" value="Menos likes">
+                    <label for="louie">Menos likes</label>
+                </div>
+
+                <label>Filtrar por Categoria</label>
+                <input type="text" name="" id=""><br>
+
+
+                <button>Buscar</button>
                 <form action="/action_page.php"> <!--Aquí poner el php o js que haga la accion de buscar-->
                 <input type="text" placeholder="Search.." name="search">
                 <button type="submit"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
