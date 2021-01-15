@@ -19,11 +19,19 @@ class Experiencia extends DBAbstractModel {
         $this->db_name = "a18sergribra_viajes";
     }
 
-    public function select() {
-        $this->query = "SELECT * FROM experiencias";
+    public function select($position="") {
+        
+        $origen = $position - 8;
+        $this->query = "SELECT usuarios.*,experiencias.* , count(ValoracionesUsuario.id_experiencia) as valoraciones FROM `experiencias` LEFT JOIN ValoracionesUsuario ON experiencias.id_experiencia = ValoracionesUsuario.id_experiencia JOIN usuarios ON experiencias.id_usuario=usuarios.id GROUP BY experiencias.id_experiencia limit 8 offset $origen";
         $this->get_results_from_query();
-        for($i=0; $i<count($this->rows); $i++){
-          $resultSet[] = $this->rows[$i];
+        error_log("entroXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        if(count($this->rows)!=0){
+          for($i=0; $i<count($this->rows); $i++){
+            error_log("volta");
+            $resultSet[] = $this->rows[$i];
+          }
+        }else{
+          $resultSet=0;
         }
 
         return $resultSet;
