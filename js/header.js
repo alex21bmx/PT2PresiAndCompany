@@ -30,6 +30,7 @@ function togglePopup(num,index){
         case 8:
             document.getElementById("popup-7").classList.toggle("active");
             document.getElementById("gestionId").value = document.getElementsByClassName("id_experiencia")[index].value;
+            document.getElementById("localizacionAct").placeHolder = document.getElementsByClassName("localizacion")[index].textContent;
             break;
 
     }
@@ -37,6 +38,7 @@ function togglePopup(num,index){
 
 function cerrarSesion(valor){
     document.cookie = "username=" + valor + "; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    document.cookie = "admin=admin; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     window.location.reload();
     alert("Sesión cerrada");
 }

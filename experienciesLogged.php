@@ -6,10 +6,12 @@
         <div class="overlay"></div>
         <div class="contentExp">
             <div class="close-btn" onclick="togglePopup(7)">&times;</div>
-            <div id="popExpFoto">
-                <h1 id="popExpTitol"></h1>
-                <h4 id="popExpFecha"></h4>
-                <h4 id="popExpCoords"></h4>
+            <div class="allInfoExp">
+            <h1 id="popExpTitol"></h1>
+                <button id="popExpFecha"></button>
+                <div id="popExpFoto"></div>
+                <div id="popExpFecha"></div>
+                <div id="popExpCoords"></div>
             </div>
             <p id="popExpTexto"></p>
         </div>
@@ -19,6 +21,25 @@
         <div class="overlay"></div>
         <div class="contentExp">
             <div class="close-btn" onclick="togglePopup(8)">&times;</div>
+            <form>
+            <div class = "categories">
+                    <select id="categoriaAct">
+                        <option selected value="aventuras">Aventuras</option> 
+                        <option value="montañismo">Montañismo</option>
+                        <option value="familiar">Familiar</option> 
+                        <option value="historico">Histórico</option>
+                        <option value="romantico">Romántico</option> 
+                    </select><br><br>
+                </div>
+                <div class="mas_info">
+                    <input type="text" id="localizacionAct" name="localizacionAct" placeholder="Localización" required><br>
+                    <input type="text" id="imagenAct" name="imagenAct" placeholder="Imagen - (URL)" required><br>
+                    <input type="number" id="latitudAct" name="latitudAct" placeholder="Latitud"> 
+                    <input type="number" id="longitudAct" name="longitudAct" placeholder="Longitud"><br><br>
+                    <input type="text" id="textoAct" name="textoAct" placeholder="Escribe una descripción..." required><br>
+                </div><br><br>
+                <input type="button" value="Actualizar" id="actualizar">
+            </form>
             <button onclick="deleteExperiencia()">Borrar experiencia</button>
         </div>
     </div>

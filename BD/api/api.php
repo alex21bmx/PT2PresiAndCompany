@@ -125,7 +125,6 @@
             "categoria" => $_REQUEST["categoria"],
             "latitud" => $_REQUEST["latitud"],
             "longitud" => $_REQUEST["longitud"],
-            "id_usuario" => $_REQUEST["id_usuario"],
             "localizacion" => $_REQUEST["localizacion"]
             );
 

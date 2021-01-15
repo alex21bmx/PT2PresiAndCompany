@@ -14,9 +14,11 @@
             ?>
             
             <?php
-                $valor = $_COOKIE["admin"];
-                if(isset($_COOKIE["username"]) && $valor == "admin")
-                    echo '<button class="headerBttn" onclick="" id="admin"><img id="adminBttn" src="./src/admin.png" alt=""></button>';
+                if(isset($_COOKIE["username"])){
+                    $valor = $_COOKIE["admin"];
+                    if($valor == "admin")
+                        echo '<button class="headerBttn" onclick="" id="admin"><img id="adminBttn" src="./src/admin.png" alt=""></button>';
+                }
             ?>
                 
             <button class="headerBttn" onclick="togglePopup(2)"><img id="staffBttn" src="./src/staff.ico" alt=""></button>

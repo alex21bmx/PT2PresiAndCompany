@@ -893,7 +893,6 @@ background-color: #555;
       font-size: 16px;
     }
 
-    .contentSearch input[type="submit"]{}
 /*CSS EXPERIENCIAS_USUARIO*/
 
 #grid-container {
@@ -1068,12 +1067,13 @@ background-color: #555;
   transform:translate(-50%,-50%) scale(0);
   background:black;
   width:850px;
-  height:650px;
+  height:760px;
   z-index:2;
   text-align:center;
   padding:20px;
   box-sizing:border-box;
   font-family: 'Raleway', Arial, sans-serif;
+  margin: 2px;
   }
   
   .popup.active .contentExp {
@@ -1081,9 +1081,45 @@ background-color: #555;
   transform:translate(-50%,-50%) scale(1);
   }
 
+  .allInfoExp{
+    left: 5%;
+  }
 #popExpFoto{
-  width: auto;
-  height: 300px;
+  height: 520px;
+  width: 1080px;
+  max-width: 100%;
+  max-height: 60%;
+  top: 15%;
+}
+
+#popExpFecha{
+  text-transform: capitalize;
+  color: whitesmoke;
+  position: absolute;
+  top: 12%;
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #b80f22;
+  font-size: 14px;
+  border-radius: 15px;
+  
+}
+
+#popExpCoords{
+  text-transform: capitalize;
+  font-size: 10px;
+  color: whitesmoke;
+  position: absolute;
+  top: 12%;
+}
+
+#popExpTexto{
+  font-size: 16px;
+  color: whitesmoke;
+  text-align: justify;
+  margin-left: 2px;
+  padding: 20px;
 }
 
 

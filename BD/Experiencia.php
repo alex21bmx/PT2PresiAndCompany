@@ -111,22 +111,16 @@ class Experiencia extends DBAbstractModel {
     }
 
     public function update ($expData = array()) {
-      $resultado = $this->selectExistsExperienciaByIdAndUsuario($expData["id_experiencia"], $expData["id_usuario"]);
-      foreach($resultado as $key => $value){
-        if ($value==1) {
-          $id_experiencia = $expData["id_experiencia"];
-          $id_usuario = $expData["id_usuario"];
-          $texto = $expData["texto"];
-          $imagen = $expData["imagen"];
-          $categoria = $expData["categoria"];
-          $latitud = $expData["latitud"];
-          $longitud = $expData["longitud"];
-          $localizacion = $expData["localizacion"];
-          $this->query = "UPDATE experiencias SET texto= '$texto', imagen= '$imagen', categoria= '$categoria', latitud= '$latitud', longitud= '$longitud', localizacion= '$localizacion' WHERE id_experiencia='$id_experiencia' AND id_usuario='$id_usuario'";
-          $this->execute_single_query($this->query);
-          return "ok";
-        }else return "fail";
-      }
+      $id_experiencia = $expData["id_experiencia"];
+      $texto = $expData["texto"];
+      $imagen = $expData["imagen"];
+      $categoria = $expData["categoria"];
+      $latitud = $expData["latitud"];
+      $longitud = $expData["longitud"];
+      $localizacion = $expData["localizacion"];
+      $this->query = "UPDATE experiencias SET texto= '$texto', imagen= '$imagen', categoria= '$categoria', latitud= '$latitud', longitud= '$longitud', localizacion= '$localizacion' WHERE id_experiencia='$id_experiencia'";
+      $this->execute_single_query($this->query);
+      return $this->rows[0];
     }
     
     public function delete ($idExperiencia="") {
