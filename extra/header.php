@@ -116,10 +116,8 @@
             <h1>Login Here</h1>
             <form>
                     <!--USERNAME INPUT-->
-                    <label for="username1">Username</label>
                     <input id="username1" type="text" placeholder="Enter Username" required>
                     <!--PASS INPUT-->
-                    <label for="password1">Password</label>
                     <input id="password1" type="password" placeholder="Enter Password" required>
                     <input type="submit" value="Log In" id="login">
             <hr></hr> 
