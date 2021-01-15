@@ -6,7 +6,12 @@
         <div class="overlay"></div>
         <div class="contentExp">
             <div class="close-btn" onclick="togglePopup(7)">&times;</div>
-            <h4 id="numIndex"></h4>
+            <div id="popExpFoto">
+                <h1 id="popExpTitol"></h1>
+                <h4 id="popExpFecha"></h4>
+                <h4 id="popExpCoords"></h4>
+            </div>
+            <p id="popExpTexto"></p>
         </div>
     </div>
 <script src="AXIOS/experienciesLogged_request.js"></script>

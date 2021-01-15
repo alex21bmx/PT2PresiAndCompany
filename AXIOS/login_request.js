@@ -11,15 +11,17 @@ document.getElementById("login").addEventListener("click",function(){
         }
     })
     .then(function (respuesta) {
+        console.log(respuesta);
         console.log(respuesta.data.id);
         if (respuesta.data.status=="fail"){
-            document.getElementById("login").innerHTML="Validar"
-            alert("ERROR, TE HAS EQUIVOCADO")
+            document.getElementById("login").innerHTML="Validar";
+            alert("ERROR, TE HAS EQUIVOCADO");
         }
         else{  
+            console.log(respuesta);
             localStorage.setItem("user_id",respuesta.data.id);                   
             document.cookie = "username="+document.getElementById("username1").value;
-            location.reload();
+            //location.reload();
         }
 
         

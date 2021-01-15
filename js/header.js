@@ -21,7 +21,7 @@ function togglePopup(num,index){
             break;
         case 7:
             document.getElementById("popup-6").classList.toggle("active");
-            document.getElementById("numIndex").innerHTML = index;
+            document.getElementById("popExpFoto").style.backgroundImage = document.getElementsByClassName("experienciaInner")[index].style.backgroundImage;
             break;
 
     }

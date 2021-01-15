@@ -86,52 +86,35 @@
         //SELECT DE TODAS LAS EXPERIENCIAS :)
         case 7: 
             $response = array();
-            $datos = $Experiencia -> select();
-            foreach($datos as $key => $value){
-                if($_REQUEST['size']==8){
-                    if($key<8){
-                        $idUsuario = $Usuario -> selectUserName($value["id_usuario"]);
-                        $valoraciones = $ValoracionesUsuario -> selectValoraciones($value["id_experiencia"]);
-                        $response[$key] = array("id_experiencia" => $value["id_experiencia"],
+            $datos = $Experiencia -> select($_REQUEST['size']);
+            if($datos != 0){
+                for ($i=0; $i < ($_REQUEST['size']-8); $i++) { 
+                    $response[$i] = array("status" => "ok");
+                }
+                foreach($datos as $key => $value){ 
+                        error_log("entro"); 
+                        $response[$key+$_REQUEST['size']-8] = array("status" => "ok",
+                        "id_experiencia" => $value["id_experiencia"],
                         "texto" => $value["texto"],
                         "imagen" => $value["imagen"],
                         "categoria" => $value["categoria"],
                         "latitud" => $value["latitud"],
                         "longitud" => $value["longitud"],
-                        "valoraciones" => $valoraciones,
+                        "valoraciones" => $value['valoraciones'],
                         "estado" => $value["estado"],
-                        "usuario" => $idUsuario["username"],
+                        "usuario" => $value["username"],
                         "id_usuario" => $value["id_usuario"],
                         "fecha_de_publicacion" => $value["fecha_de_publicacion"],
                         "localizacion" => $value["localizacion"],
                         "reportado" => $value["reportado"]
-                        );   
-                    }
-                }else{
-                    if($key>=($_REQUEST['size']-8) && $key<$_REQUEST['size']){
-                        $idUsuario = $Usuario -> selectUserName($value["id_usuario"]);
-                        $valoraciones = $ValoracionesUsuario -> selectValoraciones($value["id_experiencia"]);
-                        $response[$key] = array("id_experiencia" => $value["id_experiencia"],
-                        "texto" => $value["texto"],
-                        "imagen" => $value["imagen"],
-                        "categoria" => $value["categoria"],
-                        "latitud" => $value["latitud"],
-                        "longitud" => $value["longitud"],
-                        "valoraciones" => $valoraciones,
-                        "estado" => $value["estado"],
-                        "usuario" => $idUsuario["username"],
-                        "id_usuario" => $value["id_usuario"],
-                        "fecha_de_publicacion" => $value["fecha_de_publicacion"],
-                        "localizacion" => $value["localizacion"],
-                        "reportado" => $value["reportado"]
-                        );  
-                    }else if($key<$_REQUEST['size']){
-                        $response[$key] = array();
-                    }
-                }   
+                        );
+                }
+            }else{
+                $response[0] = array("status" => "empty");
             }
 
             echo json_encode($response);
+            
             break;
 
         //UPDATE DE UNA EXPERIENCIA EN CONCRETO :)
