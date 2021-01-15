@@ -68,6 +68,6 @@ function IsLiked(idusuari,idexperiencia,numero){
         
     })
     .catch(function (error) {
-        alert("El servidor ha tardado mucho en responder33")
+        
     }); 
 }

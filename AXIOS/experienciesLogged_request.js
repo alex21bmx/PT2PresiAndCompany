@@ -1,8 +1,33 @@
 window.onload = function() {
+    try {
+        if(localStorage.getItem('filtroUser')==null){
+            localStorage.setItem("filtroUser","no");
+        }
+    } catch (error) {
+        localStorage.setItem("filtroUser","no");
+    }
+    try {
+        if(localStorage.getItem('filtroLikes')==null){
+            localStorage.setItem("filtroLikes","no");
+        }
+    } catch (error) {
+        localStorage.setItem("filtroLikes","no");
+    }
+    try {
+        if(localStorage.getItem('filtroCategoria')==null){
+            localStorage.setItem("filtroCategoria","no");
+        }
+    } catch (error) {
+        localStorage.setItem("filtroCategoria","no");
+    }
+    console.log(localStorage.getItem('filtroUser'));
     axios.get('./BD/api/api.php', {
         timeout:10000,
         params: {
             size: document.getElementById("numero").value
+            ,filtroUser:localStorage.getItem('filtroUser')
+            ,filtroLikes:localStorage.getItem('filtroLikes')
+            ,filtroCategoria:localStorage.getItem('filtroCategoria')
             ,id: 7
         }
     })

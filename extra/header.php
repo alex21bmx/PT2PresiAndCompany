@@ -18,7 +18,7 @@
                 if(isset($_COOKIE["username"]) && $valor == "admin")
                     echo '<button class="headerBttn" onclick="" id="admin"><img id="adminBttn" src="./src/admin.png" alt=""></button>';
             ?>
-
+                
             <button class="headerBttn" onclick="togglePopup(2)"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
 
 
@@ -51,34 +51,37 @@
             <div class="search-container">
 
                 <label>Filtrar por usuario</label>
-                <input type="text" name="" id=""><br>
+                <input type="text" name="" id="filtroUser" value=""><br>
 
                 <label>Filtrar por Likes</label>
                 <div>
-                    <input type="radio" id="none" name="likes" value="No"
+                    <input type="radio" id="filtroNone" name="likes" value="No"
                             checked>
                     <label for="huey">No</label>
                 </div>
 
                 <div>
-                    <input type="radio" id="masLikes" name="likes" value="Mas likes">
+                    <input type="radio" id="filtroMasLikes" name="likes" value="Mas likes">
                     <label for="dewey">Mas likes</label>
                 </div>
 
                 <div>
-                    <input type="radio" id="menosLikes" name="likes" value="Menos likes">
+                    <input type="radio" id="filtroMenosLikes" name="likes" value="Menos likes">
                     <label for="louie">Menos likes</label>
                 </div>
 
                 <label>Filtrar por Categoria</label>
-                <input type="text" name="" id=""><br>
+                <select name="cars" id="filtroCategoria">
+                    <option value="null" selected>Ningúno</option>
+                    <option value="aventuras">Aventuras</option>
+                    <option value="montañismo">Montañismo</option>
+                    <option value="familiar">Familiar</option>
+                    <option value="historico">Histórico</option>
+                    <option value="romantico">Romántico</option>
+                </select>
 
-
-                <button>Buscar</button>
-                <form action="/action_page.php"> <!--Aquí poner el php o js que haga la accion de buscar-->
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
-            </form>
+                <button onclick="aplicaFiltros()">Buscar</button>
+                <button onclick="reiniciaFiltros()">Reinciar filtros</button>
     </div>
         </div>
     </div>

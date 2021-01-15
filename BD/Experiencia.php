@@ -19,12 +19,28 @@ class Experiencia extends DBAbstractModel {
         $this->db_name = "a18sergribra_viajes";
     }
 
-    public function select($position="") {
+    public function select($position="",$usuario="",$likes="",$categoria="") {
+        if($usuario=="no" && $categoria=="no"){
+          $where = " ";
+        }else if($usuario!="no" && $categoria!="no"){
+          $where = "WHERE experiencias.categoria=".$categoria." AND usuarios.username=".$usuario;
+        }else if($usuario!="no" && $categoria=="no"){
+          $where = "WHERE usuarios.username=".$usuario;
+        }else if($usuario=="no" && $categoria!="no"){
+          $where = "WHERE experiencias.categoria=".$categoria;
+        }
+
+        if($likes=="no"){
+          $order = " ";
+        }else if($likes=="no"){
+          $order = "ORDER BY valoraciones asc";
+        }else{
+          $order = "ORDER BY valoraciones desc";
+        }
         
         $origen = $position - 8;
-        $this->query = "SELECT usuarios.*,experiencias.* , count(ValoracionesUsuario.id_experiencia) as valoraciones FROM `experiencias` LEFT JOIN ValoracionesUsuario ON experiencias.id_experiencia = ValoracionesUsuario.id_experiencia JOIN usuarios ON experiencias.id_usuario=usuarios.id WHERE experiencias.estado='Publicada' GROUP BY experiencias.id_experiencia limit 8 offset $origen";
+        $this->query = "SELECT usuarios.*,experiencias.* , count(ValoracionesUsuario.id_experiencia) as valoraciones FROM `experiencias` LEFT JOIN ValoracionesUsuario ON experiencias.id_experiencia = ValoracionesUsuario.id_experiencia JOIN usuarios ON experiencias.id_usuario=usuarios.id WHERE experiencias.estado='Publicada'  GROUP BY experiencias.id_experiencia  limit 8 offset $origen";
         $this->get_results_from_query();
-        error_log("entroXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
         if(count($this->rows)!=0){
           for($i=0; $i<count($this->rows); $i++){
             error_log("volta");

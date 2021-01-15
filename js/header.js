@@ -40,3 +40,24 @@ function cerrarSesion(valor){
     window.location.reload();
     alert("Sesión cerrada");
 }
+function aplicaFiltros(){
+    try {
+        localStorage.setItem("filtroUser",document.getElementById("filtroUser").value);
+    } catch (error) {
+        localStorage.setItem("filtroUser","no");
+    }
+    if(document.getElementById("filtroNone").checked == true){
+        localStorage.setItem("filtroLikes","no");
+    }else if(document.getElementById("filtroMasLikes").checked == true){
+        localStorage.setItem("filtroLikes","MAS");
+    }else{
+        localStorage.setItem("filtroLikes","MENOS")
+    }
+    localStorage.setItem("filtroCategoria",document.getElementById("filtroCategoria").value);
+    location.reload();
+}
+function reiniciaFiltros(){
+    localStorage.setItem("filtroCategoria","no");
+    localStorage.setItem("filtroUser","no");
+    localStorage.setItem("filtroLikes","no");
+}

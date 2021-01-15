@@ -7,6 +7,9 @@ document.getElementById("cargamas").addEventListener("click",function(){
         timeout:10000,
         params: {
             size: document.getElementById("numero").value
+            ,filtroUser:localStorage.getItem('filtroUser')
+            ,filtroLikes:localStorage.getItem('filtroLikes')
+            ,filtroCategoria:localStorage.getItem('filtroCategoria')
             ,id: 7
         }
     })

@@ -86,7 +86,7 @@
         //SELECT DE TODAS LAS EXPERIENCIAS :)
         case 7: 
             $response = array();
-            $datos = $Experiencia -> select($_REQUEST['size']);
+            $datos = $Experiencia -> select($_REQUEST['size'],$_REQUEST['filtroUser'],$_REQUEST['filtroLikes'],$_REQUEST['filtroCategoria']);
             if($datos != 0){
                 for ($i=0; $i < ($_REQUEST['size']-8); $i++) { 
                     $response[$i] = array("status" => "ok");
