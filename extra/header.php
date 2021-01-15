@@ -45,12 +45,12 @@
     </div>
     <div class="popup" id="popup-1">
         <div class="overlay"></div>
-        <div class="content">
+        <div class="contentSearch">
             <div class="close-btn" onclick="togglePopup(1)">&times;</div>
             <div class="search-container">
                 <form action="/action_page.php"> <!--Aquí poner el php o js que haga la accion de buscar-->
                 <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <button type="submit"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
             </form>
     </div>
         </div>
