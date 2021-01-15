@@ -1,4 +1,4 @@
-function togglePopup(num){
+function togglePopup(num,index){
     switch (num){
         case 1:
             document.getElementById("popup-1").classList.toggle("active");
@@ -18,6 +18,10 @@ function togglePopup(num){
             break;
         case 6:
             document.getElementById("popup-5").classList.toggle("active");
+            break;
+        case 7:
+            document.getElementById("popup-6").classList.toggle("active");
+            document.getElementById("numIndex").innerHTML = index;
             break;
 
     }

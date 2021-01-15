@@ -38,14 +38,14 @@ window.onload = function() {
                         '<input type="hidden" class="id_experiencia" value="'+respuesta.data[index]["id_experiencia"]+'">'+
                         '<div class="experienciaMiddle" style="background-color:'+color+';">'+
                             '<h4 class="categoriaExperiencia">'+respuesta.data[index]["categoria"]+'</h4>'+
-                            '<div class="experienciaInner" style="background-image: url('+respuesta.data[index]["imagen"]+'");>'+
+                            '<div class="experienciaInner" onclick="togglePopup(7,'+index+')" style="background-image: url('+respuesta.data[index]["imagen"]+'");>'+
                                 '<div class="ultimaCapa">'+
                                     '<h4 class="localizacion">'+respuesta.data[index]["localizacion"]+'</h4>'+
                                     '<h4 class="coordenadas">'+respuesta.data[index]["latitud"]+','+respuesta.data[index]["longitud"]+'</h4>'+ 
                                 '</div>'+
                             '</div>'+
                         '</div>'+
-                        '<h4 class="usuarioYfecha">'+respuesta.data[index]["fecha_de_publicacion"]+' - '+respuesta.data[index]["id_usuario"]+'</h4>'+
+                        '<h4 class="usuarioYfecha">'+respuesta.data[index]["fecha_de_publicacion"]+' - '+respuesta.data[index]["usuario"]+'</h4>'+
                         '<div class="likecontent">'+
                             '<div id="like'+index+'" class="heart"></div>'+
                             '<h4 class="numLike odometer">'+respuesta.data[index]["valoraciones"]['COUNT(*)']+'</h4>'+
