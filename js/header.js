@@ -30,6 +30,7 @@ function togglePopup(num,index){
         case 8:
             document.getElementById("popup-7").classList.toggle("active");
             document.getElementById("gestionId").value = document.getElementsByClassName("id_experiencia")[index].value;
+            document.getElementById("localizacionAct").placeHolder = document.getElementsByClassName("localizacion")[index].textContent;
             break;
 
     }
