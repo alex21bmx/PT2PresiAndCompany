@@ -136,31 +136,24 @@
             
             <form id="crearExperiencia">
                 <div class = "categories">
-                    <select id="estado">
-                        <option value="0">Archive</option> 
-                        <option selected value="1">Post</option> 
+                    <select id="categoria">
+                        <option selected value="aventuras">Aventuras</option> 
+                        <option value="montañismo">Montañismo</option>
+                        <option value="familiar">Familiar</option> 
+                        <option value="historico">Histórico</option>
+                        <option value="romantico">Romántico</option> 
                     </select><br><br>
-                        <!--<input type="checkbox" id="categoria1" name="categoria1" value="aventures">
-                        <label for="categoria1">ADVENTURES</label>
-                        <input type="checkbox" id="categoria2" name="categoria2" value="muntanyisme">
-                        <label for="categoria2">MOUNTAIN</label>
-                        <input type="checkbox" id="categoria3" name="categoria3" value="familiar">
-                        <label for="categoria3">FAMILIAR</label>
-                        <input type="checkbox" id="categoria4" name="categoria4" value="historic">
-                        <label for="categoria4">HISTORICAL</label>
-                        <input type="checkbox" id="categoria5" name="categoria5" value="romantic">
-                        <label for="categoria5">ROMANTIC</label>-->
                 </div>
                 <div class="mas_info">
-                    <input type="text" id="localizacion" name="localizacion" placeholder="Location" required><br>
-                    <input type="text" id="imagen" name="imagen" placeholder="Img - (URL)" required><br>
-                    <input type="number" id="latitud" name="latitud" placeholder="Latitude"> 
-                    <input type="number" id="longitud" name="longitud" placeholder="Longitude"><br><br>
-                    <input type="text" id="texto" name="texto" placeholder="Write a description..." required><br>
+                    <input type="text" id="localizacion" name="localizacion" placeholder="Localización" required><br>
+                    <input type="text" id="imagen" name="imagen" placeholder="Imagen - (URL)" required><br>
+                    <input type="number" id="latitud" name="latitud" placeholder="Latitud"> 
+                    <input type="number" id="longitud" name="longitud" placeholder="Longitud"><br><br>
+                    <input type="text" id="texto" name="texto" placeholder="Escribe una descripción..." required><br>
                 </div>
                 <select id="estado">
-                    <option value="0">Archive</option> 
-                    <option selected value="1">Post</option> 
+                    <option value="Esbozo">Esbozo</option> 
+                    <option selected value="Publicada">Publicada</option> 
                 </select><br><br>
                 <input type="button" value="✔" id="crear"><br>
                 <?php 

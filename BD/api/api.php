@@ -84,7 +84,7 @@
             break;
 
         //SELECT DE TODAS LAS EXPERIENCIAS :)
-        case 7:
+        case 7: 
             $response = array();
             $datos = $Experiencia -> select();
             foreach($datos as $key => $value){
@@ -192,7 +192,7 @@
         case 13:
             $idUsuario = $Usuario -> selectIdUsuarioByUsername($_REQUEST["username"]);
 
-            $response = array("idUsuario" => $idUsuario,
+            $array = array("idUsuario" => $idUsuario["id"],
             "texto" => $_REQUEST["texto"],
             "imagen" => $_REQUEST["imagen"],
             "categoria" => $_REQUEST["categoria"],
@@ -201,17 +201,9 @@
             "localizacion" => $_REQUEST["localizacion"],
             "estado" => $_REQUEST["estado"]);
 
+            $response = $Experiencia -> insert($array);
+
             echo json_encode($response);
-            /*$array = array(
-            "texto" => $_REQUEST["texto"],
-            "imagen" => $_REQUEST["imagen"],
-            "categoria" => $_REQUEST["categoria"],
-            "latitud" => $_REQUEST["latitud"],
-            "longitud" => $_REQUEST["longitud"],
-            "estado" => $_REQUEST["estado"],
-            "id_usuario" => $idUsuario["id"],
-            "localizacion" => $_REQUEST["localizacion"]
-            );*/
             break;
     }
 

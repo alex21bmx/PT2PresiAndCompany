@@ -45,11 +45,10 @@ class Experiencia extends DBAbstractModel {
       $categoria = $array["categoria"];
       $latitud = $array["latitud"];
       $longitud = $array["longitud"];
-      $id_usuario = $array["id_usuario"];
-      $fecha_de_publicacion = $array["fecha_de_publicacion"];
+      $id_usuario = $array["idUsuario"];
       $localizacion = $array["localizacion"];
 
-      $this->query = "SELECT EXISTS (SELECT * FROM experiencias WHERE localizacion='$localizacion' AND id_usuario='$id_usuario' AND texto='$texto' AND imagen='$imagen' AND categoria='$categoria' AND fecha_de_publicacion='$fecha_de_publicacion' AND longitud='$longitud' AND latitud='$latitud')";
+      $this->query = "SELECT EXISTS (SELECT * FROM experiencias WHERE localizacion='$localizacion' AND id_usuario='$id_usuario' AND texto='$texto' AND imagen='$imagen' AND categoria='$categoria' AND longitud='$longitud' AND latitud='$latitud')";
       $this->get_results_from_query();
 
       return $this->rows[0];
@@ -65,11 +64,11 @@ class Experiencia extends DBAbstractModel {
           $latitud = $expData["latitud"];
           $longitud = $expData["longitud"];
           $estado = $expData["estado"];
-          $id_usuario = $expData["id_usuario"];
+          $id_usuario = $expData["idUsuario"];
           $localizacion = $expData["localizacion"];
 
-          $this->query="INSERT INTO experiencias (id_experiencia, texto, imagen, categoria, latitud, longitud, valoraciones_positivas, valoraciones_negativas, estado, id_usuario, fecha_de_publicacion, localizacion, reportado)
-            VALUES (null, '$texto', '$imagen', '$categoria', '$latitud', '$longitud', 0, 0, '$estado', '$id_usuario', NOW(), '$localizacion', '0')";
+          $this->query="INSERT INTO experiencias (texto, imagen, categoria, latitud, longitud, estado, id_usuario, fecha_de_publicacion, localizacion, reportado)
+            VALUES ('$texto', '$imagen', '$categoria', '$latitud', '$longitud', '$estado', '$id_usuario', CURRENT_TIMESTAMP(), '$localizacion', '0')";
           $this->execute_single_query();
           
           return "ok";
