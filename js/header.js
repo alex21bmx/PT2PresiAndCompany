@@ -44,12 +44,16 @@ function cerrarSesion(valor){
 }
 function aplicaFiltros(){
     try {
-        localStorage.setItem("filtroUser",document.getElementById("filtroUser").value);
+        if(document.getElementById("filtroUser").value==""){
+            localStorage.setItem("filtroUser","null");
+        }else{
+            localStorage.setItem("filtroUser",document.getElementById("filtroUser").value);
+        }
     } catch (error) {
-        localStorage.setItem("filtroUser","no");
+        localStorage.setItem("filtroUser","null");
     }
     if(document.getElementById("filtroNone").checked == true){
-        localStorage.setItem("filtroLikes","no");
+        localStorage.setItem("filtroLikes","null");
     }else if(document.getElementById("filtroMasLikes").checked == true){
         localStorage.setItem("filtroLikes","MAS");
     }else{
@@ -59,7 +63,7 @@ function aplicaFiltros(){
     location.reload();
 }
 function reiniciaFiltros(){
-    localStorage.setItem("filtroCategoria","no");
-    localStorage.setItem("filtroUser","no");
-    localStorage.setItem("filtroLikes","no");
+    localStorage.setItem("filtroCategoria","null");
+    localStorage.setItem("filtroUser","null");
+    localStorage.setItem("filtroLikes","null");
 }

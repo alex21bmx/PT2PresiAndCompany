@@ -20,26 +20,27 @@ class Experiencia extends DBAbstractModel {
     }
 
     public function select($position="",$usuario="",$likes="",$categoria="") {
-        if($usuario=="no" && $categoria=="no"){
+        if($usuario=="null" && $categoria=="null"){
           $where = " ";
-        }else if($usuario!="no" && $categoria!="no"){
-          $where = "WHERE experiencias.categoria=".$categoria." AND usuarios.username=".$usuario;
-        }else if($usuario!="no" && $categoria=="no"){
-          $where = "WHERE usuarios.username=".$usuario;
-        }else if($usuario=="no" && $categoria!="no"){
-          $where = "WHERE experiencias.categoria=".$categoria;
+        }else if($usuario!="null" && $categoria!="null"){
+          $where = "AND experiencias.categoria='".$categoria."' AND usuarios.username='".$usuario."'";
+        }else if($usuario!="null" && $categoria=="null"){
+          $where = "AND usuarios.username='".$usuario."'";
+        }else if($usuario=="null" && $categoria!="null"){
+          $where = "AND experiencias.categoria='".$categoria."'";
         }
 
-        if($likes=="no"){
+        if($likes=="null"){
           $order = " ";
-        }else if($likes=="no"){
+        }else if($likes=="null"){
           $order = "ORDER BY valoraciones asc";
         }else{
           $order = "ORDER BY valoraciones desc";
         }
         
         $origen = $position - 8;
-        $this->query = "SELECT usuarios.*,experiencias.* , count(ValoracionesUsuario.id_experiencia) as valoraciones FROM `experiencias` LEFT JOIN ValoracionesUsuario ON experiencias.id_experiencia = ValoracionesUsuario.id_experiencia JOIN usuarios ON experiencias.id_usuario=usuarios.id WHERE experiencias.estado='Publicada'  GROUP BY experiencias.id_experiencia  limit 8 offset $origen";
+        $this->query = "SELECT usuarios.*,experiencias.* , count(ValoracionesUsuario.id_experiencia) as valoraciones FROM `experiencias` LEFT JOIN ValoracionesUsuario ON experiencias.id_experiencia = ValoracionesUsuario.id_experiencia JOIN usuarios ON experiencias.id_usuario=usuarios.id WHERE experiencias.estado='Publicada' ".$where." GROUP BY experiencias.id_experiencia ".$order." limit 8 offset $origen";
+        error_log("SELECT usuarios.*,experiencias.* , count(ValoracionesUsuario.id_experiencia) as valoraciones FROM `experiencias` LEFT JOIN ValoracionesUsuario ON experiencias.id_experiencia = ValoracionesUsuario.id_experiencia JOIN usuarios ON experiencias.id_usuario=usuarios.id WHERE experiencias.estado='Publicada' ".$where." GROUP BY experiencias.id_experiencia ".$order." limit 8 offset $origen");
         $this->get_results_from_query();
         if(count($this->rows)!=0){
           for($i=0; $i<count($this->rows); $i++){

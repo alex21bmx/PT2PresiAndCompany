@@ -59,13 +59,6 @@
       <?php require_once("extra/footer.php"); ?>
     </footer>
 </body>
-<?php
-    if(isset($_COOKIE["username"])){
-        echo "Logged";
-    }else{
-        echo '<script src="AXIOS/experiencies_noLogged_request.js"></script>';
-    }
-?>
 <!-- JQUERY link -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!--OWL CAROUSEL JS -->
