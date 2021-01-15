@@ -18,6 +18,7 @@ document.getElementById("login").addEventListener("click",function(){
             alert("ERROR, TE HAS EQUIVOCADO");
         }
         else{  
+            console.log(respuesta);
             localStorage.setItem("user_id",respuesta.data.id);                   
             document.cookie = "username="+document.getElementById("username1").value;
             //location.reload();
