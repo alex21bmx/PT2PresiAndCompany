@@ -187,6 +187,30 @@
 
             echo json_encode($response);
             break;
+        //SELECT DE EXPERIENCIAS QUE HAN SIDO REPORTADAS
+        case 14:
+            $response = array();
+            $datos = $Experiencia -> selectExperienciasReportadas();
+            foreach($datos as $key => $value){
+                $idUsuario = $Usuario -> selectUserName($value["id_usuario"]);
+                $response[$key] = array("status" => "ok",
+                        "id_experiencia" => $value["id_experiencia"],
+                        "texto" => $value["texto"],
+                        "imagen" => $value["imagen"],
+                        "categoria" => $value["categoria"],
+                        "latitud" => $value["latitud"],
+                        "longitud" => $value["longitud"],
+                        "usuario" => $idUsuario,
+                        "id_usuario" => $value["id_usuario"],
+                        "fecha_de_publicacion" => $value["fecha_de_publicacion"],
+                        "localizacion" => $value["localizacion"],
+                        "reportado" => $value["reportado"]
+                        );      
+            }
+
+            echo json_encode($response);
+        break;
+
     }
 
         
