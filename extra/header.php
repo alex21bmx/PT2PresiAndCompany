@@ -49,31 +49,21 @@
     <div class="popup" id="popup-1">
         <div class="overlay"></div>
         <div class="contentSearch">
+            <h1 id="filtroTitol">Búsqueda</h1>
             <div class="close-btn" onclick="togglePopup(1)">&times;</div>
             <div class="search-container">
+                <h4 class="filtroLabel">Filtrar por usuario</h4>
+                <input type="text" name="" id="filtroUser" value="" placeholder="Usuario"><br>
 
-                <label>Filtrar por usuario</label>
-                <input type="text" name="" id="filtroUser" value=""><br>
+                <h4 class="filtroLabel">Filtrar por Likes</h4>
+                <select class="selects" name="cars" id="filtroLikes">
+                    <option value="MENOS">Menos likes</option>
+                    <option value="MAS">Mas likes</option>
+                    <option value="null" selected>Ningúno</option>
+                </select>
 
-                <label>Filtrar por Likes</label>
-                <div>
-                    <input type="radio" id="filtroNone" name="likes" value="No"
-                            checked>
-                    <label for="huey">No</label>
-                </div>
-
-                <div>
-                    <input type="radio" id="filtroMasLikes" name="likes" value="Mas likes">
-                    <label for="dewey">Mas likes</label>
-                </div>
-
-                <div>
-                    <input type="radio" id="filtroMenosLikes" name="likes" value="Menos likes">
-                    <label for="louie">Menos likes</label>
-                </div>
-
-                <label>Filtrar por Categoria</label>
-                <select name="cars" id="filtroCategoria">
+                <h4 class="filtroLabel">Filtrar por Categoria</h4>
+                <select class="selects" name="cars" id="filtroCategoria">
                     <option value="null" selected>Ningúno</option>
                     <option value="aventuras">Aventuras</option>
                     <option value="montañismo">Montañismo</option>
@@ -81,9 +71,9 @@
                     <option value="historico">Histórico</option>
                     <option value="romantico">Romántico</option>
                 </select>
+                <br><br>
 
                 <button onclick="aplicaFiltros()">Buscar</button>
-                <button onclick="reiniciaFiltros()">Reinciar filtros</button>
     </div>
         </div>
     </div>
@@ -147,7 +137,7 @@
                     <input id="username1" type="text" placeholder="Enter Username" required>
                     <!--PASS INPUT-->
                     <input id="password1" type="password" placeholder="Enter Password" required>
-                    <input type="submit" value="Log In" id="login">
+                    <input type="button" value="Log In" id="login">
             </form>
             <hr></hr> 
             <br>
@@ -163,7 +153,7 @@
             <form>
                 <input type="text" id="newUsername" name="newUsername" placeholder="Enter Username" required><br>
                 <input type="password" id="newPassword" name="newPassword" placeholder="Enter Password" required><br>
-                <input type="submit" value="Sign Up" id="signup">
+                <input type="button" value="Sign Up" id="signup">
             </form>
         </div>
     </div>

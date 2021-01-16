@@ -52,18 +52,14 @@ function aplicaFiltros(){
     } catch (error) {
         localStorage.setItem("filtroUser","null");
     }
-    if(document.getElementById("filtroNone").checked == true){
-        localStorage.setItem("filtroLikes","null");
-    }else if(document.getElementById("filtroMasLikes").checked == true){
-        localStorage.setItem("filtroLikes","MAS");
-    }else{
-        localStorage.setItem("filtroLikes","MENOS")
-    }
+    localStorage.setItem("filtroLikes",document.getElementById("filtroLikes").value);
     localStorage.setItem("filtroCategoria",document.getElementById("filtroCategoria").value);
+    localStorage.setItem("filtresOn","si");
     location.reload();
 }
 function reiniciaFiltros(){
     localStorage.setItem("filtroCategoria","null");
     localStorage.setItem("filtroUser","null");
     localStorage.setItem("filtroLikes","null");
+    localStorage.setItem("filtresOn","no");
 }

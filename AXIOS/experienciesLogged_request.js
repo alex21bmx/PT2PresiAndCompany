@@ -1,26 +1,7 @@
 window.onload = function() {
-    try {
-        if(localStorage.getItem('filtroUser')==null){
-            localStorage.setItem("filtroUser","null");
-        }
-    } catch (error) {
-        localStorage.setItem("filtroUser","null");
+    if(localStorage.getItem("filtresOn")!="si"){
+        reiniciaFiltros();
     }
-    try {
-        if(localStorage.getItem('filtroLikes')==null){
-            localStorage.setItem("filtroLikes","null");
-        }
-    } catch (error) {
-        localStorage.setItem("filtroLikes","null");
-    }
-    try {
-        if(localStorage.getItem('filtroCategoria')==null){
-            localStorage.setItem("filtroCategoria","null");
-        }
-    } catch (error) {
-        localStorage.setItem("filtroCategoria","null");
-    }
-    console.log(localStorage.getItem('filtroUser'));
     axios.get('./BD/api/api.php', {
         timeout:10000,
         params: {
@@ -100,6 +81,7 @@ window.onload = function() {
                     timer: 1500
                   })
             } 
+            localStorage.setItem("filtresOn","no");
         }
         
     })

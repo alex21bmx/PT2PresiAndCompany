@@ -601,7 +601,7 @@ transition-delay: 0.2s;
       font-size: 16px;
     }
     
-    .contentLogin input[type="submit"] {
+    .contentLogin input[type="button"] {
       border: none;
       outline: none;
       height: 40px;
@@ -611,7 +611,7 @@ transition-delay: 0.2s;
       border-radius: 20px;
     }
     
-    .contentLogin input[type="submit"]:hover {
+    .contentLogin input[type="button"]:hover {
       cursor: pointer;
       background: #ffc107;
       color: #000;
@@ -771,7 +771,7 @@ background-color: black;
 box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
 border-radius: 20px;
 position:absolute;
-top:40%;
+top:60%;
 left:50%;
 transform:translate(-50%,-50%) scale(0);
 background:black;
@@ -856,39 +856,78 @@ background-color: #555;
   transform:translate(-50%,-50%) scale(0);
   background:black;
   width: 320px;
-  height: 100px;
+  height: 440px;
   z-index:2;
   text-align:left;
   padding: 70px 30px;
   box-sizing:border-box;
   font-family: 'Raleway', Arial, sans-serif;
   }
+
+  .filtroLabel{
+    text-align: center;
+    
+  }
+  #filtroUser{
+    width: 100%;
+  }
+
+
   .popup.active .contentSearch {
     transition:all 300ms ease-in-out;
     transform:translate(-50%,-50%) scale(1);
     }
 
-    .search-container input[type="submit"] {
+    #filtroTitol{
+      position: absolute;
+      text-align: center;
+      top: 0;
+    }
+    .selects{
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+      text-align: center;
+      border-radius: 30px;
+      height: 30px;
+      text-align-last:center;
+      outline: none;
+      -webkit-box-shadow: 0 0 5px whitesmoke;
+        box-shadow: 0 0 5px whitesmoke;
+    }
+    .selects:hover{
+      -webkit-box-shadow: 0 0 10px whitesmoke;
+        box-shadow: 0 0 10px whitesmoke;
+    }
+    .search-container{
+      position: relative;
+      text-align: center;
+    }
+
+    .search-container button {
       border: none;
       outline: none;
-      height: 40px;
+      width: 170px;
+      height: 30px;
       background: #b80f22;
       color: #fff;
-      font-size: 18px;
+      font-size: 14px;
       border-radius: 20px;
     }
     
-    .search-container input[type="submit"]:hover {
+    .search-container button:hover {
       cursor: pointer;
       background: #ffc107;
       color: #000;
     }
     .contentSearch input[type="text"] {
       border: none;
+      width: 100px;
       border-bottom: 1px solid #fff;
       background: transparent;
       outline: none;
       height: 40px;
+      text-align: center;
       color: #fff;
       font-size: 16px;
     }

@@ -32,7 +32,7 @@ class Experiencia extends DBAbstractModel {
 
         if($likes=="null"){
           $order = " ";
-        }else if($likes=="null"){
+        }else if($likes=="MENOS"){
           $order = "ORDER BY valoraciones asc";
         }else{
           $order = "ORDER BY valoraciones desc";

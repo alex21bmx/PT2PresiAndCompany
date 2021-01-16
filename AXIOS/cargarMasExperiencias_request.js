@@ -21,7 +21,7 @@ document.getElementById("cargamas").addEventListener("click",function(){
         else{
             console.log(respuesta);
             if(respuesta.data[0].status!="empty"){
-                let cadena= localStorage.getItem('cadena');
+                let cadena= "";
                 for (let index = parseInt(document.getElementById("numero").value)-8; index < respuesta.data.length; index++) {
                     let color = "";
                     switch (respuesta.data[index]["categoria"]){
@@ -67,8 +67,7 @@ document.getElementById("cargamas").addEventListener("click",function(){
                     '</div>';
                 }
                 localStorage.setItem('tamany',respuesta.data.length);
-                localStorage.setItem('cadena',cadena);
-                document.getElementById("grid-container").innerHTML = cadena; 
+                document.getElementById("grid-container").innerHTML += cadena; 
                 for (let index = 0; index < respuesta.data.length; index++) {
                     let element = document.getElementById("like"+index);
                     element.addEventListener("click", function(){ likea(index); });
