@@ -17,12 +17,9 @@
                 if(isset($_COOKIE["username"])){
                     $valor = $_COOKIE["admin"];
                     if($valor == "admin")
-                        echo '<button class="headerBttn" onclick="" id="admin"><img id="adminBttn" src="./src/admin.png" alt=""></button>';
+                        echo '<button class="headerBttn" onclick="togglePopup(2)" id="admin"><img id="adminBttn" src="./src/admin.png" alt=""></button>';
                 }
             ?>
-                
-            <button class="headerBttn" onclick="togglePopup(2)"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
-
 
             <?php
                 if(isset($_COOKIE["username"])){
@@ -87,6 +84,22 @@
         <div class="contentStaff">
             <div class="close-btn" onclick="togglePopup(2)">&times;</div>
             <h1>Staff</h1>
+
+            <div class="tab">
+                <button class="tablinks" onclick="cambiarPanel(event, 'usuarios')">Gestionar Usuarios</button>
+                <button class="tablinks" onclick="cambiarPanel(event, 'experiencias')">Gestionar experiencias</button>
+            </div>
+
+            <div id="usuarios" class="tabcontent">
+                <h3>Usuarios</h3>
+            </div>
+
+            <div id="experiencias" class="tabcontent">
+                <h3>Experiencias reportadas</h3>
+            </div>
+                
+            <!--<div class="close-btn" onclick="togglePopup(2)">&times;</div>
+            <h1>Staff</h1>
             <div class="row">
                 <div class="column">
                     <div class="card">
@@ -125,7 +138,7 @@
                         <p><button class="button">Contact</button></p>
                     </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
