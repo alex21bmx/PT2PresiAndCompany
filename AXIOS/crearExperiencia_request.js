@@ -18,8 +18,16 @@ document.getElementById("crear").addEventListener("click",function(){
         .then(function (respuesta) {
             console.log(respuesta);
             if (respuesta.data=="ok"){
-                alert("Experiencia creada!");
                 document.getElementById("popup-5").classList.toggle("active");
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Experiencia creada',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                  setTimeout(function(){
+                    window.location.reload();
+                  }, 1500);
             }
             
         })
