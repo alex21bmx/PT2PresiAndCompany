@@ -32,7 +32,12 @@ function togglePopup(num,index){
             document.getElementById("gestionId").value = document.getElementsByClassName("id_experiencia")[index].value;
             document.getElementById("localizacionAct").placeHolder = document.getElementsByClassName("localizacion")[index].textContent;
             break;
-
+        case 9:
+            document.getElementById("popup-8").classList.toggle("active");
+            break;
+        case 10:
+            document.getElementById("popup-8").classList.remove("active");
+            break;
     }
 }
 
@@ -40,7 +45,6 @@ function cerrarSesion(valor){
     document.cookie = "username=" + valor + "; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     document.cookie = "admin=admin; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     window.location.reload();
-    alert("Sesión cerrada");
 }
 function aplicaFiltros(){
     try {

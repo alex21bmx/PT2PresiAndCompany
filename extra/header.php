@@ -27,23 +27,27 @@
             <?php
                 if(isset($_COOKIE["username"])){
                     $prueba = $_COOKIE["username"];
-                    echo '<nav>
-                        <ul>
-                            <li><div>'.$_COOKIE["username"].'</div>
-                            <div>
-                                <ul>
-                                    <li onclick="togglePopup(6)"><div>Crear experiencia</div></li>
-                                    <li onclick=""><div>Tus experiencias</div></li>
-                                    <li onclick="cerrarSesion('."'$prueba'".')"><div>Cerrar Sesión</div></li>
-                                </ul>
-                            </div>
-                            </li>
-                        </ul>
-                    </nav>';
+                    echo '<button class="headerBttn" onclick="togglePopup(9)" id="admin"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
+                    
                 }else{
                     echo '<button class="headerBttn" onclick="togglePopup(3)"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
                 }
             ?>
+            </div>
+    <!--OPCIONES USUARIO POP-UP-->
+    <div class="popup" id="popup-8">
+        <div class="overlay2"></div>
+        <div class="contentOptions">
+            <?php
+                 echo '  <ul id="optionsUl">
+                             <li ><div>Loggeado: '.$_COOKIE["username"].'</div></li>
+                             <li class="optionClickable" onclick="togglePopup(6)"><div>Crear experiencia</div></li>
+                             <li class="optionClickable" onclick=""><div>Tus experiencias</div></li>
+                             <li class="optionClickable" onclick="cerrarSesion('."'$prueba'".')"><div>Cerrar Sesión</div></li>
+                         </ul>';
+            ?>
+        </div>
+    </div>
     <!--SEARCH POP-UP--> 
     </div>
     <div class="popup" id="popup-1">
@@ -88,10 +92,10 @@
                     <div class="card">
                     <img src="./src/alex.PNG" alt="" style="width:100%">
                     <div class="container">
-                        <h2>Àlex Pérez Fernández</h2>
+                        <h2 style="color:white">Àlex Pérez Fernández</h2>
                         <p class="title">The Humble</p>
-                        <p>Fantastic person, code machine.</p>
-                        <p>a18aleperfer@inspedralbes.cat</p>
+                        <p style="color:white">Fantastic person, code machine.</p>
+                        <p style="color:white">a18aleperfer@inspedralbes.cat</p>
                         <p><button class="button">Contact</button></p>
                     </div>
                     </div>
@@ -101,10 +105,10 @@
                     <div class="card">
                     <img src="./src/sergio.PNG" alt="" style="width:100%">
                     <div class="container">
-                        <h2>Sergio Grima Bravo</h2>
+                        <h2 style="color:white">Sergio Grima Bravo</h2>
                         <p class="title">The Rock</p>
-                        <p>Lift the dumbbells like nothing. He's terrible.</p>
-                        <p>a18sergribra@inspedralbes.cat</p>
+                        <p style="color:white">Lift the dumbbells like nothing. He's terrible.</p>
+                        <p style="color:white">a18sergribra@inspedralbes.cat</p>
                         <p><button class="button">Contact</button></p>
                     </div>
                     </div>
@@ -114,10 +118,10 @@
                     <div class="card">
                     <img src="./src/arnau.PNG" alt="" style="width:100%">
                     <div class="container">
-                        <h2>Arnau Fernández Jerez</h2>
+                        <h2 style="color:white">Arnau Fernández Jerez</h2>
                         <p class="title">The President</p>
-                        <p>Their presence wanders from capitalism.</p>
-                        <p>a18arnferjer@inspedralbes.cat</p>
+                        <p style="color:white">Their presence wanders from capitalism.</p>
+                        <p style="color:white">a18arnferjer@inspedralbes.cat</p>
                         <p><button class="button">Contact</button></p>
                     </div>
                     </div>
@@ -192,7 +196,7 @@
             </form>
         </div>
     </div>
-</div>
+
 <script src="./js/header.js"></script>
 <script src="./AXIOS/login_request.js"></script>
 <script src="./AXIOS/signup_request.js"></script>

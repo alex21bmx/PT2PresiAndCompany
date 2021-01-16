@@ -20,7 +20,7 @@
       <?php require_once("extra/header.php"); ?>
     </header>
     <div id="content">
-        <div id="fotoBenvinguda">
+        <div id="fotoBenvinguda" onmouseover="togglePopup(10)">
         <figure class="snip1477">
             <div class="title">
                 <div>
