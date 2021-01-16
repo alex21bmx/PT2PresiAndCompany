@@ -45,3 +45,5 @@
     </div>
 <script src="AXIOS/experienciesLogged_request.js"></script>
 <script src="AXIOS/cargarMasExperiencias_request.js"></script>
+<script src="AXIOS/borrar_Experiencia_request.js"></script>
+<script src="AXIOS/ActualizarExperiencia_request.js"></script>

@@ -9,11 +9,18 @@ function deleteExperiencia(){
     })
     .then(function (respuesta) {
         console.log(respuesta);
-        if (respuesta.data=="ok"){
-            alert("Experiencia creada!");
-            document.getElementById("popup-5").classList.toggle("active");
+        if (respuesta.data.status=="ok"){
+            document.getElementById("popup-7").classList.toggle("active");
+            Swal.fire({
+                icon: 'success',
+                title: 'Experiencia eliminada',
+                showConfirmButton: false,
+                timer: 1500
+            });
+            setTimeout(function(){
+                window.location.reload();
+            }, 1500);
         }
-        location.reload();
         
     })
     .catch(function (error) {

@@ -44,7 +44,15 @@ function togglePopup(num,index){
 function cerrarSesion(valor){
     document.cookie = "username=" + valor + "; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     document.cookie = "admin=admin; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-    window.location.reload();
+    Swal.fire({
+        icon: 'info',
+        title: 'Sesión cerrada',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      setTimeout(function(){
+        window.location.reload();
+      }, 1500);
 }
 function aplicaFiltros(){
     try {
