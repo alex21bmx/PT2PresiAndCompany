@@ -80,6 +80,9 @@ window.onload = function() {
                     showConfirmButton: false,
                     timer: 1500
                   })
+                setTimeout(function(){
+                    window.location.reload();
+                }, 1500);
             } 
             localStorage.setItem("filtresOn","no");
         }
