@@ -162,7 +162,7 @@ class Experiencia extends DBAbstractModel {
       $localizacion = $expData["localizacion"];
       $this->query = "UPDATE experiencias SET texto= '$texto', imagen= '$imagen', categoria= '$categoria', latitud= '$latitud', longitud= '$longitud', localizacion= '$localizacion' WHERE id_experiencia='$id_experiencia'";
       $this->execute_single_query($this->query);
-      return $this->rows[0];
+      return "ok";
     }
 
     public function updateReporte($idExperiencia=""){
