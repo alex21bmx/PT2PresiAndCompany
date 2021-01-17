@@ -42,8 +42,8 @@
             <img id="reportedImg" src="" width="300" height="300">
             <h4 id="reportedTitle"></h4>
             <h4 id="reportedText"></h4>
-            <button onclick="quitarBan()">Forgive User</button>
-            <button>Delete Experience</button>
+            <button onclick="actualizarEstadoReport()">Forgive</button>
+            <button onclick="deleteExperienciaReportada()">Delete</button>
         </div>
     </div>
 

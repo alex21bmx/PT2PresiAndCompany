@@ -206,7 +206,7 @@
                             );      
                 }
             }else  
-                $response = array("status" => "empty");
+                $response[0] = array("status" => "empty");
 
             echo json_encode($response);
             break;
@@ -274,8 +274,14 @@
 
             echo json_encode($response);
             break;
-        //UPDATE DEL ESTADO DE REPORTE DE UNA EXPERIENCIA
+        //UPDATE PARA QUITAR EL REPORT DE UNA EXPERIENCIA
         case 18:
+            $datos = $Experiencia -> updateReporte($_REQUEST["idExperiencia"]);
+            $response = array("status" => $datos);
+            echo json_encode($response);
+            break;
+        //UPDATE PARA AÑADIR EL REPORT DE UNA EXPERIENCIA
+        case 19:
             $datos = $Experiencia -> updateReporte($_REQUEST["idExperiencia"]);
             $response = array("status" => $datos);
             echo json_encode($response);
