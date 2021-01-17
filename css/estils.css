@@ -177,6 +177,10 @@ body {
 #menu>li:hover>ul {
   display:block;
 }
+
+#logeado_user{
+  text-transform: capitalize;
+}
 /*-----CREAR EXPERIENCIA POP-UP-----*/
 
 #localizacion {
