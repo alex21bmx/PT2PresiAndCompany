@@ -65,7 +65,7 @@
                  echo '  <ul id="optionsUl">
                              <li ><div>Loggeado: '.$_COOKIE["username"].'</div></li>
                              <li class="optionClickable" onclick="togglePopup(6)"><div>Crear experiencia</div></li>
-                             <li class="optionClickable" onclick=""><div>Tus experiencias</div></li>
+                             <li class="optionClickable" onclick="cargarExperienciasUser('."'$prueba'".')"><div>Tus experiencias</div></li>
                              <li class="optionClickable" onclick="cerrarSesion('."'$prueba'".')"><div>Cerrar Sesión</div></li>
                          </ul>';
             ?>
@@ -238,3 +238,5 @@
 <script src="./AXIOS/signup_request.js"></script>
 <script src="./AXIOS/crearExperiencia_request.js"></script>
 <script src="./AXIOS/usuarios_request.js"></script>
+<script src="./AXIOS/experienciasAdmin_request.js"></script>
+<script src="./AXIOS/experienciasUser_request.js"></script>

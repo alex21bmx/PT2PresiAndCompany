@@ -56,12 +56,24 @@ class Usuario extends DBAbstractModel {
     }
   }
 
+  public function selectIdUser($usuario=""){
+    if($usuario!=""){
+      $this->query = "SELECT id FROM usuarios WHERE username='$usuario'";
+      $this->get_results_from_query();
+      return $this->rows[0];
+    }
+
+  }
+
   public function selectUsers(){
     $this->query = "SELECT * FROM usuarios";
     $this->get_results_from_query();
-    for($i=0; $i<count($this->rows); $i++){
-      $resultSet[] = $this->rows[$i];
-    }
+    if(count($this->rows)!=0){
+      for($i=0; $i<count($this->rows); $i++){
+        $resultSet[] = $this->rows[$i];
+      }
+    }else
+      $resultSet=0;
     return $resultSet;
   }
 

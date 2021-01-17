@@ -7,12 +7,11 @@
         <div class="contentExp">
             <div class="close-btn" onclick="togglePopup(7)">&times;</div>
             <div class="allInfoExp">
-            <h1 id="popExpTitol"></h1>
-                <button id="popExpFecha"></button>
+                <h1 id="popExpTitol"></h1>
                 <div id="popExpFoto"></div>
-                <div id="popExpFecha"></div>
                 <div id="popExpCoords"></div>
             </div>
+            <button id="popExpFecha"></button>
             <p id="popExpTexto"></p>
         </div>
     </div>

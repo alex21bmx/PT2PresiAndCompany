@@ -54,14 +54,45 @@ class Experiencia extends DBAbstractModel {
         return $resultSet;
     }
 
+    public function selectExperienciasAdmin(){
+      $this->query = "SELECT * FROM experiencias";
+      $this->get_results_from_query();
+      if(count($this->rows)!=0){
+        for($i=0; $i<count($this->rows); $i++){
+          $resultSet[] = $this->rows[$i];
+        }
+      }else
+        $resultSet=0;
+      return $resultSet;
+    }
+
     public function selectExperienciasReportadas(){
       $this->query = "SELECT * FROM experiencias WHERE reportado='1' order by fecha_de_publicacion asc";
       $this->get_results_from_query();
-      for($i=0; $i<count($this->rows); $i++){
-        $resultSet[] = $this->rows[$i];
+      if(count($this->rows)!=0){
+        for($i=0; $i<count($this->rows); $i++){
+          $resultSet[] = $this->rows[$i];
+        }
+      }else
+        $resultSet=0;
+
+      return $resultSet;
+    }
+
+    public function selectExperienciasByUser($idUsuario=""){
+      if($idUsuario!=""){
+        $this->query = "SELECT * FROM experiencias WHERE id_usuario='$idUsuario'";
+        $this->get_results_from_query();
+        if(count($this->rows)!=0){
+          for($i=0; $i<count($this->rows); $i++){
+            $resultSet[] = $this->rows[$i];
+          }
+        }else
+          $resultSet=0;
       }
 
       return $resultSet;
+
     }
 
     public function selectExperienciasPrincipales(){
