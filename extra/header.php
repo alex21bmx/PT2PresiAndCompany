@@ -24,8 +24,23 @@
             <?php
                 if(isset($_COOKIE["username"])){
                     $prueba = $_COOKIE["username"];
+<<<<<<< Updated upstream
                     echo '<button class="headerBttn" onclick="togglePopup(9)" id="admin"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
                     
+=======
+                    echo '<button class="headerBttn"
+                    <nav id="navMenu">
+                        <ul id="menu">
+                            <li><a href="">'.$_COOKIE["username"].'</a>
+                                <ul id="opcionesMenu">
+                                    <li onclick="togglePopup(6)"><a href="">New experience</a></li>
+                                    <li onclick="cerrarSesion('."'$prueba'".')"><a href="">Sign out</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    </button>';
+>>>>>>> Stashed changes
                 }else{
                     echo '<button class="headerBttn" onclick="togglePopup(3)"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
                 }

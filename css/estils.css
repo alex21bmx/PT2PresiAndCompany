@@ -139,6 +139,44 @@ body {
   width: 20px;
 }
 
+/*-----HEADER LOGEADO, OPCIONES-----*/
+
+#navMenu{
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+}
+#opcionesMenu{
+  list-style: none;
+  text-decoration: none;
+}
+
+#menu li>a{
+  color: whitesmoke;
+  text-transform: capitalize;
+  text-decoration: none;
+  min-width: 100px;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  min-width: 100px;
+}
+
+#menu li>a:hover{
+  color: #000;
+  background-color: #eaeaea;
+}
+#menu>li{
+  float: left;
+  text-align:center
+}
+#menu>li>ul{
+  display: none;
+}
+#menu>li:hover>ul {
+  display:block;
+}
 /*-----CREAR EXPERIENCIA POP-UP-----*/
 
 #localizacion {
@@ -1126,6 +1164,8 @@ background-color: #555;
 
   .allInfoExp{
     left: 5%;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
   }
 #popExpFoto{
   height: 520px;
@@ -1133,20 +1173,20 @@ background-color: #555;
   max-width: 100%;
   max-height: 60%;
   top: 15%;
+  align-items: right;
 }
 
 #popExpFecha{
   text-transform: capitalize;
   color: whitesmoke;
-  position: absolute;
   top: 12%;
   border: none;
   outline: none;
   height: 40px;
-  background: #b80f22;
+  background: #b8660f;
   font-size: 14px;
   border-radius: 15px;
-  
+  font-weight: bold;
 }
 
 #popExpCoords{
