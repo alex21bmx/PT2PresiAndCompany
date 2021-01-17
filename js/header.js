@@ -29,8 +29,36 @@ function togglePopup(num,index){
             break;
         case 8:
             document.getElementById("popup-7").classList.toggle("active");
+            let categoria = document.getElementsByClassName("categoriaExperiencia")[index].textContent;
+            if(categoria=="historical"){
+                document.getElementById("categoriaAct").value = "historico";
+            }else if(categoria=="adventures"){
+                document.getElementById("categoriaAct").value = "aventuras";
+            }else if(categoria=="mountaineering"){
+                document.getElementById("categoriaAct").value = "montañismo";
+            }else if(categoria=="family"){
+                document.getElementById("categoriaAct").value = "familiar";
+            }else{
+                document.getElementById("categoriaAct").value = "romantico";
+            }
+            let str = document.getElementsByClassName("experienciaInner")[index].style.backgroundImage;
+            let img = str.substring(
+                str.lastIndexOf("(") + 2, 
+                str.lastIndexOf(")") - 1
+            );
+            let str2 = document.getElementsByClassName("coordenadas")[index].textContent;
+            document.getElementById("imagenAct").value = img;
+            document.getElementById("latitudAct").value = str2.substring(
+                0, 
+                str2.lastIndexOf(",")
+            );
+            document.getElementById("longitudAct").value = str2.substring(
+                str2.lastIndexOf(",") +1, 
+                str2.length
+            );
+            document.getElementById("localizacionAct").value = document.getElementsByClassName("localizacion")[index].textContent;
+            document.getElementById("textoAct").value = document.getElementsByClassName("textoExp")[index].value;
             document.getElementById("gestionId").value = document.getElementsByClassName("id_experiencia")[index].value;
-            document.getElementById("localizacionAct").placeHolder = document.getElementsByClassName("localizacion")[index].textContent;
             break;
         case 9:
             document.getElementById("popup-8").classList.toggle("active");
@@ -60,6 +88,9 @@ function togglePopup(num,index){
             document.getElementById("popup-10").classList.toggle("active");
             document.getElementById("popup-11").classList.toggle("active");
             cargaExperienciasReportadas();
+            break;
+        case 15:
+            document.getElementById("popup-12").classList.toggle("active");
             break;
     }
 }

@@ -33,6 +33,15 @@
                 }
             ?>
             </div>
+    <!--Tus experiencias POP-UP-->
+    <div class="popup" id="popup-12">
+        <div class="overlay2"></div>
+        <div class="contentTusExperiencias">
+            <h1 id="" style="color:white">Your Experiences</h1>
+            <div class="close-btn" onclick="togglePopup(15)">&times;</div>
+        </div>
+    </div>
+
     <!--Experiencia reportada POP-UP-->
     <div class="popup" id="popup-11">
         <div class="overlay2"></div>
@@ -65,7 +74,7 @@
                  echo '  <ul id="optionsUl">
                              <li ><div id="logeado_user">Logged: '.$_COOKIE["username"].'</div></li>
                              <li class="optionClickable" onclick="togglePopup(6)"><div>New Experience</div></li>
-                             <li class="optionClickable" onclick="cargarExperienciasUser('."'$prueba'".')"><div>Your Experiences</div></li>
+                             <li class="optionClickable" onclick="togglePopup(15)"><div>Your Experiences</div></li>
                              <li class="optionClickable" onclick="cerrarSesion('."'$prueba'".')"><div>Sign out</div></li>
                          </ul>';
             ?>
