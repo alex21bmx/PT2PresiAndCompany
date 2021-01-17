@@ -55,7 +55,7 @@ class Experiencia extends DBAbstractModel {
     }
 
     public function selectExperienciasReportadas(){
-      $this->query = "SELECT * FROM experiencias WHERE reportado='1' HAVING COUNT(*)>2";
+      $this->query = "SELECT * FROM experiencias WHERE reportado='1'";
       $this->get_results_from_query();
       for($i=0; $i<count($this->rows); $i++){
         $resultSet[] = $this->rows[$i];
