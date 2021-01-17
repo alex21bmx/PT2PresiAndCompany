@@ -21,7 +21,7 @@ document.getElementById("crear").addEventListener("click",function(){
                 document.getElementById("popup-5").classList.toggle("active");
                 Swal.fire({
                     icon: 'success',
-                    title: 'Experiencia creada',
+                    title: 'Experience created',
                     showConfirmButton: false,
                     timer: 1500
                   })
@@ -37,7 +37,7 @@ document.getElementById("crear").addEventListener("click",function(){
     }else{
         Swal.fire({
             icon: 'error',
-            title: 'Rellene los campos obligatorios',
+            title: 'Fill in the required fields',
             showConfirmButton: false,
             timer: 1500
         });

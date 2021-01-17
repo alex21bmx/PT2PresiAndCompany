@@ -69,7 +69,7 @@ function cerrarSesion(valor){
     document.cookie = "admin=admin; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     Swal.fire({
         icon: 'info',
-        title: 'Sesión cerrada',
+        title: 'Logged out',
         showConfirmButton: false,
         timer: 1500
       })

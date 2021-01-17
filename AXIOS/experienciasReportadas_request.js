@@ -28,10 +28,11 @@ function cargaExperienciasReportadas(){
             }else{
                 Swal.fire({
                     icon: 'warning',
-                    title: 'No hay experiencias reportadas',
+                    title: 'No reported experiences',
                     showConfirmButton: false,
                     timer: 1500
                   })
+              togglePopup(12);  
             }       
         }
         

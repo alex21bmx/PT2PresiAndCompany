@@ -76,7 +76,7 @@ window.onload = function() {
             }else{
                 Swal.fire({
                     icon: 'warning',
-                    title: 'No hay resultados',
+                    title: 'No more results',
                     showConfirmButton: false,
                     timer: 1500
                   })

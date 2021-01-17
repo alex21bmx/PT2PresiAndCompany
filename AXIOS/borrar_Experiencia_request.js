@@ -13,7 +13,7 @@ function deleteExperiencia(){
             document.getElementById("popup-7").classList.toggle("active");
             Swal.fire({
                 icon: 'success',
-                title: 'Experiencia eliminada',
+                title: 'Experience deleted',
                 showConfirmButton: false,
                 timer: 1500
             });

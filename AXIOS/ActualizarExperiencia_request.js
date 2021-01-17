@@ -20,7 +20,7 @@ document.getElementById("actualizar").addEventListener("click",function(){
                 document.getElementById("popup-7").classList.toggle("active");
                 Swal.fire({
                     icon: 'success',
-                    title: 'Experiencia actualizada',
+                    title: 'Experience updated',
                     showConfirmButton: false,
                     timer: 1500
                 });
@@ -36,7 +36,7 @@ document.getElementById("actualizar").addEventListener("click",function(){
     }else{
         Swal.fire({
             icon: 'error',
-            title: 'Rellene los campos obligatorios',
+            title: 'Fill in the required fields',
             showConfirmButton: false,
             timer: 1500
         });

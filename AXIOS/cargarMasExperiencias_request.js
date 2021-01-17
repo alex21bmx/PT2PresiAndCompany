@@ -77,7 +77,7 @@ document.getElementById("cargamas").addEventListener("click",function(){
             }else{
                 Swal.fire({
                     icon: 'warning',
-                    title: 'No hay mas resultados',
+                    title: 'No more results',
                     showConfirmButton: false,
                     timer: 1500
                   })

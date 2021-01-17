@@ -77,7 +77,7 @@
         <div class="contentAdmin">
             <?php
                  echo '  <ul id="optionsUl">
-                             <li class="optionClickable" onclick=""><div>Reported Experiences</div></li>
+                             <li class="optionClickable" onclick="togglePopup(12)"><div>Reported Experiences</div></li>
                              <li class="optionClickable" onclick="cargarExperiencias()"><div>Experiencies Control</div></li>
                              <li class="optionClickable" onclick="cargarUsuarios()"><div>Users Control</div></li>
                          </ul>';
@@ -97,8 +97,8 @@
 
                 <h4 class="filtroLabel" style="color:white">Filter by Likes</h4>
                 <select class="selects" name="cars" id="filtroLikes">
-                    <option value="MENOS">▲ LIKES</option>
-                    <option value="MAS">▼ LIKES</option>
+                    <option value="MAS">▲ LIKES</option>
+                    <option value="MENOS">▼ LIKES</option>
                     <option value="null" selected style="font-weight:bold">-</option>
                 </select>
 
