@@ -8,11 +8,11 @@
     </div>
     <div id="botonsDivHeader">
         
-            <?php
+    <?php
                 if(isset($_COOKIE["username"]))
                     echo '<button class="headerBttn" onclick="togglePopup(1)"><img id="searchBttn" src="./src/buscar.jpg" alt=""></button>';
             ?>
-            
+
             <?php
                 if(isset($_COOKIE["username"])){
                     $valor = $_COOKIE["admin"];
@@ -24,23 +24,8 @@
             <?php
                 if(isset($_COOKIE["username"])){
                     $prueba = $_COOKIE["username"];
-<<<<<<< Updated upstream
-                    echo '<button class="headerBttn" onclick="togglePopup(9)" id="admin"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
-                    
-=======
-                    echo '<button class="headerBttn"
-                    <nav id="navMenu">
-                        <ul id="menu">
-                            <li><a href="">'.$_COOKIE["username"].'</a>
-                                <ul id="opcionesMenu">
-                                    <li onclick="togglePopup(6)"><a href="">New experience</a></li>
-                                    <li onclick="cerrarSesion('."'$prueba'".')"><a href="">Sign out</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                    </button>';
->>>>>>> Stashed changes
+                    echo '<button class="headerBttn" onclick="togglePopup(9)" id="admin"><img id="logInBttn" src="./src/user.png" alt=""></button>';
+
                 }else{
                     echo '<button class="headerBttn" onclick="togglePopup(3)"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
                 }
@@ -52,10 +37,10 @@
         <div class="contentOptions">
             <?php
                  echo '  <ul id="optionsUl">
-                             <li ><div>Loggeado: '.$_COOKIE["username"].'</div></li>
-                             <li class="optionClickable" onclick="togglePopup(6)"><div>Crear experiencia</div></li>
-                             <li class="optionClickable" onclick="cargarExperienciasUser('."'$prueba'".')"><div>Tus experiencias</div></li>
-                             <li class="optionClickable" onclick="cerrarSesion('."'$prueba'".')"><div>Cerrar Sesión</div></li>
+                             <li ><div id="logeado_user">Logged: '.$_COOKIE["username"].'</div></li>
+                             <li class="optionClickable" onclick="togglePopup(6)"><div>New Experience</div></li>
+                             <li class="optionClickable" onclick="cargarExperienciasUser('."'$prueba'".')"><div>Your Experiences</div></li>
+                             <li class="optionClickable" onclick="cerrarSesion('."'$prueba'".')"><div>Sign out</div></li>
                          </ul>';
             ?>
         </div>
@@ -66,9 +51,9 @@
         <div class="contentAdmin">
             <?php
                  echo '  <ul id="optionsUl">
-                             <li class="optionClickable" onclick=""><div>Experiencias reportadas</div></li>
-                             <li class="optionClickable" onclick="cargarExperiencias()"><div>Borrar o modificar Experiencias</div></li>
-                             <li class="optionClickable" onclick="cargarUsuarios()"><div>Borrar o modificar Usuarios</div></li>
+                             <li class="optionClickable" onclick=""><div>Reported Experiences</div></li>
+                             <li class="optionClickable" onclick="cargarExperiencias()"><div>Experiencies Control</div></li>
+                             <li class="optionClickable" onclick="cargarUsuarios()"><div>Users Control</div></li>
                          </ul>';
             ?>
         </div>
@@ -78,20 +63,20 @@
     <div class="popup" id="popup-1">
         <div class="overlay"></div>
         <div class="contentSearch">
-            <h1 id="filtroTitol" style="color:white">Búsqueda</h1>
+            <h1 id="filtroTitol" style="color:white">SEARCH</h1>
             <div class="close-btn" onclick="togglePopup(1)">&times;</div>
             <div class="search-container">
-                <h4 class="filtroLabel" style="color:white">Filtrar por usuario</h4>
+                <h4 class="filtroLabel" style="color:white">Filter by user</h4>
                 <input type="text" name="" id="filtroUser" value="" placeholder="Usuario"><br>
 
-                <h4 class="filtroLabel" style="color:white">Filtrar por Likes</h4>
+                <h4 class="filtroLabel" style="color:white">Filter by Likes</h4>
                 <select class="selects" name="cars" id="filtroLikes">
-                    <option value="MENOS">Menos likes</option>
-                    <option value="MAS">Mas likes</option>
+                    <option value="MENOS"><img src="./src/minus.png" alt=""></option>
+                    <option value="MAS"><img src="./src/plus.png" alt=""></option>
                     <option value="null" selected>Ningúno</option>
                 </select>
 
-                <h4 class="filtroLabel" style="color:white">Filtrar por Categoria</h4>
+                <h4 class="filtroLabel" style="color:white">Filter by Categories</h4>
                 <select class="selects" name="cars" id="filtroCategoria">
                     <option value="null" selected>Ningúno</option>
                     <option value="aventuras">Aventuras</option>
