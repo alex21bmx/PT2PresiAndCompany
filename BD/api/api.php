@@ -274,7 +274,12 @@
 
             echo json_encode($response);
             break;
-
+        //UPDATE DEL ESTADO DE REPORTE DE UNA EXPERIENCIA
+        case 18:
+            $datos = $Experiencia -> updateReporte($_REQUEST["idExperiencia"]);
+            $response = array("status" => $datos);
+            echo json_encode($response);
+            break;
     }
 
         

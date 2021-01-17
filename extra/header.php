@@ -21,6 +21,8 @@
                 }
             ?>
 
+            <button class="headerBttn" onclick="togglePopup(2)"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
+
             <?php
                 if(isset($_COOKIE["username"])){
                     $prueba = $_COOKIE["username"];
@@ -31,6 +33,30 @@
                 }
             ?>
             </div>
+    <!--Experiencia reportada POP-UP-->
+    <div class="popup" id="popup-11">
+        <div class="overlay2"></div>
+        <div class="contentReportada">
+            <div class="close-btn" onclick="togglePopup(13)">&times;</div>
+            <input type="hidden" id="reportedId" value="">
+            <img id="reportedImg" src="" width="300" height="300">
+            <h4 id="reportedTitle"></h4>
+            <h4 id="reportedText"></h4>
+            <button onclick="quitarBan()">Perdonar</button>
+            <button>Borrar</button>
+        </div>
+    </div>
+
+    <!--Experiencias reportadas POP-UP-->
+    <div class="popup" id="popup-10">
+        <div class="overlay2"></div>
+        <div class="contentReportadas">
+            <h1 id="" style="color:white">Reports</h1>
+            <div class="close-btn" onclick="togglePopup(12)">&times;</div>
+            <div id="experienciasReport"></div>
+        </div>
+    </div>
+
     <!--OPCIONES USUARIO POP-UP-->
     <div class="popup" id="popup-8">
         <div class="overlay2"></div>
@@ -214,3 +240,4 @@
 <script src="./AXIOS/usuarios_request.js"></script>
 <script src="./AXIOS/experienciasAdmin_request.js"></script>
 <script src="./AXIOS/experienciasUser_request.js"></script>
+<script src="./AXIOS/actualizarReporte_request.js"></script>

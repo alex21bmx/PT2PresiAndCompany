@@ -13,6 +13,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="AXIOS/Like_request.js"></script>
     <script src="AXIOS/borrar_Experiencia_request.js"></script>
+    <script src="AXIOS/experienciasReportadas_request.js"></script>
     <script src="js/like.js"></script>
 </head>
 <body>

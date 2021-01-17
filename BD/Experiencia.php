@@ -67,7 +67,7 @@ class Experiencia extends DBAbstractModel {
     }
 
     public function selectExperienciasReportadas(){
-      $this->query = "SELECT * FROM experiencias WHERE reportado='1'";
+      $this->query = "SELECT * FROM experiencias WHERE reportado='1' order by fecha_de_publicacion asc";
       $this->get_results_from_query();
       if(count($this->rows)!=0){
         for($i=0; $i<count($this->rows); $i++){
@@ -163,6 +163,16 @@ class Experiencia extends DBAbstractModel {
       $this->query = "UPDATE experiencias SET texto= '$texto', imagen= '$imagen', categoria= '$categoria', latitud= '$latitud', longitud= '$longitud', localizacion= '$localizacion' WHERE id_experiencia='$id_experiencia'";
       $this->execute_single_query($this->query);
       return $this->rows[0];
+    }
+
+    public function updateReporte($idExperiencia=""){
+      if($idExperiencia!="" && $reportado!=""){
+        $this->query = "UPDATE experiencias SET reportado='0' WHERE id_experiencia='$idExperiencia'";
+        $this->execute_single_query($this->query);
+        return "ok";
+      }else
+        return "fail";
+
     }
     
     public function delete ($idExperiencia="") {
