@@ -20,9 +20,6 @@
                         echo '<button class="headerBttn" onclick="togglePopup(11)" id="admin"><img id="adminBttn" src="./src/admin.png" alt=""></button>';
                 }
             ?>
-                
-            <button class="headerBttn" onclick="togglePopup(2)"><img id="staffBttn" src="./src/staff.ico" alt=""></button>
-
 
             <?php
                 if(isset($_COOKIE["username"])){
@@ -138,7 +135,7 @@
                         <p><button class="button">Contact</button></p>
                     </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
