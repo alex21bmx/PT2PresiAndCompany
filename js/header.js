@@ -42,6 +42,20 @@ function togglePopup(num,index){
         case 11:
             document.getElementById("popup-9").classList.toggle("active");
             break;
+        case 12:
+            document.getElementById("popup-10").classList.toggle("active");
+            if(document.getElementById("popup-10").classList.contains("active")){
+                cargaExperienciasReportadas();
+            }
+            break;
+        case 13:
+            document.getElementById("popup-10").classList.toggle("active");
+            document.getElementById("popup-11").classList.toggle("active");
+            document.getElementById("reportedId").value = document.getElementsByClassName("reportedId")[index].value;
+            document.getElementById("reportedImg").src = document.getElementsByClassName("reportedImg")[index].value;
+            document.getElementById("reportedTitle").innerHTML = "Titulo: "+document.getElementsByClassName("reportedTitle")[index].value;
+            document.getElementById("reportedText").innerHTML = "Texto: "+document.getElementsByClassName("reportedText")[index].value;
+            break;
     }
 }
 

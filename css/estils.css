@@ -1237,5 +1237,60 @@ background-color: #555;
   transition:all 300ms ease-in-out;
   transform:translate(-50%,-50%) scale(1);
   }
+/*Popup reportado*/
+.popup .contentReportadas{
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:black;
+  width:320px;
+  height:220px;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  font-family: 'Raleway', Arial, sans-serif;
+  margin: 2px;
+  }
+  
+  .popup.active .contentReportadas {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+  }
 
+  #experienciasReport{
+    overflow-y: scroll;
+    height: 80px;
+    width: 250px;
+  }
 
+  /*Popup single report */
+  .popup .contentReportada{
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    background:black;
+    width:500px;
+    height:540px;
+    z-index:2;
+    text-align:center;
+    padding:20px;
+    box-sizing:border-box;
+    font-family: 'Raleway', Arial, sans-serif;
+    margin: 2px;
+    }
+    
+    .popup.active .contentReportada {
+    transition:all 300ms ease-in-out;
+    transform:translate(-50%,-50%) scale(1);
+    }
+    #reportedText{
+      overflow-y: scroll;
+      height: 100px;
+    }

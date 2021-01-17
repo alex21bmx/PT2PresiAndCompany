@@ -55,7 +55,7 @@ class Experiencia extends DBAbstractModel {
     }
 
     public function selectExperienciasReportadas(){
-      $this->query = "SELECT * FROM experiencias WHERE reportado='1'";
+      $this->query = "SELECT * FROM experiencias WHERE reportado='1' order by fecha_de_publicacion asc";
       $this->get_results_from_query();
       for($i=0; $i<count($this->rows); $i++){
         $resultSet[] = $this->rows[$i];
