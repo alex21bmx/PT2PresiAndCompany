@@ -37,6 +37,10 @@ function togglePopup(num,index){
             break;
         case 10:
             document.getElementById("popup-8").classList.remove("active");
+            document.getElementById("popup-9").classList.remove("active");
+            break;
+        case 11:
+            document.getElementById("popup-9").classList.toggle("active");
             break;
     }
 }

@@ -17,7 +17,7 @@
                 if(isset($_COOKIE["username"])){
                     $valor = $_COOKIE["admin"];
                     if($valor == "admin")
-                        echo '<button class="headerBttn" onclick="" id="admin"><img id="adminBttn" src="./src/admin.png" alt=""></button>';
+                        echo '<button class="headerBttn" onclick="togglePopup(11)" id="admin"><img id="adminBttn" src="./src/admin.png" alt=""></button>';
                 }
             ?>
                 
@@ -48,25 +48,38 @@
             ?>
         </div>
     </div>
+    <!--OPCIONES STAFF POP-UP-->
+    <div class="popup" id="popup-9">
+        <div class="overlay2"></div>
+        <div class="contentAdmin">
+            <?php
+                 echo '  <ul id="optionsUl">
+                             <li class="optionClickable" onclick=""><div>Experiencias reportadas</div></li>
+                             <li class="optionClickable" onclick=""><div>Borrar o modificar Experiencias</div></li>
+                             <li class="optionClickable" onclick=""><div>Borrar o modificar Usuarios</div></li>
+                         </ul>';
+            ?>
+        </div>
+    </div>
     <!--SEARCH POP-UP--> 
     </div>
     <div class="popup" id="popup-1">
         <div class="overlay"></div>
         <div class="contentSearch">
-            <h1 id="filtroTitol">Búsqueda</h1>
+            <h1 id="filtroTitol" style="color:white">Búsqueda</h1>
             <div class="close-btn" onclick="togglePopup(1)">&times;</div>
             <div class="search-container">
-                <h4 class="filtroLabel">Filtrar por usuario</h4>
+                <h4 class="filtroLabel" style="color:white">Filtrar por usuario</h4>
                 <input type="text" name="" id="filtroUser" value="" placeholder="Usuario"><br>
 
-                <h4 class="filtroLabel">Filtrar por Likes</h4>
+                <h4 class="filtroLabel" style="color:white">Filtrar por Likes</h4>
                 <select class="selects" name="cars" id="filtroLikes">
                     <option value="MENOS">Menos likes</option>
                     <option value="MAS">Mas likes</option>
                     <option value="null" selected>Ningúno</option>
                 </select>
 
-                <h4 class="filtroLabel">Filtrar por Categoria</h4>
+                <h4 class="filtroLabel" style="color:white">Filtrar por Categoria</h4>
                 <select class="selects" name="cars" id="filtroCategoria">
                     <option value="null" selected>Ningúno</option>
                     <option value="aventuras">Aventuras</option>
@@ -86,7 +99,7 @@
         <div class="overlay"></div>
         <div class="contentStaff">
             <div class="close-btn" onclick="togglePopup(2)">&times;</div>
-            <h1>Staff</h1>
+            <h1 style="color:white">Staff</h1>
             <div class="row">
                 <div class="column">
                     <div class="card">
