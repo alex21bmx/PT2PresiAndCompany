@@ -56,6 +56,11 @@ function togglePopup(num,index){
             document.getElementById("reportedTitle").innerHTML = "Titulo: "+document.getElementsByClassName("reportedTitle")[index].value;
             document.getElementById("reportedText").innerHTML = "Texto: "+document.getElementsByClassName("reportedText")[index].value;
             break;
+        case 14:
+            document.getElementById("popup-10").classList.toggle("active");
+            document.getElementById("popup-11").classList.toggle("active");
+            cargaExperienciasReportadas();
+            break;
     }
 }
 

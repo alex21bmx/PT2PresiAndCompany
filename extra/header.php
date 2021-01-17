@@ -27,11 +27,6 @@
                 if(isset($_COOKIE["username"])){
                     $prueba = $_COOKIE["username"];
                     echo '<button class="headerBttn" onclick="togglePopup(9)" id="admin"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
-<<<<<<< Updated upstream
-                    
-=======
-
->>>>>>> Stashed changes
                 }else{
                     echo '<button class="headerBttn" onclick="togglePopup(3)"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
                 }
@@ -46,8 +41,8 @@
             <img id="reportedImg" src="" width="300" height="300">
             <h4 id="reportedTitle"></h4>
             <h4 id="reportedText"></h4>
-            <button onclick="quitarBan()">Perdonar</button>
-            <button>Borrar</button>
+            <button onclick="actualizarEstadoReport()">Perdonar</button>
+            <button onclick="deleteExperienciaReportada()">Borrar</button>
         </div>
     </div>
 

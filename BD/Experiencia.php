@@ -166,7 +166,7 @@ class Experiencia extends DBAbstractModel {
     }
 
     public function updateReporte($idExperiencia=""){
-      if($idExperiencia!="" && $reportado!=""){
+      if($idExperiencia!=""){
         $this->query = "UPDATE experiencias SET reportado='0' WHERE id_experiencia='$idExperiencia'";
         $this->execute_single_query($this->query);
         return "ok";

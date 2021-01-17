@@ -11,7 +11,10 @@ function cargaExperienciasReportadas(){
             alert("ERROR, TE HAS EQUIVOCADO");
         }
         else{
-            console.log(respuesta);
+            
+            if(respuesta.data[0].status!="empty"){
+                
+                console.log(respuesta);
             let cadena = "";
             for (let index = 0; index < respuesta.data.length; index++) {
                 cadena+='<p onclick="togglePopup(13,'+index+')" style="cursor: pointer;"> id: '+respuesta.data[index]["id_experiencia"]+' Fecha: '+respuesta.data[index]["fecha_de_publicacion"]+'</p>'+
@@ -20,20 +23,16 @@ function cargaExperienciasReportadas(){
                 '<input type="hidden" class="reportedText" value="'+respuesta.data[index]["texto"]+'">'+
                 '<input type="hidden" class="reportedTitle" value="'+respuesta.data[index]["localizacion"]+'">';
             }
-            document.getElementById("experienciasReport").innerHTML = cadena;
-            /*
-            if(respuesta.data[0].status!="empty"){
-                
-                document.getElementById("experienciasReport").innerHTML += cadena; 
+            document.getElementById("experienciasReport").innerHTML = cadena; 
                 
             }else{
                 Swal.fire({
                     icon: 'warning',
-                    title: 'No hay mas resultados',
+                    title: 'No hay experiencias reportadas',
                     showConfirmButton: false,
                     timer: 1500
                   })
-            } */       
+            }       
         }
         
     })
