@@ -56,6 +56,15 @@ class Usuario extends DBAbstractModel {
     }
   }
 
+  public function selectUsers(){
+    $this->query = "SELECT * FROM usuarios";
+    $this->get_results_from_query();
+    for($i=0; $i<count($this->rows); $i++){
+      $resultSet[] = $this->rows[$i];
+    }
+    return $resultSet;
+  }
+
   //Devuelve el nombre del usuario a partir de su id
   public function selectUserName($idUsuario){
     if($idUsuario!=""){
@@ -74,8 +83,6 @@ class Usuario extends DBAbstractModel {
     }
   }
 
-
-  
   public function update ($userName="", $pass="") {
     if($userName!="" && $pass!=""){
       $resultado = $this->selectExistsUserByUserName($userName);

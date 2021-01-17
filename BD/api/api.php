@@ -201,13 +201,25 @@
                         "longitud" => $value["longitud"],
                         "id_usuario" => $value["id_usuario"],
                         "fecha_de_publicacion" => $value["fecha_de_publicacion"],
-                        "localizacion" => $value["localizacion"],
+                        "localizacion" => $value["localizacion"]
                         );      
             }
 
             echo json_encode($response);
-        break;
-
+            break;
+        //SELECT DE TODOS LOS USUARIOS
+        case 15:
+            $response = array();
+            $datos = $Usuario -> selectUsers();
+            foreach($datos as $key => $value){
+                $response[$key] = array("status" => "ok",
+                        "id_usuario" => $value["id"],
+                        "username" => $value["username"],
+                        "tipo_usuario" => $value["tipo_usuario"],
+                        );      
+            }
+            echo json_encode($response);
+            break;
     }
 
         
