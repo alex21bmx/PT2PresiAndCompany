@@ -34,5 +34,12 @@ document.getElementById("crear").addEventListener("click",function(){
         .catch(function (error) {
             alert("El servidor ha tardado mucho en responder2")
         });
+    }else{
+        Swal.fire({
+            icon: 'error',
+            title: 'Rellene los campos obligatorios',
+            showConfirmButton: false,
+            timer: 1500
+        });
     }
 } );      
