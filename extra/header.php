@@ -42,8 +42,8 @@
             <img id="reportedImg" src="" width="300" height="300">
             <h4 id="reportedTitle"></h4>
             <h4 id="reportedText"></h4>
-            <button onclick="quitarBan()">Perdonar</button>
-            <button>Borrar</button>
+            <button onclick="quitarBan()">Forgive User</button>
+            <button>Delete Experience</button>
         </div>
     </div>
 
@@ -93,27 +93,27 @@
             <div class="close-btn" onclick="togglePopup(1)">&times;</div>
             <div class="search-container">
                 <h4 class="filtroLabel" style="color:white">Filter by user</h4>
-                <input type="text" name="" id="filtroUser" value="" placeholder="Usuario"><br>
+                <input type="text" name="" id="filtroUser" value="" placeholder="User"><br>
 
                 <h4 class="filtroLabel" style="color:white">Filter by Likes</h4>
                 <select class="selects" name="cars" id="filtroLikes">
-                    <option value="MENOS"><img src="./src/minus.png" alt=""></option>
-                    <option value="MAS"><img src="./src/plus.png" alt=""></option>
-                    <option value="null" selected>Ningúno</option>
+                    <option value="MENOS">▲ LIKES</option>
+                    <option value="MAS">▼ LIKES</option>
+                    <option value="null" selected style="font-weight:bold">-</option>
                 </select>
 
                 <h4 class="filtroLabel" style="color:white">Filter by Categories</h4>
                 <select class="selects" name="cars" id="filtroCategoria">
-                    <option value="null" selected>Ningúno</option>
-                    <option value="aventuras">Aventuras</option>
-                    <option value="montañismo">Montañismo</option>
-                    <option value="familiar">Familiar</option>
-                    <option value="historico">Histórico</option>
-                    <option value="romantico">Romántico</option>
+                    <option value="null" selected>-</option>
+                    <option value="aventuras">Adventures ✈</option>
+                    <option value="montañismo">Mountaineering 🌄</option>
+                    <option value="familiar">Familiar 👪 </option>
+                    <option value="historico">Historical 📖 </option>
+                    <option value="romantico">Romantic 💏</option>
                 </select>
                 <br><br>
 
-                <button onclick="aplicaFiltros()">Buscar</button>
+                <button id="searchButton" onclick="aplicaFiltros()">Buscar</button>
     </div>
         </div>
     </div>
