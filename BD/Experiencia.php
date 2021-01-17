@@ -164,6 +164,16 @@ class Experiencia extends DBAbstractModel {
       $this->execute_single_query($this->query);
       return $this->rows[0];
     }
+
+    public function updateReporte($idExperiencia=""){
+      if($idExperiencia!="" && $reportado!=""){
+        $this->query = "UPDATE experiencias SET reportado='0' WHERE id_experiencia='$idExperiencia'";
+        $this->execute_single_query($this->query);
+        return "ok";
+      }else
+        return "fail";
+
+    }
     
     public function delete ($idExperiencia="") {
       if($idExperiencia!=""){

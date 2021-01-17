@@ -8,11 +8,11 @@
     </div>
     <div id="botonsDivHeader">
         
-            <?php
+    <?php
                 if(isset($_COOKIE["username"]))
                     echo '<button class="headerBttn" onclick="togglePopup(1)"><img id="searchBttn" src="./src/buscar.jpg" alt=""></button>';
             ?>
-            
+
             <?php
                 if(isset($_COOKIE["username"])){
                     $valor = $_COOKIE["admin"];
@@ -27,7 +27,11 @@
                 if(isset($_COOKIE["username"])){
                     $prueba = $_COOKIE["username"];
                     echo '<button class="headerBttn" onclick="togglePopup(9)" id="admin"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
+<<<<<<< Updated upstream
                     
+=======
+
+>>>>>>> Stashed changes
                 }else{
                     echo '<button class="headerBttn" onclick="togglePopup(3)"><img id="logInBttn" src="./src/key.ico" alt=""></button>';
                 }
@@ -240,3 +244,4 @@
 <script src="./AXIOS/usuarios_request.js"></script>
 <script src="./AXIOS/experienciasAdmin_request.js"></script>
 <script src="./AXIOS/experienciasUser_request.js"></script>
+<script src="./AXIOS/actualizarReporte_request.js"></script>
