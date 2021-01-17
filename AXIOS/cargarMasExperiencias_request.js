@@ -25,19 +25,19 @@ document.getElementById("cargamas").addEventListener("click",function(){
                 for (let index = parseInt(document.getElementById("numero").value)-8; index < respuesta.data.length; index++) {
                     let color = "";
                     switch (respuesta.data[index]["categoria"]){
-                        case "aventuras":
+                        case "adventures":
                             color = "#40731D";
                             break; 
-                        case "montañismo":
+                        case "mountaineering":
                             color = "#633E36";
                             break; 
-                        case "familiar":
+                        case "family":
                             color = "#01709A";
                             break; 
-                        case "historico":
+                        case "historical":
                             color = "#779606";
                             break; 
-                        case "romantico":
+                        case "romantic":
                             color = "#660271";
                             break;
                     }
