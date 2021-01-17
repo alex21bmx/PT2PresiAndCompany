@@ -54,6 +54,15 @@ class Experiencia extends DBAbstractModel {
         return $resultSet;
     }
 
+    public function selectExperienciasAdmin(){
+      $this->query = "SELECT * FROM experiencias";
+      $this->get_results_from_query();
+      for($i=0; $i<count($this->rows); $i++){
+        $resultSet[] = $this->rows[$i];
+      }
+      return $resultSet;
+    }
+
     public function selectExperienciasReportadas(){
       $this->query = "SELECT * FROM experiencias WHERE reportado='1'";
       $this->get_results_from_query();

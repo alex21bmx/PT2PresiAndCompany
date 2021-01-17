@@ -52,7 +52,7 @@
             <?php
                  echo '  <ul id="optionsUl">
                              <li class="optionClickable" onclick=""><div>Experiencias reportadas</div></li>
-                             <li class="optionClickable" onclick=""><div>Borrar o modificar Experiencias</div></li>
+                             <li class="optionClickable" onclick="cargarExperiencias()"><div>Borrar o modificar Experiencias</div></li>
                              <li class="optionClickable" onclick="cargarUsuarios()"><div>Borrar o modificar Usuarios</div></li>
                          </ul>';
             ?>
@@ -212,3 +212,4 @@
 <script src="./AXIOS/signup_request.js"></script>
 <script src="./AXIOS/crearExperiencia_request.js"></script>
 <script src="./AXIOS/usuarios_request.js"></script>
+<script src="./AXIOS/experienciasAdmin_request.js"></script>
