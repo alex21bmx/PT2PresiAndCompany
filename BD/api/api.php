@@ -253,13 +253,13 @@
         //SELECT DE TODAS LAS EXPERIENCIAS DE UN USUARIO
         case 17:
             $response = array();
-            $idUsuario = $Usuario -> selectIdUser($_REQUEST["username"]);
-            $datos = $Experiencia -> selectExperienciasByUser($idUsuario["id"]);
+            $datos = $Experiencia -> selectExperienciasByUser($_REQUEST["username"]);
             if($datos != 0){
                 foreach($datos as $key => $value){
                     $response[$key] = array("status" => "ok",
                             "id_experiencia" => $value["id_experiencia"],
                             "texto" => $value["texto"],
+                            "estado" => $value["estado"],
                             "imagen" => $value["imagen"],
                             "categoria" => $value["categoria"],
                             "latitud" => $value["latitud"],

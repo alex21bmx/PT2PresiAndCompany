@@ -1454,3 +1454,7 @@ background-color: #555;
     transition:all 300ms ease-in-out;
     transform:translate(-50%,-50%) scale(1);
     }
+    #tusExperiencias{
+      overflow-y: scroll;
+      height: 300px;
+    }

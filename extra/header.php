@@ -33,12 +33,56 @@
                 }
             ?>
             </div>
+    <!--Tu experiencia POP-UP-->
+    <div class="popup" id="popup-13">
+        <div class="overlay2"></div>
+        <div class="contentNewExperience">
+            <h1 id="" style="color:white">Experience edit</h1>
+            <div class="close-btn" onclick="togglePopup(16)">&times;</div>
+            <div class="allEN">
+            <div class="left-sideNE">
+                <h1><img src="./src/presiLogo.png" alt="" style="width:100%"></h1>
+                <div class="fotoPersona">
+                    <img src="./src/fotoNE.png" alt="" style="width:100%">
+                </div>
+            </div>
+            <div class="right-slideNE">
+                <form>
+                    <div class = "categories">
+                        <select id="categoriaTusExp">
+                            <option selected value="aventuras">Adventures ✈</option> 
+                            <option value="montañismo">Mountaineering 🌄</option>
+                            <option value="familiar">Familiar 👪</option> 
+                            <option value="historico">Historical 📖</option>
+                            <option value="romantico">Romantic 💏</option> 
+                        </select><br><br>
+                    </div>
+                    <div class="mas_info">
+                        <input type="text" id="localizacionTusExp" name="localizacion" placeholder="Location" required><br>
+                        <input type="number" id="latitudTusExp" name="latitud" placeholder="Latitude"> 
+                        <input type="number" id="longitudTusExp" name="longitud" placeholder="Length"><br><br>
+                        <input type="text" id="imagenTusExp" name="imagen" placeholder="Img - (URL)" required><br>
+                        <input type="text" id="textoTusExp" name="texto" placeholder="Write a description ..." required><br>
+                    </div>
+                    <br>
+                    <select id="estadoTusExp">
+                        <option value="Esbozo">Archived</option> 
+                        <option selected value="Publicada">Posted</option> 
+                    </select><br><br>
+                    <input type="button" value="✔" id="crearTusExp"><br>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
     <!--Tus experiencias POP-UP-->
     <div class="popup" id="popup-12">
         <div class="overlay2"></div>
         <div class="contentTusExperiencias">
             <h1 id="" style="color:white">Your Experiences</h1>
             <div class="close-btn" onclick="togglePopup(15)">&times;</div>
+            <div id="tusExperiencias"></div>
         </div>
     </div>
 

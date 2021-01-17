@@ -91,6 +91,35 @@ function togglePopup(num,index){
             break;
         case 15:
             document.getElementById("popup-12").classList.toggle("active");
+            cargarExperienciasUser(localStorage.getItem("user_id"));
+            break;
+        case 16:
+            document.getElementById("popup-13").classList.toggle("active");
+            document.getElementById("popup-12").classList.toggle("active");
+            let json = JSON.parse(localStorage.getItem("jsonTuExp"));
+            let categoria2 = json[index]["categoria"];
+            if(categoria2=="historical"){
+                document.getElementById("categoriaTusExp").value = "historico";
+            }else if(categoria2=="adventures"){
+                document.getElementById("categoriaTusExp").value = "aventuras";
+            }else if(categoria2=="mountaineering"){
+                document.getElementById("categoriaTusExp").value = "montañismo";
+            }else if(categoria2=="family"){
+                document.getElementById("categoriaTusExp").value = "familiar";
+            }else{
+                document.getElementById("categoriaTusExp").value = "romantico";
+            }
+            let estado = json[index]["estado"];
+            if(estado=="Esbozo"){
+                document.getElementById("estadoTusExp").value = "Esbozo";
+            }else{
+                document.getElementById("estadoTusExp").value = "Publicada";
+            }
+            document.getElementById("imagenTusExp").value = json[index]["imagen"];
+            document.getElementById("latitudTusExp").value = json[index]["latitud"];
+            document.getElementById("longitudTusExp").value = json[index]["longitud"];
+            document.getElementById("localizacionTusExp").value = json[index]["localizacion"];
+            document.getElementById("textoTusExp").value = json[index]["texto"];
             break;
     }
 }
