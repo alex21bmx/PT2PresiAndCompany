@@ -107,8 +107,8 @@
                     <option value="null" selected>-</option>
                     <option value="aventuras">Adventures ✈</option>
                     <option value="montañismo">Mountaineering 🌄</option>
-                    <option value="familiar">Familiar 👪 </option>
-                    <option value="historico">Historical 📖 </option>
+                    <option value="familiar">Familiar 👪</option>
+                    <option value="historico">Historical 📖</option>
                     <option value="romantico">Romantic 💏</option>
                 </select>
                 <br><br>
@@ -189,7 +189,7 @@
         <div class="contentRegister">
             <div class="close-btn" onclick="togglePopup(5)">&times;</div>
             <img class="avatar" src="./src/presiLogoPopUp.png" alt="">
-            <h1>Sign-up</h1>
+            <h1><i>Sign-up</i></h1>
             <form>
                 <input type="text" id="newUsername" name="newUsername" placeholder="Enter Username" required><br>
                 <input type="password" id="newPassword" name="newPassword" placeholder="Enter Password" required><br>
@@ -200,36 +200,46 @@
     <!--CREAR EXPERIENCIA POP-UP-->
     <div class="popup" id="popup-5">
         <div class="overlay"></div>
-        <div class="content">
+        <div class="contentNewExperience">
         <div class="close-btn" onclick="togglePopup(6)">&times;</div>
-            <h2>POST AN EXPERIENCE</h2>
-            
-            <form>
-                <div class = "categories">
-                    <select id="categoria">
-                        <option selected value="aventuras">Aventuras</option> 
-                        <option value="montañismo">Montañismo</option>
-                        <option value="familiar">Familiar</option> 
-                        <option value="historico">Histórico</option>
-                        <option value="romantico">Romántico</option> 
+            <div class="allEN">
+            <div class="left-sideNE">
+                <h1><img src="./src/presiLogo.png" alt="" style="width:100%"></h1>
+                <div class="fotoPersona">
+                    <img src="./src/fotoNE.png" alt="" style="width:100%">
+                </div>
+            </div>
+            <div class="right-slideNE">
+                <h2>POST AN EXPERIENCE</h2>
+                <form>
+                    <div class = "categories">
+                        <select id="categoria">
+                            <option selected value="aventuras">Adventures ✈</option> 
+                            <option value="montañismo">Mountaineering 🌄</option>
+                            <option value="familiar">Familiar 👪</option> 
+                            <option value="historico">Historical 📖</option>
+                            <option value="romantico">Romantic 💏</option> 
+                        </select><br><br>
+                    </div>
+                    <div class="mas_info">
+                        <input type="text" id="localizacion" name="localizacion" placeholder="Location" required><br>
+                        <input type="number" id="latitud" name="latitud" placeholder="Latitude"> 
+                        <input type="number" id="longitud" name="longitud" placeholder="Length"><br><br>
+                        <input type="text" id="imagen" name="imagen" placeholder="Img - (URL)" required><br>
+                        <input type="text" id="texto" name="texto" placeholder="Write a description ..." required><br>
+                    </div>
+                    <br>
+                    <select id="estado">
+                        <option value="Esbozo">Archived</option> 
+                        <option selected value="Publicada">Posted</option> 
                     </select><br><br>
-                </div>
-                <div class="mas_info">
-                    <input type="text" id="localizacion" name="localizacion" placeholder="Localización" required><br>
-                    <input type="text" id="imagen" name="imagen" placeholder="Imagen - (URL)" required><br>
-                    <input type="number" id="latitud" name="latitud" placeholder="Latitud"> 
-                    <input type="number" id="longitud" name="longitud" placeholder="Longitud"><br><br>
-                    <input type="text" id="texto" name="texto" placeholder="Escribe una descripción..." required><br>
-                </div>
-                <select id="estado">
-                    <option value="Esbozo">Esbozo</option> 
-                    <option selected value="Publicada">Publicada</option> 
-                </select><br><br>
-                <input type="button" value="✔" id="crear"><br>
-                <?php 
-                echo '<input id="username" style="visibility:hidden" value="'. $prueba . '"required>';
-                ?>
-            </form>
+                    <input type="button" value="✔" id="crear"><br>
+                    <?php 
+                    echo '<input id="username" style="visibility:hidden" value="'. $prueba . '"required>';
+                    ?>
+                </form>
+            </div>
+            </div>
         </div>
     </div>
 
