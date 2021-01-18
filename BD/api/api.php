@@ -13,7 +13,6 @@
 
         //SELECT DE UN USUARIO PARA EL LOGIN :)
         case 1:
-            
             $resultado = $Usuario-> selectExistsUser($_REQUEST['user'], $_REQUEST['pass']);
             foreach($resultado as $key => $value){
                 if($value==1){

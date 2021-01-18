@@ -14,7 +14,12 @@ document.getElementById("login").addEventListener("click",function(){
             console.log(respuesta.data.id);
             if (respuesta.data.status=="fail"){
                 document.getElementById("login").innerHTML="Validar";
-                alert("ERROR, TE HAS EQUIVOCADO");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Invalid username or password',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             }
             else{  
                 console.log(respuesta);
@@ -35,5 +40,12 @@ document.getElementById("login").addEventListener("click",function(){
             //se ejecuta siempre
             document.getElementById("login").innerHTML="Log-In"
         });   
-    }  
+    }else{
+        Swal.fire({
+            icon: 'error',
+            title: 'Invalid username or password',
+            showConfirmButton: false,
+            timer: 1500
+        });
+    }
 });
