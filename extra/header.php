@@ -204,7 +204,7 @@
                 </select>
                 <br><br>
 
-                <button id="searchButton" onclick="aplicaFiltros()">Buscar</button>
+                <button id="searchButton" onclick="aplicaFiltros()"><img id="searchBttn" src="./src/buscar.jpg" alt=""></button>
     </div>
         </div>
     </div>
@@ -216,7 +216,7 @@
             <h1 style="color:white">Staff</h1>
             <div class="row">
                 <div class="column">
-                    <div class="card">
+                    <div class="cardStaff">
                     <img src="./src/alex.PNG" alt="" style="width:100%">
                     <div class="container">
                         <h2 style="color:white">Àlex Pérez Fernández</h2>
@@ -229,7 +229,7 @@
                 </div>
 
                 <div class="column">
-                    <div class="card">
+                    <div class="cardStaff">
                     <img src="./src/sergio.PNG" alt="" style="width:100%">
                     <div class="container">
                         <h2 style="color:white">Sergio Grima Bravo</h2>
@@ -242,7 +242,7 @@
                 </div>
                 
                 <div class="column">
-                    <div class="card">
+                    <div class="cardStaff">
                     <img src="./src/arnau.PNG" alt="" style="width:100%">
                     <div class="container">
                         <h2 style="color:white">Arnau Fernández Jerez</h2>
@@ -293,44 +293,56 @@
         <div class="overlay"></div>
         <div class="contentNewExperience">
         <div class="close-btn" onclick="togglePopup(6)">&times;</div>
-            <div class="allEN">
-            <div class="left-sideNE">
-                <h1><img src="./src/presiLogo.png" alt="" style="width:100%"></h1>
-                <div class="fotoPersona">
-                    <img src="./src/fotoNE.png" alt="" style="width:100%">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Post an Experience</h2>
+                    <form>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Location" name="localizacion">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="number" placeholder="Latitude" name="latitud">
+                            <input class="input--style-3" type="number" placeholder="Length" name="longitud">
+                        </div>
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select>
+                                    <option selected value="aventuras">Adventures ✈</option> 
+                                    <option value="montañismo">Mountaineering 🌄</option>
+                                    <option value="familiar">Familiar 👪</option> 
+                                    <option value="historico">Historical 📖</option>
+                                    <option value="romantico">Romantic 💏</option> 
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="URL" name="imagen">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-4" type="text" placeholder="Write a description ..." name="texto">
+                        </div>
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select>
+                                    <option value="Esbozo">Archived</option> 
+                                    <option selected value="Publicada">Posted</option>  
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="p-t-10">
+                            <input type="button" value="CREATE" class="crear crear--pill crear-orange">
+                        </div>
+                        <?php 
+                            echo '<input id="username" style="visibility:hidden" value="'. $prueba . '"required>';
+                        ?>
+                    </form>
                 </div>
             </div>
-            <div class="right-slideNE">
-                <h2>POST AN EXPERIENCE</h2>
-                <form>
-                    <div class = "categories">
-                        <select id="categoria">
-                            <option value="adventures">Adventures ✈</option>
-                            <option value="mountaineering">Mountaineering 🌄</option>
-                            <option value="family">Familiar 👪</option>
-                            <option value="historical">Historical 📖</option>
-                            <option value="romantic">Romantic 💏</option>
-                        </select><br><br>
-                    </div>
-                    <div class="mas_info">
-                        <input type="text" id="localizacion" name="localizacion" placeholder="Location" required><br>
-                        <input type="number" id="latitud" name="latitud" placeholder="Latitude"> 
-                        <input type="number" id="longitud" name="longitud" placeholder="Length"><br><br>
-                        <input type="text" id="imagen" name="imagen" placeholder="Img - (URL)" required><br>
-                        <input type="text" id="texto" name="texto" placeholder="Write a description ..." required><br>
-                    </div>
-                    <br>
-                    <select id="estado">
-                        <option value="Esbozo">Archived</option> 
-                        <option selected value="Publicada">Posted</option> 
-                    </select><br><br>
-                    <input type="button" value="✔" id="crear"><br>
-                    <?php 
-                    echo '<input id="username" style="visibility:hidden" value="'. $prueba . '"required>';
-                    ?>
-                </form>
-            </div>
-            </div>
+        </div>
         </div>
     </div>
 
