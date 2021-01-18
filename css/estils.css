@@ -1196,8 +1196,16 @@ background-color: #555;
   font-size: 12px;
   position: absolute;
   bottom: 20px;
-  right:120px;
+  right:150px;
   color: blueviolet;
+  cursor: pointer;
+}
+.report{
+  font-size: 12px;
+  position: absolute;
+  bottom: 20px;
+  right:90px;
+  color: grey;
   cursor: pointer;
 }
 .heart {
@@ -1462,3 +1470,30 @@ background-color: #555;
       overflow-y: scroll;
       height: 300px;
     }
+/*Popup users admin*/
+.popup .usersAdmin{
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:black;
+  width:500px;
+  height:540px;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  font-family: 'Raleway', Arial, sans-serif;
+  margin: 2px;
+  }
+  
+  .popup.active .usersAdmin {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+  }
+  #usersAdmin{
+    overflow-y: scroll;
+      height: 300px;
+  }

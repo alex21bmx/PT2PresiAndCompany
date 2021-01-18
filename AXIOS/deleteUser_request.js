@@ -1,25 +1,21 @@
-document.getElementById("").addEventListener("click",function(){      
-    document.getElementById("signup").innerHTML=`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Validando`
-
+function deleteUser(){
     axios.get('./BD/api/api.php', {
         timeout:3000,
         params: {
-            user: ,
+            user: document.getElementById("userIDAdmin").value,
             id: 5
         }
     })
     .then(function (respuesta) {
-       
-        if (respuesta.data.status=="fail"){
-            document.getElementById("signup").innerHTML="Validar"
-            alert("Este usuario no existe")
-        }
-        else{                            
-            alert("Usuario eliminado");
-        }
 
         console.log(respuesta);
-        
+        Swal.fire({
+            icon: 'success',
+            title: 'User deleted',
+            showConfirmButton: false,
+            timer: 1500
+        });
+        togglePopup(19);
         
     })
     .catch(function (error) {
@@ -27,4 +23,4 @@ document.getElementById("").addEventListener("click",function(){
     })
     .then(function () {
     });         
-});
+}
