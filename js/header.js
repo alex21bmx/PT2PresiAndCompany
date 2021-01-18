@@ -137,33 +137,22 @@ function togglePopup(num,index){
             }
             break;
         case 18:
-            document.getElementById("popup-13").classList.toggle("active");
-            document.getElementById("popup-14").classList.toggle("active");
-            let json2 = JSON.parse(localStorage.getItem("jsonTuExp"));
-            let categoria3 = json2[index]["categoria"];
-            if(categoria3=="historical"){
-                document.getElementById("categoriaTusExp").value = "historico";
-            }else if(categoria3=="adventures"){
-                document.getElementById("categoriaTusExp").value = "aventuras";
-            }else if(categoria3=="mountaineering"){
-                document.getElementById("categoriaTusExp").value = "montañismo";
-            }else if(categoria3=="family"){
-                document.getElementById("categoriaTusExp").value = "familiar";
-            }else{
-                document.getElementById("categoriaTusExp").value = "romantico";
+            document.getElementById("popup-15").classList.toggle("active");
+            if(document.getElementById("popup-15").classList.contains("active")){
+                cargarUsuarios();
             }
-            let estado2 = json2[index]["estado"];
-            if(estado2=="Esbozo"){
-                document.getElementById("estadoTusExp").value = "Esbozo";
-            }else{
-                document.getElementById("estadoTusExp").value = "Publicada";
-            }
-            document.getElementById("imagenTusExp").value = json2[index]["imagen"];
-            document.getElementById("latitudTusExp").value = json2[index]["latitud"];
-            document.getElementById("longitudTusExp").value = json2[index]["longitud"];
-            document.getElementById("localizacionTusExp").value = json2[index]["localizacion"];
-            document.getElementById("textoTusExp").value = json2[index]["texto"];
-            document.getElementById("idTusExp").value = json2[index]["id_experiencia"];
+            break;
+        case 19:
+            document.getElementById("popup-16").classList.toggle("active");
+            document.getElementById("popup-15").classList.toggle("active");
+            
+            let json3 = JSON.parse(localStorage.getItem("jsonTuExp"));
+            
+            document.getElementById("userIDAdmin").value = json3[index]["id_usuario"];
+            document.getElementById("usernameAdmin").value = json3[index]["username"];
+            document.getElementById("passwordAdmin").value = json3[index]["password"];
+            document.getElementById("roleAdmin").value = json3[index]["tipo_usuario"];
+            
             break;
     }
 }

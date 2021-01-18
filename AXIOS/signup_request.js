@@ -13,10 +13,24 @@ document.getElementById("signup").addEventListener("click",function(){
         
             if (respuesta.data.status=="fail"){
                 document.getElementById("signup").innerHTML="Validar"
-                alert("ERROR, TE HAS EQUIVOCADO")
+                Swal.fire({
+                    icon: 'error',
+                    title: 'User already exists',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             }
             else{                            
-                alert("Usuario creado");
+                Swal.fire({
+                    icon: 'success',
+                    title: 'User created',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                document.getElementById("popup-4").classList.toggle("active");
+                setTimeout(function(){
+                    document.getElementById("popup-3").classList.toggle("active");
+                }, 1500);
             }
 
             console.log(respuesta);
@@ -30,5 +44,13 @@ document.getElementById("signup").addEventListener("click",function(){
             //se ejecuta siempre
             document.getElementById("signup").innerHTML="Sign-up"
         }); 
-    }    
+    }else{
+        Swal.fire({
+            icon: 'error',
+            title: 'Fill in the required fields',
+            showConfirmButton: false,
+            timer: 1500
+        });
+    }
+
 });

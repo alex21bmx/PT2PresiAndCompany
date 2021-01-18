@@ -13,7 +13,6 @@
 
         //SELECT DE UN USUARIO PARA EL LOGIN :)
         case 1:
-            
             $resultado = $Usuario-> selectExistsUser($_REQUEST['user'], $_REQUEST['pass']);
             foreach($resultado as $key => $value){
                 if($value==1){
@@ -49,9 +48,8 @@
             break;
 
         //UPDATE PARA QUE EL USUARIO PUEDA HACER UN CAMBIO DE CONTRASEÑA :)
-        case 4: 
-            
-            $datos = $Usuario -> update($_REQUEST['user'], $_REQUEST['pass']);
+        case 4:  
+            $datos = $Usuario -> update($_REQUEST['user_id'], $_REQUEST['username'],$_REQUEST['tipo_usuario'],$_REQUEST['password']);
             $response = array("status" => $datos);
             echo json_encode($response);
             break;
@@ -220,6 +218,7 @@
                             "id_usuario" => $value["id"],
                             "username" => $value["username"],
                             "tipo_usuario" => $value["tipo_usuario"],
+                            "password" => $value["password"]
                             );      
                 }
             }else

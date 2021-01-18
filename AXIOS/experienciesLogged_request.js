@@ -62,6 +62,7 @@ window.onload = function() {
                                 '<div id="like'+index+'" class="heart"></div>'+
                                 cadena2+
                                 '<h4 class="numLike odometer">'+respuesta.data[index]["valoraciones"]+'</h4>'+
+                                '<a class="report" onclick="actualizarEstadoReportAdd('+respuesta.data[index]["id_experiencia"]+')">Reportar</a>'+
                             '</div>'+
                         '</div>';
                 }

@@ -95,28 +95,17 @@ class Usuario extends DBAbstractModel {
     }
   }
 
-  public function update ($userName="", $pass="") {
-    if($userName!="" && $pass!=""){
-      foreach($resultado as $key => $value){
-        if ($value==1) {
-          $this->query = "UPDATE usuarios SET password= '$pass' WHERE username='$userName'";
+  public function update ($id="", $username="",$role="",$password="") {
+          $this->query = "UPDATE usuarios SET username= '$username',password= '$password',tipo_usuario= '$role' WHERE id='$id'";
           $this->execute_single_query($this->query);
           return "ok";
-        }else return "fail";
-      }
-    }
   }
   
   public function delete ($userName="") {
-    if($userName!=""){
-      foreach($resultado as $key => $value){
-        if ($value==1) {
-          $this->query = "DELETE FROM usuarios WHERE username ='$userName'";
+          $this->query = "DELETE FROM usuarios WHERE id ='$userName'";
           $this->execute_single_query($this->query);
           return "ok";
-        }else return "fail";
-      }
-    }
+        
   }
 }
 

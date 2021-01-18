@@ -14,6 +14,9 @@
     <script src="AXIOS/Like_request.js"></script>
     <script src="AXIOS/borrar_Experiencia_request.js"></script>
     <script src="AXIOS/experienciasReportadas_request.js"></script>
+    <script src="AXIOS/actualizarReporteAdd_request.js"></script>
+    <script src="AXIOS/updateUser_request.js"></script>
+    <script src="AXIOS/deleteUser_request.js"></script>
     <script src="AXIOS/borrar_ExperienciaReportada_request.js"></script>
     <script src="js/like.js"></script>
 </head>

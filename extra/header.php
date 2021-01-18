@@ -33,7 +33,33 @@
                 }
             ?>
             </div>
-    <!--Tus experiencias POP-UP-->
+
+    <!--Usuario Admin POP-UP-->
+    <div class="popup" id="popup-16">
+        <div class="overlay"></div>
+        <div class="usersAdmin">
+            <h1 id="" style="color:white">User edit</h1>
+            <div class="close-btn" onclick="togglePopup(19)">&times;</div>
+            <input type="hidden" id="userIDAdmin" placeholder="ID"></input><br>
+            <input type="text" id="usernameAdmin" placeholder="Username"></input><br>
+            <input type="text" id="passwordAdmin" placeholder="Password"></input><br>
+            <input type="text" id="roleAdmin" placeholder="Role"></input><br><br>
+            <input type="button" value="Update" id="UpdateUserAdmin" onclick="updateUsuario()">
+            <input type="button" value="Delete" id="deleteUserAdmin" onclick="deleteUser()">
+        </div>
+    </div>
+
+    <!--Usuarios Admin POP-UP-->
+    <div class="popup" id="popup-15">
+        <div class="overlay"></div>
+        <div class="usersAdmin">
+            <h1 id="" style="color:white">Usuarios</h1>
+            <div class="close-btn" onclick="togglePopup(18)">&times;</div>
+            <div id="usersAdmin"></div>
+        </div>
+    </div>
+
+    <!--Experiencias Admin POP-UP-->
     <div class="popup" id="popup-14">
         <div class="overlay"></div>
         <div class="contentTusExperiencias">
@@ -153,7 +179,7 @@
                  echo '  <ul id="optionsUl">
                              <li class="optionClickable" onclick="togglePopup(12)"><div>Reported Experiences</div></li>
                              <li class="optionClickable" onclick="togglePopup(17)"><div>Experiencies Control</div></li>
-                             <li class="optionClickable" onclick="cargarUsuarios()"><div>Users Control</div></li>
+                             <li class="optionClickable" onclick="togglePopup(18)"><div>Users Control</div></li>
                          </ul>';
             ?>
         </div>
