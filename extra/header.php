@@ -105,7 +105,7 @@
                         <br>
                         <select id="estadoTusExp">
                             <option value="Esbozo">Archived</option> 
-                            <option selected value="Publicada">Posted</option> 
+                            <option value="Publicada">Posted</option> 
                         </select><br><br>
                         <input type="button" value="Update" id="crearTusExp" class="crear crear--pill crear-orange">
                         <div><br><br>

@@ -31,15 +31,15 @@ function togglePopup(num,index){
             document.getElementById("popup-7").classList.toggle("active");
             let categoria = document.getElementsByClassName("categoriaExperiencia")[index].textContent;
             if(categoria=="historical"){
-                document.getElementById("categoriaAct").value = "historico";
+                document.getElementById("categoriaAct").value = "historical";
             }else if(categoria=="adventures"){
-                document.getElementById("categoriaAct").value = "aventuras";
+                document.getElementById("categoriaAct").value = "adventures";
             }else if(categoria=="mountaineering"){
-                document.getElementById("categoriaAct").value = "montañismo";
+                document.getElementById("categoriaAct").value = "mountaineering";
             }else if(categoria=="family"){
-                document.getElementById("categoriaAct").value = "familiar";
+                document.getElementById("categoriaAct").value = "family";
             }else{
-                document.getElementById("categoriaAct").value = "romantico";
+                document.getElementById("categoriaAct").value = "romantic";
             }
             let str = document.getElementsByClassName("experienciaInner")[index].style.backgroundImage;
             let img = str.substring(
@@ -106,15 +106,15 @@ function togglePopup(num,index){
             let json = JSON.parse(localStorage.getItem("jsonTuExp"));
             let categoria2 = json[index]["categoria"];
             if(categoria2=="historical"){
-                document.getElementById("categoriaTusExp").value = "historico";
+                document.getElementById("categoriaTusExp").value = "historical";
             }else if(categoria2=="adventures"){
-                document.getElementById("categoriaTusExp").value = "aventuras";
+                document.getElementById("categoriaTusExp").value = "adventures";
             }else if(categoria2=="mountaineering"){
-                document.getElementById("categoriaTusExp").value = "montañismo";
+                document.getElementById("categoriaTusExp").value = "mountaineering";
             }else if(categoria2=="family"){
-                document.getElementById("categoriaTusExp").value = "familiar";
+                document.getElementById("categoriaTusExp").value = "family";
             }else{
-                document.getElementById("categoriaTusExp").value = "romantico";
+                document.getElementById("categoriaTusExp").value = "romantic";
             }
             let estado = json[index]["estado"];
             if(estado=="Esbozo"){

@@ -236,6 +236,7 @@
                             "id_experiencia" => $value["id_experiencia"],
                             "texto" => $value["texto"],
                             "imagen" => $value["imagen"],
+                            "estado" => $value["estado"],
                             "categoria" => $value["categoria"],
                             "latitud" => $value["latitud"],
                             "longitud" => $value["longitud"],
