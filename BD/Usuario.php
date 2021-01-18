@@ -97,7 +97,6 @@ class Usuario extends DBAbstractModel {
 
   public function update ($userName="", $pass="") {
     if($userName!="" && $pass!=""){
-      $resultado = $this->selectExistsUserByUserName($userName);
       foreach($resultado as $key => $value){
         if ($value==1) {
           $this->query = "UPDATE usuarios SET password= '$pass' WHERE username='$userName'";
@@ -110,7 +109,6 @@ class Usuario extends DBAbstractModel {
   
   public function delete ($userName="") {
     if($userName!=""){
-      $resultado = $this->selectExistsUserByUserName($userName);
       foreach($resultado as $key => $value){
         if ($value==1) {
           $this->query = "DELETE FROM usuarios WHERE username ='$userName'";
