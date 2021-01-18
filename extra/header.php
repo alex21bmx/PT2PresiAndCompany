@@ -60,11 +60,11 @@
                 <form>
                     <div class = "categories">
                         <select id="categoriaTusExp">
-                            <option selected value="aventuras">Adventures ✈</option> 
-                            <option value="montañismo">Mountaineering 🌄</option>
-                            <option value="familiar">Familiar 👪</option> 
-                            <option value="historico">Historical 📖</option>
-                            <option value="romantico">Romantic 💏</option> 
+                            <option selected value="adventures">Adventures ✈</option> 
+                            <option value="mountaineering">Mountaineering 🌄</option>
+                            <option value="family">Familiar 👪</option> 
+                            <option value="historical">Historical 📖</option>
+                            <option value="romantic">Romantic 💏</option> 
                         </select><br><br>
                     </div>
                     <div class="mas_info">
@@ -317,3 +317,4 @@
 <script src="./AXIOS/experienciasUser_request.js"></script>
 <script src="./AXIOS/actualizarReporte_request.js"></script>
 <script src="AXIOS/borrar_Experiencia_request.js"></script>
+<script src="AXIOS/ActualizarTusExperiencias_request.js"></script>

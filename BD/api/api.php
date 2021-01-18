@@ -282,7 +282,21 @@
             break;
         //UPDATE PARA AÑADIR EL REPORT DE UNA EXPERIENCIA
         case 19:
-            $datos = $Experiencia -> updateReporte($_REQUEST["idExperiencia"]);
+            $datos = $Experiencia -> updateReporteAdd($_REQUEST["idExperiencia"]);
+            $response = array("status" => $datos);
+            echo json_encode($response);
+            break;
+        case 20:
+            $array = array("id_experiencia" => $_REQUEST["id_experiencia"],
+            "texto" => $_REQUEST["texto"],
+            "imagen" => $_REQUEST["imagen"],
+            "categoria" => $_REQUEST["categoria"],
+            "latitud" => $_REQUEST["latitud"],
+            "longitud" => $_REQUEST["longitud"],
+            "localizacion" => $_REQUEST["localizacion"]
+            );
+
+            $datos = $Experiencia -> update($array);
             $response = array("status" => $datos);
             echo json_encode($response);
             break;
