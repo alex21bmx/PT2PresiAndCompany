@@ -122,6 +122,7 @@ function togglePopup(num,index){
             document.getElementById("longitudTusExp").value = json[index]["longitud"];
             document.getElementById("localizacionTusExp").value = json[index]["localizacion"];
             document.getElementById("textoTusExp").value = json[index]["texto"];
+            document.getElementById("idTusExp").value = json[index]["id_experiencia"];
             break;
     }
 }

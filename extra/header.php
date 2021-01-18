@@ -33,9 +33,19 @@
                 }
             ?>
             </div>
+    <!--Tus experiencias POP-UP-->
+    <div class="popup" id="popup-14">
+        <div class="overlay"></div>
+        <div class="contentTusExperiencias">
+            <h1 id="" style="color:white">Your Experiences</h1>
+            <div class="close-btn" onclick="togglePopup(17)">&times;</div>
+            <div id="tusExperiencias"></div>
+        </div>
+    </div>
+
     <!--Tu experiencia POP-UP-->
     <div class="popup" id="popup-13">
-        <div class="overlay2"></div>
+        <div class="overlay"></div>
         <div class="contentNewExperience">
             <h1 id="" style="color:white">Experience edit</h1>
             <div class="close-btn" onclick="togglePopup(16)">&times;</div>
@@ -71,6 +81,7 @@
                     </select><br><br>
                     <input type="button" value="Update" id="crearTusExp">
                     <input type="button" value="Delete" id="crearTusExp">
+                    <input type="hidden" id="idTusExp">
                 </form>
             </div>
             </div>
@@ -79,7 +90,7 @@
 
     <!--Tus experiencias POP-UP-->
     <div class="popup" id="popup-12">
-        <div class="overlay2"></div>
+        <div class="overlay"></div>
         <div class="contentTusExperiencias">
             <h1 id="" style="color:white">Your Experiences</h1>
             <div class="close-btn" onclick="togglePopup(15)">&times;</div>
@@ -89,7 +100,7 @@
 
     <!--Experiencia reportada POP-UP-->
     <div class="popup" id="popup-11">
-        <div class="overlay2"></div>
+        <div class="overlay"></div>
         <div class="contentReportada">
             <div class="close-btn" onclick="togglePopup(13)">&times;</div>
             <input type="hidden" id="reportedId" value="">
@@ -103,7 +114,7 @@
 
     <!--Experiencias reportadas POP-UP-->
     <div class="popup" id="popup-10">
-        <div class="overlay2"></div>
+        <div class="overlay"></div>
         <div class="contentReportadas">
             <h1 id="" style="color:white">Reports</h1>
             <div class="close-btn" onclick="togglePopup(12)">&times;</div>
@@ -113,7 +124,7 @@
 
     <!--OPCIONES USUARIO POP-UP-->
     <div class="popup" id="popup-8">
-        <div class="overlay2"></div>
+        <div class="overlay"></div>
         <div class="contentOptions">
             <?php
                  echo '  <ul id="optionsUl">
