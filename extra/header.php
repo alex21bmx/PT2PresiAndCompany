@@ -178,6 +178,7 @@
 
                 <h4 class="filtroLabel" style="color:white">Filter by Categories</h4>
                 <select class="selects" name="cars" id="filtroCategoria">
+                    <option value="null">-</option>
                     <option value="adventures">Adventures ✈</option>
                     <option value="mountaineering">Mountaineering 🌄</option>
                     <option value="family">Familiar 👪</option>
