@@ -69,7 +69,8 @@
                         <option value="Esbozo">Archived</option> 
                         <option selected value="Publicada">Posted</option> 
                     </select><br><br>
-                    <input type="button" value="✔" id="crearTusExp"><br>
+                    <input type="button" value="Update" id="crearTusExp">
+                    <input type="button" value="Delete" id="crearTusExp">
                 </form>
             </div>
             </div>
@@ -158,11 +159,11 @@
                 <h4 class="filtroLabel" style="color:white">Filter by Categories</h4>
                 <select class="selects" name="cars" id="filtroCategoria">
                     <option value="null" selected>-</option>
-                    <option value="aventuras">Adventures ✈</option>
-                    <option value="montañismo">Mountaineering 🌄</option>
-                    <option value="familiar">Familiar 👪</option>
-                    <option value="historico">Historical 📖</option>
-                    <option value="romantico">Romantic 💏</option>
+                    <option value="adventures">Adventures ✈</option>
+                    <option value="mountaineering">Mountaineering 🌄</option>
+                    <option value="family">Familiar 👪</option>
+                    <option value="historical">Historical 📖</option>
+                    <option value="romantic">Romantic 💏</option>
                 </select>
                 <br><br>
 

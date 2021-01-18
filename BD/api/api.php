@@ -270,7 +270,7 @@
                             );      
                 }
             }else
-                $response = array("status" => "empty");
+                $response[0] = array("status" => "empty");
 
             echo json_encode($response);
             break;

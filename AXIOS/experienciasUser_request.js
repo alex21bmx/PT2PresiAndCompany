@@ -28,6 +28,6 @@ function cargarExperienciasUser(usuario){
             }         
         })
         .catch(function (error) {
-            alert("El servidor ha tardado mucho en responder2")
+            alert("tus experiencias")
         });
 }      

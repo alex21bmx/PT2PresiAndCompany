@@ -91,7 +91,9 @@ function togglePopup(num,index){
             break;
         case 15:
             document.getElementById("popup-12").classList.toggle("active");
-            cargarExperienciasUser(localStorage.getItem("user_id"));
+            if(document.getElementById("popup-12").classList.contains("active")){
+                cargarExperienciasUser(localStorage.getItem("user_id"));
+            }
             break;
         case 16:
             document.getElementById("popup-13").classList.toggle("active");
