@@ -983,7 +983,7 @@ transition-delay: 0.2s;
   transform:translate(-50%,-50%) scale(0);
   background:black;
   width: 320px;
-  height: 420px;
+  height: 300px;
   z-index:2;
   text-align:left;
   padding: 70px 30px;

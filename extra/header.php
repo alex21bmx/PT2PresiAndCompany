@@ -367,7 +367,7 @@
             <form>
                 <input type="text" id="newUsername" name="newUsername" placeholder="Enter Username" required><br>
                 <input type="password" id="newPassword" name="newPassword" placeholder="Enter Password" required><br>
-                <input type="button" value="Sign Up" id="signup">
+                <input type="button" value="Sign Up" class="crear crear--pill crear-orange" id="signup">
             </form>
         </div>
     </div>
