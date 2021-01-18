@@ -93,11 +93,16 @@ function togglePopup(num,index){
             document.getElementById("popup-12").classList.toggle("active");
             if(document.getElementById("popup-12").classList.contains("active")){
                 cargarExperienciasUser(localStorage.getItem("user_id"));
+                localStorage.setItem("currentPopup",12);
             }
             break;
         case 16:
             document.getElementById("popup-13").classList.toggle("active");
-            document.getElementById("popup-12").classList.toggle("active");
+            if(localStorage.getItem("currentPopup")==12){
+                document.getElementById("popup-12").classList.toggle("active");
+            }else{
+                document.getElementById("popup-14").classList.toggle("active");
+            }
             let json = JSON.parse(localStorage.getItem("jsonTuExp"));
             let categoria2 = json[index]["categoria"];
             if(categoria2=="historical"){
@@ -123,6 +128,42 @@ function togglePopup(num,index){
             document.getElementById("localizacionTusExp").value = json[index]["localizacion"];
             document.getElementById("textoTusExp").value = json[index]["texto"];
             document.getElementById("idTusExp").value = json[index]["id_experiencia"];
+            break;
+        case 17:
+            document.getElementById("popup-14").classList.toggle("active");
+            if(document.getElementById("popup-14").classList.contains("active")){
+                cargarExperiencias();
+                localStorage.setItem("currentPopup",14);
+            }
+            break;
+        case 18:
+            document.getElementById("popup-13").classList.toggle("active");
+            document.getElementById("popup-14").classList.toggle("active");
+            let json2 = JSON.parse(localStorage.getItem("jsonTuExp"));
+            let categoria3 = json2[index]["categoria"];
+            if(categoria3=="historical"){
+                document.getElementById("categoriaTusExp").value = "historico";
+            }else if(categoria3=="adventures"){
+                document.getElementById("categoriaTusExp").value = "aventuras";
+            }else if(categoria3=="mountaineering"){
+                document.getElementById("categoriaTusExp").value = "montañismo";
+            }else if(categoria3=="family"){
+                document.getElementById("categoriaTusExp").value = "familiar";
+            }else{
+                document.getElementById("categoriaTusExp").value = "romantico";
+            }
+            let estado2 = json2[index]["estado"];
+            if(estado2=="Esbozo"){
+                document.getElementById("estadoTusExp").value = "Esbozo";
+            }else{
+                document.getElementById("estadoTusExp").value = "Publicada";
+            }
+            document.getElementById("imagenTusExp").value = json2[index]["imagen"];
+            document.getElementById("latitudTusExp").value = json2[index]["latitud"];
+            document.getElementById("longitudTusExp").value = json2[index]["longitud"];
+            document.getElementById("localizacionTusExp").value = json2[index]["localizacion"];
+            document.getElementById("textoTusExp").value = json2[index]["texto"];
+            document.getElementById("idTusExp").value = json2[index]["id_experiencia"];
             break;
     }
 }

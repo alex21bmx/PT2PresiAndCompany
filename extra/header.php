@@ -37,9 +37,9 @@
     <div class="popup" id="popup-14">
         <div class="overlay"></div>
         <div class="contentTusExperiencias">
-            <h1 id="" style="color:white">Your Experiences</h1>
+            <h1 id="" style="color:white">Experiences</h1>
             <div class="close-btn" onclick="togglePopup(17)">&times;</div>
-            <div id=""></div>
+            <div id="experienciasAdmin"></div>
         </div>
     </div>
 
@@ -143,7 +143,7 @@
             <?php
                  echo '  <ul id="optionsUl">
                              <li class="optionClickable" onclick="togglePopup(12)"><div>Reported Experiences</div></li>
-                             <li class="optionClickable" onclick="cargarExperiencias()"><div>Experiencies Control</div></li>
+                             <li class="optionClickable" onclick="togglePopup(17)"><div>Experiencies Control</div></li>
                              <li class="optionClickable" onclick="cargarUsuarios()"><div>Users Control</div></li>
                          </ul>';
             ?>

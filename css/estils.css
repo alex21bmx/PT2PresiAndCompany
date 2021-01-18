@@ -1458,3 +1458,7 @@ background-color: #555;
       overflow-y: scroll;
       height: 300px;
     }
+    #experienciasAdmin{
+      overflow-y: scroll;
+      height: 300px;
+    }
