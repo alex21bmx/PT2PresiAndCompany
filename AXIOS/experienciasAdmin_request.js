@@ -12,7 +12,7 @@ function cargarExperiencias(){
             let cadena = "";
             localStorage.setItem("jsonTuExp",JSON.stringify(respuesta.data));
             for (let index = 0; index < respuesta.data.length; index++) {
-                cadena+='<p onclick="togglePopup(18,'+index+')" style="cursor: pointer;"> Localizacion: '+respuesta.data[index]["localizacion"]+' Fecha: '+respuesta.data[index]["fecha_de_publicacion"]+' ID: '+respuesta.data[index]["id_usuario"]+'</p>'+
+                cadena+='<p onclick="togglePopup(16,'+index+')" style="cursor: pointer;"> Localizacion: '+respuesta.data[index]["localizacion"]+' Fecha: '+respuesta.data[index]["fecha_de_publicacion"]+' ID: '+respuesta.data[index]["id_usuario"]+'</p>'+
                 '<input type="hidden" class="indexAdminExp" value="'+index+'">';
             }
             document.getElementById("experienciasAdmin").innerHTML = cadena; 
