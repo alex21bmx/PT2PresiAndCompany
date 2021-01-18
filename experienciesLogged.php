@@ -25,11 +25,11 @@
             <form>
             <div class = "categories">
                     <select id="categoriaAct">
-                        <option selected value="aventuras">Aventuras</option> 
-                        <option value="montañismo">Montañismo</option>
-                        <option value="familiar">Familiar</option> 
-                        <option value="historico">Histórico</option>
-                        <option value="romantico">Romántico</option> 
+                        <option value="adventures">Adventures ✈</option>
+                        <option value="mountaineering">Mountaineering 🌄</option>
+                        <option value="family">Familiar 👪</option>
+                        <option value="historical">Historical 📖</option>
+                        <option value="romantic">Romantic 💏</option> 
                     </select><br><br>
                 </div>
                 <div class="mas_info">

@@ -279,11 +279,11 @@
                 <form>
                     <div class = "categories">
                         <select id="categoria">
-                            <option selected value="aventuras">Adventures ✈</option> 
-                            <option value="montañismo">Mountaineering 🌄</option>
-                            <option value="familiar">Familiar 👪</option> 
-                            <option value="historico">Historical 📖</option>
-                            <option value="romantico">Romantic 💏</option> 
+                            <option value="adventures">Adventures ✈</option>
+                            <option value="mountaineering">Mountaineering 🌄</option>
+                            <option value="family">Familiar 👪</option>
+                            <option value="historical">Historical 📖</option>
+                            <option value="romantic">Romantic 💏</option>
                         </select><br><br>
                     </div>
                     <div class="mas_info">
