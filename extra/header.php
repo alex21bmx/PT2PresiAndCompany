@@ -80,7 +80,7 @@
                         <option selected value="Publicada">Posted</option> 
                     </select><br><br>
                     <input type="button" value="Update" id="crearTusExp">
-                    <input type="button" value="Delete" id="crearTusExp">
+                    <input type="button" value="Delete" id="crearTusExp" onclick="deleteExperiencia(1)">
                     <input type="hidden" id="idTusExp" value="">
                 </form>
             </div>
@@ -316,3 +316,4 @@
 <script src="./AXIOS/experienciasAdmin_request.js"></script>
 <script src="./AXIOS/experienciasUser_request.js"></script>
 <script src="./AXIOS/actualizarReporte_request.js"></script>
+<script src="AXIOS/borrar_Experiencia_request.js"></script>

@@ -41,7 +41,7 @@
                 </div><br><br>
                 <input type="button" value="Actualizar" id="actualizar">
             </form>
-            <button onclick="deleteExperiencia()">Borrar experiencia</button>
+            <button onclick="deleteExperiencia(0)">Borrar experiencia</button>
         </div>
     </div>
 <script src="AXIOS/experienciesLogged_request.js"></script>
