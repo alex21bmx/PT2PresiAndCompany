@@ -19,7 +19,12 @@ function cargarUsuarios(){
             document.getElementById("usersAdmin").innerHTML = cadena; 
                 
             }else{
-                 
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'No Users',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })  
             }         
         })
         .catch(function (error) {
