@@ -96,6 +96,7 @@
                             </select>
                             <div class="select-dropdown"></div>
                         </div>
+                        <br>
                         <div class="mas_info">
                             <input type="text" id="imagenTusExp" name="imagen" placeholder="Img - (URL)" required><br>
                             <h3 class="descEditExp">Description</h3>
