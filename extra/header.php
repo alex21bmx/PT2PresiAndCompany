@@ -46,46 +46,55 @@
     <!--Tu experiencia POP-UP-->
     <div class="popup" id="popup-13">
         <div class="overlay"></div>
-        <div class="contentNewExperience">
-            <h1 id="" style="color:white">Experience edit</h1>
-            <div class="close-btn" onclick="togglePopup(16)">&times;</div>
-            <div class="allEN">
-            <div class="left-sideNE">
-                <h1><img src="./src/presiLogo.png" alt="" style="width:100%"></h1>
-                <div class="fotoPersona">
-                    <img src="./src/fotoNE.png" alt="" style="width:100%">
+            <div class="contentMyexperiences">
+                <div class="close-btn" onclick="togglePopup(16)">&times;</div>
+                <div class="wrapper wrapper--w780">
+                    <div class="card card-3">
+                        <div class="card-heading"></div>
+                        <div class="card-body">
+                            <h2 class="title">Edit an Experience</h2>
+                            <form>
+                            <div class="input-group">
+                                <input id="localizacionTusExp" class="input--style-3" type="text" placeholder="Location" name="localizacion">
+                            </div>
+                            <div class="input-group">
+                                <input id="latitudTusExp" class="input--style-3" type="number" placeholder="Latitude" name="latitud">
+                                <input id="longitudTusExp" class="input--style-3" type="number" placeholder="Length" name="longitud">
+                            </div>
+                            <div class ="input-group">
+                            <div class = "categories">
+                            <select id="categoriaTusExp">
+                                <option selected value="adventures">Adventures ✈</option> 
+                                <option value="mountaineering">Mountaineering 🌄</option>
+                                <option value="family">Familiar 👪</option> 
+                                <option value="historical">Historical 📖</option>
+                                <option value="romantic">Romantic 💏</option> 
+                            </select>
+                            <div class="select-dropdown"></div>
+                        </div>
+                        <div class="mas_info">
+                            <input type="text" id="imagenTusExp" name="imagen" placeholder="Img - (URL)" required><br>
+                            <h3 class="descEditExp">Description</h3>
+                            <input type="text" id="textoTusExp" name="texto" placeholder="Write a description ..." required><br>
+                        </div>
+                        <br>
+                        <select id="estadoTusExp">
+                            <option value="Esbozo">Archived</option> 
+                            <option selected value="Publicada">Posted</option> 
+                        </select><br><br>
+                        <input type="button" value="Update" id="crearTusExp" class="crear crear--pill crear-orange">
+                        <div><br><br>
+                        <input type="button" value="Delete" id="crearTusExp" onclick="deleteExperiencia(1)" class="crear crear--pill crear-orange">
+                        </div>
+                        <input type="hidden" id="idTusExp" value="">
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="right-slideNE">
-                <form>
-                    <div class = "categories">
-                        <select id="categoriaTusExp">
-                            <option selected value="adventures">Adventures ✈</option> 
-                            <option value="mountaineering">Mountaineering 🌄</option>
-                            <option value="family">Familiar 👪</option> 
-                            <option value="historical">Historical 📖</option>
-                            <option value="romantic">Romantic 💏</option> 
-                        </select><br><br>
-                    </div>
-                    <div class="mas_info">
-                        <input type="text" id="localizacionTusExp" name="localizacion" placeholder="Location" required><br>
-                        <input type="number" id="latitudTusExp" name="latitud" placeholder="Latitude"> 
-                        <input type="number" id="longitudTusExp" name="longitud" placeholder="Length"><br><br>
-                        <input type="text" id="imagenTusExp" name="imagen" placeholder="Img - (URL)" required><br>
-                        <input type="text" id="textoTusExp" name="texto" placeholder="Write a description ..." required><br>
-                    </div>
-                    <br>
-                    <select id="estadoTusExp">
-                        <option value="Esbozo">Archived</option> 
-                        <option selected value="Publicada">Posted</option> 
-                    </select><br><br>
-                    <input type="button" value="Update" id="crearTusExp">
-                    <input type="button" value="Delete" id="crearTusExp" onclick="deleteExperiencia(1)">
-                    <input type="hidden" id="idTusExp" value="">
-                </form>
-            </div>
-            </div>
         </div>
+
+        
     </div>
 
     <!--Tus experiencias POP-UP-->
@@ -169,8 +178,7 @@
 
                 <h4 class="filtroLabel" style="color:white">Filter by Categories</h4>
                 <select class="selects" name="cars" id="filtroCategoria">
-                    <option value="null" selected>-</option>
-                    <option value="adventures">Adventures ✈</option>
+                    <option selected value="adventures">Adventures ✈</option>
                     <option value="mountaineering">Mountaineering 🌄</option>
                     <option value="family">Familiar 👪</option>
                     <option value="historical">Historical 📖</option>
@@ -283,11 +291,11 @@
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select>
-                                    <option selected value="aventuras">Adventures ✈</option> 
-                                    <option value="montañismo">Mountaineering 🌄</option>
-                                    <option value="familiar">Familiar 👪</option> 
-                                    <option value="historico">Historical 📖</option>
-                                    <option value="romantico">Romantic 💏</option> 
+                                    <option selected value="adventures">Adventures ✈</option> 
+                                    <option value="mountaineering">Mountaineering 🌄</option>
+                                    <option value="family">Familiar 👪</option> 
+                                    <option value="historical">Historical 📖</option>
+                                    <option value="romantic">Romantic 💏</option> 
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
