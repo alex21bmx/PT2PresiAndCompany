@@ -39,7 +39,7 @@
         <div class="contentTusExperiencias">
             <h1 id="" style="color:white">Your Experiences</h1>
             <div class="close-btn" onclick="togglePopup(17)">&times;</div>
-            <div id="tusExperiencias"></div>
+            <div id=""></div>
         </div>
     </div>
 
@@ -81,7 +81,7 @@
                     </select><br><br>
                     <input type="button" value="Update" id="crearTusExp">
                     <input type="button" value="Delete" id="crearTusExp">
-                    <input type="hidden" id="idTusExp">
+                    <input type="hidden" id="idTusExp" value="">
                 </form>
             </div>
             </div>
