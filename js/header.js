@@ -81,8 +81,8 @@ function togglePopup(num,index){
             document.getElementById("popup-11").classList.toggle("active");
             document.getElementById("reportedId").value = document.getElementsByClassName("reportedId")[index].value;
             document.getElementById("reportedImg").src = document.getElementsByClassName("reportedImg")[index].value;
-            document.getElementById("reportedTitle").innerHTML = "Titulo: "+document.getElementsByClassName("reportedTitle")[index].value;
-            document.getElementById("reportedText").innerHTML = "Texto: "+document.getElementsByClassName("reportedText")[index].value;
+            document.getElementById("reportedTitle").value = document.getElementsByClassName("reportedTitle")[index].value;
+            document.getElementById("reportedText").value = document.getElementsByClassName("reportedText")[index].value;
             break;
         case 14:
             document.getElementById("popup-10").classList.toggle("active");

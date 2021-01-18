@@ -36,34 +36,80 @@
      <!--Usuario Admin POP-UP-->
      <div class="popup" id="popup-16">
         <div class="overlay"></div>
-        <div class="usersAdmin">
-            <h1 id="" style="color:white">User edit</h1>
+        <div class="contentMyexperiences">
             <div class="close-btn" onclick="togglePopup(19)">&times;</div>
-            <input type="hidden" id="userIDAdmin" placeholder="ID"></input><br>
-            <input type="text" id="usernameAdmin" placeholder="Username"></input><br>
-            <input type="text" id="passwordAdmin" placeholder="Password"></input><br>
-            <input type="text" id="roleAdmin" placeholder="Role"></input><br><br>
-            <input type="button" value="Update" id="UpdateUserAdmin" onclick="updateUsuario()">
-            <input type="button" value="Delete" id="deleteUserAdmin" onclick="deleteUser()">
+            <div class="wrapper wrapper--w780">
+                <div class="card card-3">
+                    <div class="card-heading"></div>
+                    <div class="card-body">
+                        <h2 id="" style="color:white">User edit</h2>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <input type="hidden" id="userIDAdmin" class="input--style-3" placeholder="ID"></input>
+                        
+                            <div class="input-group">
+                                <input type="text" id="usernameAdmin" class="input--style-3" placeholder="Username"></input><br>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="passwordAdmin" class="input--style-3" placeholder="Password"></input><br>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="roleAdmin" class="input--style-3" placeholder="Role"></input><br><br>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                    
+                            
+        
+                        <input type="button" class="crear crear--pill crear-orange" value="Update" id="UpdateUserAdmin" onclick="updateUsuario()"><br><br>
+                        <input type="button" class="crear crear--pill crear-orange" value="Delete" id="deleteUserAdmin" onclick="deleteUser()">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!--Usuarios Admin POP-UP-->
     <div class="popup" id="popup-15">
         <div class="overlay"></div>
-        <div class="usersAdmin">
-            <h1 id="" style="color:white">Usuarios</h1>
+        <div class="contentScrolls">
             <div class="close-btn" onclick="togglePopup(18)">&times;</div>
-            <div id="usersAdmin"></div>
+            <div class="wrapper wrapper--w780">
+                <div class="card card-4">
+                    <div class="card-heading"></div>
+                    <div class="card-body">
+                        <h2 id="" style="color:white">Usuarios</h2>
+                        <div id="usersAdmin" class="scroll"></div>
+                    </div>
+                </div>
+            </div>          
         </div>
     </div>
     <!--Tus experiencias POP-UP-->
     <div class="popup" id="popup-14">
         <div class="overlay"></div>
-        <div class="contentTusExperiencias">
-            <h1 id="" style="color:white">Experiences</h1>
+        <div class="contentScrolls">
             <div class="close-btn" onclick="togglePopup(17)">&times;</div>
-            <div id="experienciasAdmin"></div>
+            <div class="wrapper wrapper--w780">
+                <div class="card card-4">
+                    <div class="card-heading"></div>
+                    <div class="card-body">
+                        <h2 id="" style="color:white">Experiences</h2>
+                        <div id="experienciasAdmin" class="scroll"></div>
+                    </div>
+                </div>
+            </div>          
         </div>
     </div>
 
@@ -125,34 +171,63 @@
     <!--Tus experiencias POP-UP-->
     <div class="popup" id="popup-12">
         <div class="overlay"></div>
-        <div class="contentTusExperiencias">
-            <h1 id="" style="color:white">Your Experiences</h1>
+        <div class="contentScrolls">
             <div class="close-btn" onclick="togglePopup(15)">&times;</div>
-            <div id="tusExperiencias"></div>
+            <div class="wrapper wrapper--w780">
+                <div class="card card-4">
+                    <div class="card-heading"></div>
+                    <div class="card-body">
+                        <h2 id="" style="color:white">Your Experiences</h2>
+                        <div id="tusExperiencias" class="scroll"></div>
+                    </div>
+                </div>
+            </div>          
         </div>
     </div>
 
     <!--Experiencia reportada POP-UP-->
     <div class="popup" id="popup-11">
         <div class="overlay"></div>
-        <div class="contentReportada">
+        <div class="contentMyexperiences">
             <div class="close-btn" onclick="togglePopup(13)">&times;</div>
+            <div class="wrapper wrapper--w780">
+                <div class="card card-3">
+                    <div class="card-heading"></div>
+                    <div class="card-body">
+                        <h2 id="" style="color:white">Reported experience</h2>
+                        <br><br><br>
+                        <img id="reportedImg" src="" width="300" height="300">
+                        <br><br>
+                        <div class="input-group">
+                            <input type="text" id="reportedTitle" class="input--style-3" placeholder="Username"></input>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="reportedText" class="input--style-3" placeholder="Password"></input>
+                        </div>
+                        <br><br>
+                        <input type="button" class="crear crear--pill crear-orange" value="Forgive" id="UpdateUserAdmin" onclick="actualizarEstadoReport()"><br><br>
+                        <input type="button" class="crear crear--pill crear-orange" value="Delete" id="deleteUserAdmin" onclick="deleteExperienciaReportada()">
+                    </div>
+                </div>
+            </div>
             <input type="hidden" id="reportedId" value="">
-            <img id="reportedImg" src="" width="300" height="300">
-            <h4 id="reportedTitle"></h4>
-            <h4 id="reportedText"></h4>
-            <button onclick="actualizarEstadoReport()">Forgive</button>
-            <button onclick="deleteExperienciaReportada()">Delete</button>
         </div>
     </div>
 
     <!--Experiencias reportadas POP-UP-->
     <div class="popup" id="popup-10">
         <div class="overlay"></div>
-        <div class="contentReportadas">
-            <h1 id="" style="color:white">Reports</h1>
+        <div class="contentScrolls">
             <div class="close-btn" onclick="togglePopup(12)">&times;</div>
-            <div id="experienciasReport"></div>
+            <div class="wrapper wrapper--w780">
+                <div class="card card-4">
+                    <div class="card-heading"></div>
+                    <div class="card-body">
+                        <h2 id="" style="color:white">Reports</h2>
+                        <div id="experienciasReport" class="scroll"></div>
+                    </div>
+                </div>
+            </div>          
         </div>
     </div>
 
