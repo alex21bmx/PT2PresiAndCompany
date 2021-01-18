@@ -282,15 +282,15 @@
                     <h2 class="title">Post an Experience</h2>
                     <form>
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Location" name="localizacion">
+                            <input class="input--style-3" id="localizacion" type="text" placeholder="Location" name="localizacion">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="number" placeholder="Latitude" name="latitud">
-                            <input class="input--style-3" type="number" placeholder="Length" name="longitud">
+                            <input class="input--style-3" id="latitud" type="number" placeholder="Latitude" name="latitud">
+                            <input class="input--style-3" id="longitud" type="number" placeholder="Length" name="longitud">
                         </div>
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select>
+                                <select id="categoria">
                                     <option selected value="adventures">Adventures ✈</option> 
                                     <option value="mountaineering">Mountaineering 🌄</option>
                                     <option value="family">Familiar 👪</option> 
@@ -301,14 +301,14 @@
                             </div>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="URL" name="imagen">
+                            <input class="input--style-3" id="imagen" type="text" placeholder="URL" name="imagen">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-4" type="text" placeholder="Write a description ..." name="texto">
+                            <input class="input--style-4" id="texto" type="text" placeholder="Write a description ..." name="texto">
                         </div>
                         <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select>
+                                <select id="estado">
                                     <option value="Esbozo">Archived</option> 
                                     <option selected value="Publicada">Posted</option>  
                                 </select>
@@ -316,7 +316,7 @@
                             </div>
                         </div>
                         <div class="p-t-10">
-                            <input type="button" value="CREATE" class="crear crear--pill crear-orange">
+                            <input type="button" value="CREATE" id="crear" class="crear crear--pill crear-orange">
                         </div>
                         <?php 
                             echo '<input id="username" style="visibility:hidden" value="'. $prueba . '"required>';
