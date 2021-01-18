@@ -1895,3 +1895,274 @@ background-color: #555;
         padding-bottom: 45px;
       }
     }
+
+    /*GESTIONAR*/
+
+    #contentGestionar {
+      flex: 1;
+      background-color: black;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      }
+      .popup .contentGestionar{
+        margin: 0 auto;
+        align-items: center;
+        display: grid;
+        justify-items: center;
+        box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        position:absolute;
+        max-width: 1580px;
+        height:650px;
+        transform:translate(-50%,-50%) scale(0);
+        background:black;
+        top:40%;
+        left:50%;
+        z-index:2;
+        text-align:center;
+        padding: 0;
+        box-sizing:border-box;
+        font-family: 'Raleway', Arial, sans-serif;
+      }
+      .popup.active .contentGestionar {
+        transition:all 300ms ease-in-out;
+        transform:translate(-50%,-50%) scale(1);
+        }
+    
+    .contentGestionar .wrapper{
+      margin: 0 auto;
+    }
+    
+    .contentGestionar .wrapper--w780 {
+      max-width: 1080px;
+    }
+    
+    .contentGestionar .card-body{
+      background: lighten(black, 5%);
+      display: grid;
+      grid-template-areas: "." ".";
+      width: 500px;
+    }
+    
+    .contentGestionar .crearTusExp{
+      display: inline-block;
+      line-height: 40px;
+      padding: 0 33px;
+      font-family: 'Raleway', Arial, sans-serif;
+      cursor: pointer;
+      color: whitesmoke;
+      -webkit-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      font-size: 18px;
+    }
+    
+    .contentGestionar .crear--radius{
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    .contentGestionar .crear--pill{
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+    }
+    
+    .contentGestionar .crear-orange{
+      background: #b80f22;;
+    }
+    
+    .contentGestionar .crear-orange:hover{
+      background: #ffc107;
+    }
+    
+    /* ==========================================================================
+       #FORM
+       ========================================================================== */
+       .contentGestionar input {
+        outline: none;
+        margin: 0;
+        border: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        width: 100%;
+        font-size: 14px;
+        font-family: inherit;
+      }
+      
+      .contentGestionar .input-icon {
+        position: absolute;
+        font-size: 18px;
+        color: #ccc;
+        right: 8px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+      
+      .contentGestionar .mas_info{
+        position: relative;
+        margin-bottom: 33px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      
+      .contentGestionar .input--style-3 {
+        padding: 5px 0;
+        font-size: 16px;
+        color: #ccc;
+        background: transparent;
+      }
+
+      .contentGestionar #imagenAct {
+        padding: 5px 0;
+        font-size: 16px;
+        color: #ccc;
+        background: transparent;
+      }
+      .contentGestionar #textoAct {
+        padding: 5px 0;
+        font-size: 16px;
+        color: #ccc;
+        background: transparent;
+      }
+      .contentGestionar .input--style-3::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: #ccc;
+      }
+      
+      .contentGestionar .input--style-3:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: #ccc;
+        opacity: 1;
+      }
+      
+      .contentGestionar .input--style-3::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: #ccc;
+        opacity: 1;
+      }
+      
+      .contentGestionar .input--style-3:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #ccc;
+      }
+      
+      .contentGestionar .input--style-3:-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #ccc;
+      }
+    
+      .contentGestionar .input--style-4 {
+        padding: 5px 0;
+        font-size: 16px;
+        color: #ccc;
+        background: transparent;
+        overflow: auto;
+      }
+      
+      .contentGestionar .input--style-4::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: #ccc;
+      }
+      
+      .contentGestionar .input--style-4:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: #ccc;
+        opacity: 1;
+      }
+      
+      .contentGestionar .input--style-4::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: #ccc;
+        opacity: 1;
+      }
+      
+      .contentGestionar .input--style-4:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #ccc;
+      }
+      
+      .contentGestionar .input--style-4:-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #ccc;
+      }
+    
+      
+    
+    
+    /* ==========================================================================
+       #TITLE
+       ========================================================================== */
+       .contentGestionar .title {
+        font-size: 24px;
+        color: #fff;
+        font-weight: 400;
+        margin-bottom: 36px;
+      }
+    
+      .contentGestionar .descEditExp{
+        font-size: 18px;
+        color: #fff;
+        font-weight: 400;
+        margin-bottom: 36px;
+      }
+      /* ==========================================================================
+       #CARD
+       ========================================================================== */
+       .contentGestionar .card {
+      overflow: hidden;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      background: #fff;
+    }
+    
+    .contentGestionar .card-3 {
+      background: #000;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      display: table;
+    }
+    
+    .contentGestionar .card-3 .card-heading {
+      background: url("../src/fotoNE.jpg") top left/cover no-repeat;
+      display: table-cell;
+      width: 30%;
+    }
+    
+    .contentGestionar .card-3 .card-body {
+      padding: 57px 65px;
+      padding-bottom: 65px;
+      display: table-cell;
+    }
+    
+    @media (max-width: 767px) {
+      .contentGestionar .card-3 {
+        display: block;
+      }
+      .contentGestionar .card-3 .card-heading {
+        display: block;
+        width: 100%;
+        padding-top: 400px;
+        background-position: center center;
+      }
+      .contentGestionar .card-3 .card-body {
+        display: block;
+        width: 100%;
+        padding: 37px 30px;
+        padding-bottom: 45px;
+      }
+    }
