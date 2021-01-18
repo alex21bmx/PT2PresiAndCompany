@@ -124,7 +124,7 @@
 
     <!--OPCIONES USUARIO POP-UP-->
     <div class="popup" id="popup-8">
-        <div class="overlay"></div>
+        <div class="overlay2"></div>
         <div class="contentOptions">
             <?php
                  echo '  <ul id="optionsUl">
